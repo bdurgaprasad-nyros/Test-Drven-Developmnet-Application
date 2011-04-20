@@ -1,0 +1,31 @@
+ &nbsp; &nbsp;
+<a href="javascript:handleClickMoreAboutVchatter();">
+	<%=image_tag "sticky2_assets/welcome/qmark.png", {:style=>"margin-bottom:-3px;margin-left:-12px;"}%>
+</a>
+
+<div class="invisible">
+	<div id="<%=more_id%>" title="Connecting to vChatter">
+		<p>
+			You'll follow your Facebook friends who are already on vChatter so that you can use all of vChatter's features. We won't message your friends who aren't on vChatter or post anything to your Facebook without your permission.
+		</p>
+
+		<p>
+			For vChatter to be both a fun and trusted video chat destination, it's important that you use your real identity and connect your Facebook account with us. For questions please feel free to contact us at support@vchatter.com.
+		</p>
+		
+		<div class="span-12 align_right">
+			<a href="javascript:handleCloseMoreDialog<%=more_id%>()">Close</a>
+		</div>	
+
+	</div>
+</div>
+
+<%=render_javascript_block do%>
+
+	function handleCloseMoreDialog<%=more_id%>(){$j('#<%=more_id%>').dialog('close')}
+
+	function handleClickMoreAboutVchatter(){
+		$j('#<%=more_id%>').dialog({width:500, show: 'fade', hide: 'puff', dialogClass: 'noTitleStuff'});
+	}
+
+<%end%>

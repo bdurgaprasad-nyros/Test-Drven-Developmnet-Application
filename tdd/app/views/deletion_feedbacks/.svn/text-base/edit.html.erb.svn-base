@@ -1,0 +1,6 @@
+<h1>Editing deletion_feedback</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Show', @deletion_feedback %> |
+<%= link_to 'Back', deletion_feedbacks_path %>

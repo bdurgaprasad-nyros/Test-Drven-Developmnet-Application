@@ -1,0 +1,1 @@
+<%=render(:partial=>"photo/photo_form_iframe_wrapper", :locals=>{:photo_action_url=>"new_photo_form", :model => @this_model, :mounted_as => @mounted_as, :object_id => @this_object_id, :came_from=> @came_from})%>

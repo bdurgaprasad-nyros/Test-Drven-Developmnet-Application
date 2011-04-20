@@ -1,0 +1,469 @@
+
+<% content_for :local_style_info do %>
+	<style>
+	
+		#profile_block {
+			margin-left: -2px;
+		}
+		#profile_left {
+			background-image: url('/images/sticky2_assets/home/profilebk_left.png');
+			height: 113px;
+			width: 10px;
+		}
+		#profile_middle {
+			background-image: url('/images/sticky2_assets/home/profilebk_mid.png');
+			height: 113px;
+			width: 280px;
+			color: #ffffff;
+			font-size: 13px;
+		}
+		#profile_right {
+			background-image: url('/images/sticky2_assets/home/profilebk_right.png');
+			height: 113px;
+			width: 10px;
+		}
+	
+		#home_page_profile_pic {
+			height: 60px;
+			width: 60px;
+		}
+	
+		#follower_info {
+			font-size: 12px;
+			padding-left: 11px;
+		}
+		.follow_count {
+			font-size: 11px;
+			color: #3fea5b;
+		}
+	
+		.user_group_button {
+			width: 107px;
+			height: 26px;
+			border-style: none;
+			background-repeat: no-repeat;
+			background-color: transparent;
+		}
+	
+		#default_user_button {
+			width: 108px;
+			height: 30px;
+			background-image: url('/images/sticky2_assets/home/mychannel_btn.png');
+			cursor: hand;
+			cursor: pointer;
+		}
+		#default_user_button:hover {
+			width: 108px;
+			height: 30px;
+			background-image: url('/images/sticky2_assets/home/mychannelhover_btn.png');
+			cursor: hand;
+			cursor: pointer;
+		}
+	
+		#default_with_people {
+			background-image: url('/images/sticky2_assets/home/livecount_btn.png');
+			color: white;
+			text-align: left;
+			text-indent: 21px;
+			line-height: 23px;
+		}
+		#default_with_people:hover {
+			background-image: url('/images/sticky2_assets/home/livecounthover_btn.png');
+		}
+
+		#new_group_button {
+			width: 107px;
+			height: 26px;
+			border-style: none;
+			background-repeat: no-repeat;
+			background-color: transparent;
+			background-image: url('/images/sticky2_assets/home/creategroup_btn.png');
+		}
+		#new_group_button:hover {
+			background-image: url('/images/sticky2_assets/home/creategrouphover_btn.png');
+		}
+	
+		#invite_friends_button {
+			width: 108px;
+			height: 30px;
+			border-style: none;
+			cursor: hand;
+			cursor: pointer;
+			background-repeat: no-repeat;
+			background-color: transparent;
+			background-image: url('/images/sticky2_assets/home/share_btn.png');
+		}
+		#invite_friends_button:hover {
+			width: 108px;
+			height: 30px;
+			background-image: url('/images/sticky2_assets/home/sharehover_btn.png');
+			cursor: hand;
+			cursor: pointer;
+		}
+	
+		#friend_view_block {
+			margin-left: 0px;
+			color: white;
+		}
+		
+		#fiend_view_middle {
+			width: 297px;
+			max-height: 255px;
+			background-image: url('/images/sticky2_assets/home/callfriendbk_mid.png');
+		}
+		
+		#friend_view_bottom {
+			width: 297px;
+			height: 2px;
+			margin-top: -17px;
+			background-image: url('/images/sticky2_assets/home/callfriendbk_low.png');
+			
+		}
+		#people_to_call img {
+			width: 60px;
+			height: 60px;
+		}
+	
+		#my_groups_block {
+			margin-top: 8px;
+		}
+		
+		.content_block_top {
+			height: 30px;
+			background-image: url('/images/sticky2_assets/home/mygroupbk_top.png');
+			font-size: 13px;
+			color: white;
+		}
+		
+		.chat_button {
+			background-image: url('/images/sticky2_assets/home/chatjoin_btn.png');
+			height: 22px;
+			width: 50px;
+			border-style: none;
+			background-repeat: no-repeat;
+			background-color: transparent;
+		}
+		.chat_button:hover {
+			background-image: url('/images/sticky2_assets/home/chatjoinhover_btn.png');
+		}
+		.join_group {
+			margin-left: 5px;
+		}
+		.group_follow_detail {
+			width: 175px;
+			margin-left:10px;
+		}
+		
+		.group_followed_pic img {
+			width: 100px;
+			height: 100px;
+		}
+		
+		.follower_images img {
+			width: 30px;
+			height: 30px;
+		}
+		.follower_images div {
+			float: left;
+		}
+		.group_follows_detail {
+			height: 110px;
+		}
+		
+		#trending_now {
+			width: 400px;
+		}
+		
+		.group_carousel_left {
+			background-image: url('/images/sticky2_assets/home/grouplistbk_left.png');
+			height: 188px;
+			width: 8px;
+		}
+		.group_carousel_right {
+			background-image: url('/images/sticky2_assets/home/grouplistbk_right.png');
+			height: 188px;
+			width: 8px;
+		}
+		.group_carousel_mid {
+			background-image: url('/images/sticky2_assets/home/grouplistbk_mid.png');
+			height: 188px;
+			width: 433px;
+			color: white;
+		}
+		
+		
+		.feed-list-top {
+			background-image: url('/images/sticky2_assets/profile/newsfeedbk_top.png');
+			color: white;
+			font-size:13px;
+			margin-top: 15px;
+			width: 445px;
+			
+		}
+		
+		.feed-column {
+			width: 445px;
+			padding-left: 5px;
+			font-family: Arial;
+			color:#3b5998;
+			background-image: url('/images/sticky2_assets/home/newsfeedbk_mid.png');
+			background-repeat: repeat-y;
+		}
+
+		#my_groups_top {
+			width: 297px;
+			background-color: transparent;
+			border: 0px;
+			margin-left: 1px;
+		}
+		
+		#my_groups_middle {
+			max-height: 335px;
+			width: 299px;
+			background-color: #f2f2f2;
+			overflow: auto;
+			background-image: url('/images/sticky2_assets/home/mygrouplistbk_mid.png');
+			background-repeat: repeat-y;
+		}
+		
+		#my_groups_bottom {
+			height: 6px;
+			width: 299px;
+			background-image: url('/images/sticky2_assets/home/mygrouplistbk_low.png');
+			background-repeat: no-repeat;
+		}
+		
+		
+		.feed_time {
+			font-size: 10px;
+			color: #999999;
+			float:right;
+			padding-right: 5px;
+		}
+	
+		.feed_description {
+			margin-left:6px;
+			font-size: 12px;
+		}
+		
+		tr.odd {
+			background-color: #f9f9f9;
+		}
+		
+		.feed-column img {
+			height: 30px;
+			width: 30px;
+			border: none;
+		}
+		
+		.vchatter_following_image, .fb_friend_image {
+			float: left;
+			padding-top: 2px;
+			padding-bottom: 2px;
+			padding-left: 4px;
+			padding-right: 4px;
+		}
+		
+		.vchatter_following_image img, .fb_friend_image img {
+		    cursor:hand;
+		    cursor:pointer;
+		}
+		
+		
+	</style>
+<% end %>
+<script>
+	function invite_friends() {
+		alert("Invite ye friends here!")
+	}
+	
+</script>
+<div class="span-20 clearfix">
+	
+	
+	<div class="span-7 clearfix">
+		<%= render :partial=> 'profile_block'%>	
+		<%= render :partial=> 'friends_view_block'%>
+		
+		
+		<div class="span-7 clearfix" id="my_groups_block">
+			<div id="my_groups_top" class="content_block_top">
+				<div style="margin-left:11px;padding-top:7px;">
+					My Groups (<%=current_user.groups_followed.count%>)
+				</div>
+			</div>
+			
+			<div id="my_groups_middle">
+				<div style="padding: 5px;">
+					<%= render :partial => 'group_follows_detail', 
+								:collection => current_user.groups_followed, 
+								:as => :group %>
+					
+				</div>
+			</div>
+			<div id="my_groups_bottom"></div>
+		</div>
+	</div>
+	
+	<div class="span-11 clearfix">
+		<%= render :partial => 'group_carousel', 
+					:object=>  Group.get_trending_groups.first(4),
+					:locals => {:carousel_name => 'Groups Trending Now'},
+					:as => :groups_to_show
+		%>
+	
+		<%= render :partial => 'group_carousel', 
+					:object=>  Group.get_recommended_groups.first(4),
+					:locals => {:carousel_name => 'Recommended Groups',:margin_top => "10px"},
+					:as => :groups_to_show
+		%>
+
+		<% unless @newsfeed.class == TrueClass %>
+			<div class="span-11 feed-list-top" style="margin-left:44px;">
+				<div style="padding: 5px;">
+					News feed
+				</div>
+			</div>
+		
+			<div class="span-11 feed-column" style="margin-left:44px;">
+				<table style="width:438px;">
+					<%= render 	:partial => 'newsfeed_item',
+								:collection => @newsfeed['item'].first(10),
+								:as => :newsfeeditem
+					 %>
+				</table>
+			</div>
+		<% end %>
+			
+		
+	</div>
+	
+</div>
+
+<div id="fb-root"></div>
+<script>
+
+	//==========================================
+	// Facebook methods start
+	//==========================================
+
+	function fb_friend_image_click(evt) {
+		onInviteOneFriend(this.id.split("_")[1]);
+	}
+	
+	function v_friend_image_click(evt) {
+		$j.getScript( '/users/' + this.id.split("_")[1] + "/locate"
+		);
+	}
+
+	var max_display_count = 12;
+	var friend_invite_tip = "invite to chat";
+	function render_friends_to_call(friend_list) {
+		render_loc = $j('#people_to_call');
+		
+		$j('.fb_friend_image').unbind('click',fb_friend_image_click);
+		$j('.vchatter_following_image').unbind('click',v_friend_image_click);
+	
+		render_loc.empty();
+		display_string = ""
+	
+		for (var i = 0; i < friend_list.length && i < max_display_count; i++) {
+		
+			var className;
+			
+			if (friend_list[i].type=="VChatter") {
+				var className = "vchatter_following_image";
+			} else if (friend_list[i].type=="Facebook") {
+				var className = "fb_friend_image";
+			}
+		
+			display_string += "<div id=\"fb_" + friend_list[i].uid + "\"" +
+					"title=\"Invite " + friend_list[i].name + " to chat\" " +
+					" class=\"" + className  + "\">" + 
+					"<img alt=\"Invite " + friend_list[i].name + " to chat\"" +
+					 " src=\"" + friend_list[i].image + "\" /></div>"
+		
+		}
+    
+		render_loc.append(display_string);
+		
+		$j('.fb_friend_image').bind('click',fb_friend_image_click);
+		$j('.vchatter_following_image').bind('click',v_friend_image_click);
+		
+	}
+
+
+  following = <%= @following_info.to_json.html_safe %>;
+  render_friends_to_call(following);
+
+  initial_user_to_show = following.length;
+
+  window.fbAsyncInit = function() {
+    FB.init({appId: '<%= FACEBOOK_APP_ID %>', status: true, cookie: true,
+             xfbml: true});
+
+	FB.api("/me/friends?fields=name,picture", handleFriends);
+  };
+
+
+	function handleFriends(response) {
+        var friends = response.data;
+
+        for (var i = 0; i < friends.length; i++) {
+			var new_facebook_friend = {
+				image: friends[i].picture,
+				name: friends[i].name,
+				uid: friends[i].id,
+				type: "Facebook"
+			}
+			following.push(new_facebook_friend)
+        }
+		render_friends_to_call(following);
+
+	}
+	
+	function onShareToWall() {
+	       FB.ui(
+	       {
+	             method: 'feed',
+				 link: 'http://<%= WEBAPP_URL %><%= current_user.get_user_profile_path %>',
+				 picture: 'http://<%= WEBAPP_URL %><%= User.get_user_pic(current_user,"30_30") %>',
+				 name: 'My personal live video channel on vChatter',
+				 message: 'Hang out with me on my group video chat page!',
+				 caption: 'vChatter: Fun & Free Video Chat Groups'
+	   		});
+	}
+
+	// We would use this after we move our Facebook application over to the new app also
+	function onMultiInviteFriends() {
+		FB.ui
+		({
+			method: 'apprequests', 
+			title: 'Video-call your friends now.',
+			message: 'Lets video chat.'
+		});
+	}
+	
+	function onInviteOneFriend (userId) {
+		   FB.ui(
+	       {
+	             method: "feed",
+				 to: userId,
+				 link: "http://<%= WEBAPP_URL %><%= current_user.get_user_profile_path %>",
+				 picture: "http://<%= WEBAPP_URL %><%= User.get_user_pic(current_user,"30_30") %>",
+				 name: "My personal live video channel on vChatter",
+				 message: "Hang out with me on my group video chat page!",
+				 caption: "vChatter: Fun & Free Video Chat Groups"
+	   		});
+	}
+
+	
+
+	//==========================================
+	// Facebook methods end
+	//==========================================
+	
+	
+</script>
+
+

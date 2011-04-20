@@ -1,0 +1,21 @@
+<% "Notifications" %>
+
+<table>
+  <tr>
+    <th>Group</th>
+    <th>Notification Type</th>
+    <th>Body</th>
+  </tr>
+  <% for notification in @notifications %>
+    <tr>
+      <td><%= notification.group_id %></td>
+      <td><%= notification.notification_type_id %></td>
+      <td><%= notification.body %></td>
+      <td><%= link_to "Show", notification %></td>
+      <td><%= link_to "Edit", edit_notification_path(notification) %></td>
+      <td><%= link_to "Destroy", notification, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Notification", new_notification_path %></p>

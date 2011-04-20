@@ -1,0 +1,35 @@
+<div class="span-11" style="margin-left:44px;<%= "margin-top:" + margin_top + ";" if local_assigns.has_key?(:margin_top) %>">
+	<table>
+		<tr>
+			<td style="width:8px;">
+				<div class="group_carousel_left"></div>
+			</td>
+			<td style="width:384px;">
+				<div class="group_carousel_mid">
+					<div  class="content_block_top_bak">
+						<div style="margin-left:11px;padding-top:7px;">
+							<%= carousel_name %>
+						</div>
+					</div>
+					<div class="carousel_block">
+						<table>
+							<tr> 
+								<% if groups_to_show.count > 0 %>
+									<%= render :partial => 'individual_group_carousel', 
+												:collection => groups_to_show, 
+												:as => :group %>
+								<% else %>
+									<td></td>
+								<% end %>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</td>
+			<td >
+				<div class="group_carousel_right"></div>
+			</td>
+		</tr>
+	</table>
+	
+</div>

@@ -1,0 +1,26 @@
+<% require 'cgi'
+
+	user = User.find(newsfeeditem["userId"].to_i)
+
+
+%>
+<tr class="<%= cycle("even", "odd") %>" >
+	
+	<td>
+		<a href="<%=user.get_user_profile_path%>" >
+			<%= image_tag User.get_user_pic(user,"30_30")%>
+		</a>
+	</td>
+	
+	<td>
+		<div class="feed_description">
+			<a href="<%= user.get_user_profile_path %>">
+				<%= newsfeeditem['lastName'] %>
+			</a> <%= newsfeeditem['content'].html_safe %>
+		</div>
+		<%= render :partial => 'shared/bunchball_feed_time', 
+					:object=>Time.at(newsfeeditem["ts"].to_i),
+					:as=> :feed_time %>
+		
+	</td>
+</tr>

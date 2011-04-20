@@ -1,0 +1,1 @@
+<%=render(:partial=> @came_from == "registration"? "photo/registration_photo_form" : "photo/photo_form")%>

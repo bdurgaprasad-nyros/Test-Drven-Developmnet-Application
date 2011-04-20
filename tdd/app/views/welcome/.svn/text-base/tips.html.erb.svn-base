@@ -1,0 +1,81 @@
+<div class="span-20">
+<%= render :partial => "verticalmenu"%>
+
+<div class="span-13 last" id="info-right">
+<h2>vChatter Tips</h2>
+<h3>vChatter Tip One</h3>
+
+<p>Facebook is the easiest and fastest way to do this is to connect your Facebook account with vChatter.  Connecting your Facebook account makes it easier to gain followers.</p>
+
+<img src="/images/sticky2_assets/quick-start-guide/facebook-account.gif" width="499" height="271" alt="Login to vChatter using Facebook Account">
+<hr class="space" />
+
+<h3>vChatter Tip Two</h3>
+
+<p>Connect your account with your Facebook and Twitter accounts to gain more followers</p>
+
+<img src="/images/sticky2_assets/quick-start-guide/facebook-account.gif" width="499" height="271" alt="Login to vChatter using Facebook Account">
+<hr class="space" />
+
+<h3>vChatter Tip Three</h3>
+
+<p>Video chat with followers, people you follow, and new people in groups that interest you</p>
+
+<img src="/images/sticky2_assets/quick-start-guide/facebook-account.gif" width="499" height="271" alt="Login to vChatter using Facebook Account">
+<hr class="space" />
+
+<h3>vChatter Tip Four</h3>
+
+<p>Explore groups to find interesting people and discussions</p>
+
+<img src="/images/sticky2_assets/quick-start-guide/facebook-account.gif" width="499" height="271" alt="Login to vChatter using Facebook Account">
+<hr class="space" />
+
+<h3>vChatter Tip Five</h3>
+
+<p>Use your personal chat room immediately</p>
+
+<img src="/images/sticky2_assets/quick-start-guide/facebook-account.gif" width="499" height="271" alt="Login to vChatter using Facebook Account">
+<hr class="space" />
+
+<h3>vChatter Tip Six</h3>
+
+<p>Check out the profiles of people you meet in groups </p>
+
+<img src="/images/sticky2_assets/quick-start-guide/facebook-account.gif" width="499" height="271" alt="Login to vChatter using Facebook Account">
+<hr class="space" />
+
+<h3>vChatter Tip Seven</h3>
+
+<p>call your Twitter and Facebook contacts </p>
+
+<img src="/images/sticky2_assets/quick-start-guide/facebook-account.gif" width="499" height="271" alt="Login to vChatter using Facebook Account">
+<hr class="space" />
+
+<h3>vChatter Tip Eight</h3>
+
+<p>Start following interesting people to stay connected with them</p>
+
+<img src="/images/sticky2_assets/quick-start-guide/facebook-account.gif" width="499" height="271" alt="Login to vChatter using Facebook Account">
+<hr class="space" />
+
+<h3>vChatter Tip Nine</h3>
+
+<p>get updates on followers and people you're following (followerings)</p>
+
+<img src="/images/sticky2_assets/quick-start-guide/facebook-account.gif" width="499" height="271" alt="Login to vChatter using Facebook Account">
+<hr class="space" />
+
+
+<h3>vChatter Tip Ten</h3>
+
+<p>Create your own groups. Coming soon, make them public or private.</p>
+
+<img src="/images/sticky2_assets/quick-start-guide/facebook-account.gif" width="499" height="271" alt="Login to vChatter using Facebook Account">
+<hr class="space" />
+
+
+
+</div>
+
+</div>

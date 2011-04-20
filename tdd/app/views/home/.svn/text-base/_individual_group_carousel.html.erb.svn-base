@@ -1,0 +1,47 @@
+<%
+#### style code here for the moment to keep partial DRY
+if controller.controller_name=="home"
+	# this branch maintains current home layout	
+	table_style="width:100px"
+	cell_style="width:100px"
+	name_length=14
+else
+	# this branch specifies formatting for groups/browse (- sl )
+	table_style=" margin:10px;width:100px"
+	cell_style="width:100px;vertical-align:top"
+	name_length=16
+end	
+%>
+<td style="<%=cell_style%>"> 
+	<table style="<%=table_style%>">
+		<tr>
+			<td>
+				<div class="carousel_block_image">
+					<a href="<%= group.get_group_profile_path %>">
+						<%= image_tag Group.get_group_pic(group, "100_100")%>
+					</a>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td class="align_center">
+				<div class="carousel_group_name">
+					<%= truncate(group.name, { :length=> name_length, :ommission=>"..."}) %>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td class="align_center">
+				<div style="margin-left:3px;">
+					<a href="<%= group.get_group_profile_path %>">
+						<%= render 	:partial => 'home/group_live_count',
+								   	:object => group,
+									:as => :group
+						 %>
+					</a>
+					
+				</div>
+			</td>
+		</tr>
+	</table>
+</td>

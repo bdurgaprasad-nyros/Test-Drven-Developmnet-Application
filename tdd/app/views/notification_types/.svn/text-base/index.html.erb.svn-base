@@ -1,0 +1,19 @@
+<% "Notification Types" %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+  <% for notification_type in @notification_types %>
+    <tr>
+      <td><%= notification_type.name %></td>
+      <td><%= notification_type.description %></td>
+      <td><%= link_to "Show", notification_type %></td>
+      <td><%= link_to "Edit", edit_notification_type_path(notification_type) %></td>
+      <td><%= link_to "Destroy", notification_type, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Notification Type", new_notification_type_path %></p>

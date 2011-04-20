@@ -1,0 +1,16 @@
+<% "Notification Type" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @notification_type.name %>
+</p>
+<p>
+  <strong>Description:</strong>
+  <%= @notification_type.description %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_notification_type_path(@notification_type) %> |
+  <%= link_to "Destroy", @notification_type, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", notification_types_path %>
+</p>

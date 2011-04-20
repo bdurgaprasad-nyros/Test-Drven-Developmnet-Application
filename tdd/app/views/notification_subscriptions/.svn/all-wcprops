@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/w3mg_vcgroupsw3mg/!svn/ver/163/app/views/notification_subscriptions
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/w3mg_vcgroupsw3mg/!svn/ver/163/app/views/notification_subscriptions/edit.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/w3mg_vcgroupsw3mg/!svn/ver/163/app/views/notification_subscriptions/index.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/w3mg_vcgroupsw3mg/!svn/ver/163/app/views/notification_subscriptions/new.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/w3mg_vcgroupsw3mg/!svn/ver/163/app/views/notification_subscriptions/show.html.erb
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/w3mg_vcgroupsw3mg/!svn/ver/163/app/views/notification_subscriptions/_form.html.erb
+END

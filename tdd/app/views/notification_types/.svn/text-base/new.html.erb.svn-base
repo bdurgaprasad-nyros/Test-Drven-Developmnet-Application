@@ -1,0 +1,5 @@
+<% "New Notification Type" %>
+
+<%= render 'form' %>
+
+<p><%= link_to "Back to List", notification_types_path %></p>

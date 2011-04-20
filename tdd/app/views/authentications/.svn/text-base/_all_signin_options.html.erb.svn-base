@@ -1,0 +1,25 @@
+<a href="/auth/twitter"
+   title="twitter.com" class="auth_provider">
+     <%= image_tag "twitter_32.png", :size => "32x32", :alt => "Twitter" %>
+  Twitter
+</a>
+
+<a href="/auth/facebook" class="auth_provider">
+<%=image_tag "mockup_assets/dummy_facebook_connect.png", :style=>'border: 0px;'%>
+</a>
+
+<div class="clear"></div>
+
+<script type="text/javascript">
+  var popup_window = $j('.auth_provider').popupWindow({
+    height:500,
+    width:900,
+    top:50,
+    left:50
+  });
+
+  if (window == parent) {
+    window.close();
+    window.opener.location = window.location.pathname
+  }
+</script>

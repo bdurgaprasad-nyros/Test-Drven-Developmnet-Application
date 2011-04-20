@@ -1,0 +1,215 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/w3mg_vcgroupsw3mg/!svn/ver/505/db/migrate
+END
+20110405155221_add_basic_information_to_users.rb
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/w3mg_vcgroupsw3mg/!svn/ver/221/db/migrate/20110405155221_add_basic_information_to_users.rb
+END
+20110405203714_add_broadcast_cout_to_group.rb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/w3mg_vcgroupsw3mg/!svn/ver/224/db/migrate/20110405203714_add_broadcast_cout_to_group.rb
+END
+20110412230404_add_recommended_to_groups.rb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/w3mg_vcgroupsw3mg/!svn/ver/345/db/migrate/20110412230404_add_recommended_to_groups.rb
+END
+20110401142422_create_vanity.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/w3mg_vcgroupsw3mg/!svn/ver/165/db/migrate/20110401142422_create_vanity.rb
+END
+20110403184444_add_notification_types.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/w3mg_vcgroupsw3mg/!svn/ver/195/db/migrate/20110403184444_add_notification_types.rb
+END
+20110405041301_add_fields_to_users.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/w3mg_vcgroupsw3mg/!svn/ver/217/db/migrate/20110405041301_add_fields_to_users.rb
+END
+20110407183303_create_user_additional_infos.rb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/w3mg_vcgroupsw3mg/!svn/ver/256/db/migrate/20110407183303_create_user_additional_infos.rb
+END
+20110419204927_create_user_reports.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/w3mg_vcgroupsw3mg/!svn/ver/505/db/migrate/20110419204927_create_user_reports.rb
+END
+20110412200530_add_current_group_id_to_users.rb
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/w3mg_vcgroupsw3mg/!svn/ver/342/db/migrate/20110412200530_add_current_group_id_to_users.rb
+END
+20110405155453_add_relationship_status_code_to_users.rb
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/w3mg_vcgroupsw3mg/!svn/ver/221/db/migrate/20110405155453_add_relationship_status_code_to_users.rb
+END
+20110403173843_create_notification_preferences.rb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/w3mg_vcgroupsw3mg/!svn/ver/195/db/migrate/20110403173843_create_notification_preferences.rb
+END
+20110311111558_add_birthday_gender_to_user.rb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/w3mg_vcgroupsw3mg/!svn/ver/1/db/migrate/20110311111558_add_birthday_gender_to_user.rb
+END
+20110319052451_add_names_to_users.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/w3mg_vcgroupsw3mg/!svn/ver/1/db/migrate/20110319052451_add_names_to_users.rb
+END
+20110317071710_create_groups.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/w3mg_vcgroupsw3mg/!svn/ver/1/db/migrate/20110317071710_create_groups.rb
+END
+20110410183038_change_timezone_field_name.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/w3mg_vcgroupsw3mg/!svn/ver/282/db/migrate/20110410183038_change_timezone_field_name.rb
+END
+20110331010707_add_avatar_to_users.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/w3mg_vcgroupsw3mg/!svn/ver/152/db/migrate/20110331010707_add_avatar_to_users.rb
+END
+20110406051017_change_data_type_for_users_time_zone_code.rb
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/w3mg_vcgroupsw3mg/!svn/ver/233/db/migrate/20110406051017_change_data_type_for_users_time_zone_code.rb
+END
+20110419205442_create_user_bans.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/w3mg_vcgroupsw3mg/!svn/ver/505/db/migrate/20110419205442_create_user_bans.rb
+END
+20110404224318_create_follows.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/w3mg_vcgroupsw3mg/!svn/ver/215/db/migrate/20110404224318_create_follows.rb
+END
+20110415141734_add_personal_to_group.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/w3mg_vcgroupsw3mg/!svn/ver/415/db/migrate/20110415141734_add_personal_to_group.rb
+END
+20110416010446_create_new_image_sizes_for_existing_users_and_groups.rb
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/w3mg_vcgroupsw3mg/!svn/ver/425/db/migrate/20110416010446_create_new_image_sizes_for_existing_users_and_groups.rb
+END
+20110412225240_add_on_current_user_count_index_to_groups.rb
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/w3mg_vcgroupsw3mg/!svn/ver/344/db/migrate/20110412225240_add_on_current_user_count_index_to_groups.rb
+END
+20110310144436_devise_create_users.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/w3mg_vcgroupsw3mg/!svn/ver/230/db/migrate/20110310144436_devise_create_users.rb
+END
+20110411170659_create_deletion_feedbacks.rb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/w3mg_vcgroupsw3mg/!svn/ver/322/db/migrate/20110411170659_create_deletion_feedbacks.rb
+END
+20110405160244_create_contact_phones.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/w3mg_vcgroupsw3mg/!svn/ver/221/db/migrate/20110405160244_create_contact_phones.rb
+END
+20110408192833_add_inspired_by_to_user.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/w3mg_vcgroupsw3mg/!svn/ver/278/db/migrate/20110408192833_add_inspired_by_to_user.rb
+END
+20110401080540_create_notification_subscriptions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/w3mg_vcgroupsw3mg/!svn/ver/163/db/migrate/20110401080540_create_notification_subscriptions.rb
+END
+20110401080419_create_notifications.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/w3mg_vcgroupsw3mg/!svn/ver/163/db/migrate/20110401080419_create_notifications.rb
+END
+20110405155641_add_philosophy_to_users.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/w3mg_vcgroupsw3mg/!svn/ver/221/db/migrate/20110405155641_add_philosophy_to_users.rb
+END
+20110313212959_create_authentications.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/w3mg_vcgroupsw3mg/!svn/ver/1/db/migrate/20110313212959_create_authentications.rb
+END
+20110401080628_create_notification_types.rb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/w3mg_vcgroupsw3mg/!svn/ver/163/db/migrate/20110401080628_create_notification_types.rb
+END
+20110326141946_add_background_image_and_group_image_to_groups.rb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/w3mg_vcgroupsw3mg/!svn/ver/76/db/migrate/20110326141946_add_background_image_and_group_image_to_groups.rb
+END
+20110401112322_add_frequency_code_to_notification_subscription.rb
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/w3mg_vcgroupsw3mg/!svn/ver/163/db/migrate/20110401112322_add_frequency_code_to_notification_subscription.rb
+END
+20110405155847_add_contact_information_to_users.rb
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/w3mg_vcgroupsw3mg/!svn/ver/221/db/migrate/20110405155847_add_contact_information_to_users.rb
+END
+20110405160432_create_instant_messenger_accounts.rb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/w3mg_vcgroupsw3mg/!svn/ver/221/db/migrate/20110405160432_create_instant_messenger_accounts.rb
+END

@@ -1,0 +1,1 @@
+page.replace_html "following_message", :partial => @partial_name

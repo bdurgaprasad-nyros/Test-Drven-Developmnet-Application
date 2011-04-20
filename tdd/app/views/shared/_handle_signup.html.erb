@@ -1,0 +1,17 @@
+<%=render_javascript_block do%>
+	function handleClickRegisterFacebook(){
+		window.open('<%= user_omniauth_authorize_path(:facebook) %>','','width=900,height=500');	
+	}
+	function handleClickRegisterTwitter(){
+		window.open('<%=  user_omniauth_authorize_path(:twitter) %>','','width=900,height=500');	
+	}	
+<%end%>
+
+<div id="secret_dialog_hider" class="invisible">
+	<div id="email_signup_container_2" class="signup_content">
+		
+	</div>
+	<div id="signup_container" class="signup_content">
+	</div>
+
+</div>

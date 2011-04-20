@@ -1,0 +1,40 @@
+<%
+@title="Most Recent" unless @title
+%>
+<hr class="space" />
+<h2 style="margin-left:15px;font-size:16px;color:#254484;margin-bottom:0px"><%=@title%></h2>
+<table class="" style="width:600px;margin-bottom:20px;margin-top:-10px">
+	<tr>
+		<td style="width:8px;">
+			<div class="group_carousel_left"></div>
+		</td>
+		<td style="width:600px;" class="">
+			<div class="group_carousel_mid">
+				<div  class="content_block_top_bak">
+					<div style="margin-left:11px;padding-top:7px;">
+	
+					</div>
+				</div>
+				<div class="carousel_block">
+					<table>
+					<%	if @groups.count  > 0 %>	
+							<%@groups.in_groups_of(5) do |cell_group| %>
+									<tr>
+										<%for cell in cell_group%> 
+											<%= render :partial => 'home/individual_group_carousel', 
+												:object => cell, 
+												:as => :group unless cell.nil? %>
+										<%end%>
+									</tr>
+						 	<% end %>
+					<% else %>
+								<td></td>
+
+							</tr>	
+					<% end %>
+					</table>
+				</div>
+			</div>
+		</td>
+	</tr>
+</table>

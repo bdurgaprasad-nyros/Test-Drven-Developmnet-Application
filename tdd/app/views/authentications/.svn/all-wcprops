@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/w3mg_vcgroupsw3mg/!svn/ver/403/app/views/authentications
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/w3mg_vcgroupsw3mg/!svn/ver/4/app/views/authentications/index.html.erb
+END
+_all_signin_options.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/w3mg_vcgroupsw3mg/!svn/ver/403/app/views/authentications/_all_signin_options.html.erb
+END
+_remove_auth_sign_in.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/w3mg_vcgroupsw3mg/!svn/ver/3/app/views/authentications/_remove_auth_sign_in.html.erb
+END

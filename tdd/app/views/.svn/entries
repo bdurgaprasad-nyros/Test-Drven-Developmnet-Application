@@ -1,0 +1,91 @@
+10
+
+dir
+506
+https://w3mg.unfuddle.com/svn/w3mg_vcgroupsw3mg/app/views
+https://w3mg.unfuddle.com/svn/w3mg_vcgroupsw3mg
+
+
+
+2011-04-20T00:48:44.268507Z
+506
+wbunker
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+fff8618f-3263-40c7-a7af-140b7c093e9a
+
+groups
+dir
+
+devise
+dir
+
+vanities
+dir
+
+follows
+dir
+
+home
+dir
+
+photo
+dir
+
+deletion_feedbacks
+dir
+
+welcome
+dir
+
+registrations
+dir
+
+profile
+dir
+
+layouts
+dir
+
+following
+dir
+
+users
+dir
+
+authentications
+dir
+
+shared
+dir
+
+sessions
+dir
+
+notification_preferences
+dir
+
+notifications
+dir
+
+notification_types
+dir
+
+followers
+dir
+
+notification_subscriptions
+dir
+

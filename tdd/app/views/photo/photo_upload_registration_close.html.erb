@@ -1,0 +1,9 @@
+<script type="text/javascript">
+  function closeRefresh(path) {
+    parent.location.href = path;
+    //parent.location.reload();	
+  }
+</script>
+
+<body onload="closeRefresh('<%= @redirect_path %>')">	
+</body>	

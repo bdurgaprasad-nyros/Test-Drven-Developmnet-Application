@@ -1,0 +1,11 @@
+<%# # # # # # # # # # # CODE USED BY [action_type]_document_iframe.rhtml# # # # # # # # # # # # #%>
+<div style="padding:10px">
+  <iframe id="image_frame"
+          frameborder="0"
+		  style="border"
+		  width="500" 
+		  height="470"
+		  scrolling="auto"  
+		 src="/photo/<%=photo_action_url%>?model=<%=model%>&amp;mounted_as=<%= mounted_as %>&amp;object_id=<%= object_id %>&amp;came_from=<%= came_from %> ">
+  </iframe>
+</div>

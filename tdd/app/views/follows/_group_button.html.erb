@@ -1,0 +1,16 @@
+<div id="following_message">
+	<% if user_signed_in? %>
+		<% if current_user.following_relationships.find_by_followed_id_and_followed_type(@group.id,
+			 												"Group").nil? %>
+			<%= render :partial => 'follows/follow_group_button'%>
+		<% else %>
+			<%= render :partial => 'follows/abandon_group_button'%>
+		<% end %>
+	<% else %>
+		<%= button_to_function 	" ", 
+						"signUp();", 
+						:class=>"not_following_button", 
+						:id=>"start_following"
+		%>
+	<% end %>
+</div>

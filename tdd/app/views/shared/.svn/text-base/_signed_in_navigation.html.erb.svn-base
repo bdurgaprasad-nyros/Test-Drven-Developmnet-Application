@@ -1,0 +1,16 @@
+<table style="width:311px">
+	<tr><!--need new image for left side-->
+		<td  style="background-image:url(/images/sticky2_assets/groups/navbk_left.png);background-repeat:no-repeat;width:11px;height:39px;font-size:1px">
+	
+        </td>
+		<td id="navigation_links" class="align_center">
+			&nbsp;<%=link_to "Home", "/home/index"%>			
+			&nbsp;&nbsp;<%= link_to "Profile", current_user.get_user_profile_path %>					          
+  			&nbsp;&nbsp;<%= link_to "Browse", groups_path %>	
+  			&nbsp;&nbsp;<%= link_to "Create Group", new_group_path %>	
+			&nbsp;&nbsp;<%= link_to "Logout", destroy_user_session_path %>         
+		</td>
+		<td style="background-image:url(/images/sticky2_assets/groups/navbk_right.png);background-repeat:no-repeat;width:11px;height:39px;font-size:1px">&nbsp;										
+		</td>	
+	</tr>
+</table>

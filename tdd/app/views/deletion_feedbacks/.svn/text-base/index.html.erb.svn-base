@@ -1,0 +1,21 @@
+<h1>Listing deletion_feedbacks</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @deletion_feedbacks.each do |deletion_feedback| %>
+  <tr>
+    <td><%= link_to 'Show', deletion_feedback %></td>
+    <td><%= link_to 'Edit', edit_deletion_feedback_path(deletion_feedback) %></td>
+    <td><%= link_to 'Destroy', deletion_feedback, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Deletion feedback', new_deletion_feedback_path %>

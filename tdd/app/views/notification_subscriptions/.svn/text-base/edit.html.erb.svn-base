@@ -1,0 +1,8 @@
+<% "Edit Notification Subscription" %>
+
+<%= render 'form' %>
+
+<p>
+  <%= link_to "Show", @notification_subscription %> |
+  <%= link_to "View All", notification_subscriptions_path %>
+</p>

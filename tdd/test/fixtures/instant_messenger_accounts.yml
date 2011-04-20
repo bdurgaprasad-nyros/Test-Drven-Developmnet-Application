@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  service_code: 1
+  screen_name: MyString
+  user_id: 1
+
+two:
+  service_code: 1
+  screen_name: MyString
+  user_id: 1

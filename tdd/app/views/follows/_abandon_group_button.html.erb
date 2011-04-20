@@ -1,0 +1,10 @@
+<%= button_to "", 
+	{ 	:controller=>:follows, 
+		:action => :destroy, 
+		:id => @group.id, 
+		:followed_type=>"Group"
+	},
+	:method=>:delete, 
+	:remote=>true,
+	:class=>"following_button",
+	:id=>"stop_following"%>

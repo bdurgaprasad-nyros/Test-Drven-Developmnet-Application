@@ -1,0 +1,2 @@
+<%=render_indicator_title_and_sequence("Add Profile Picture - Almost Done!", 3)%>
+<%=render(:partial=>"photo/registration_photo_form", :locals=>{:photo_action_url=>"new_photo_form", :model => "user", :mounted_as => "avatar", :object_id => @user.id, :came_from => "registration"})%>

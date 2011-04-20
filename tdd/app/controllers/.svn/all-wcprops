@@ -1,0 +1,113 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/w3mg_vcgroupsw3mg/!svn/ver/505/app/controllers
+END
+notification_types_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/w3mg_vcgroupsw3mg/!svn/ver/163/app/controllers/notification_types_controller.rb
+END
+notification_subscriptions_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/w3mg_vcgroupsw3mg/!svn/ver/163/app/controllers/notification_subscriptions_controller.rb
+END
+groups_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/w3mg_vcgroupsw3mg/!svn/ver/498/app/controllers/groups_controller.rb
+END
+vanities_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/w3mg_vcgroupsw3mg/!svn/ver/498/app/controllers/vanities_controller.rb
+END
+follows_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/w3mg_vcgroupsw3mg/!svn/ver/279/app/controllers/follows_controller.rb
+END
+home_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/w3mg_vcgroupsw3mg/!svn/ver/505/app/controllers/home_controller.rb
+END
+photo_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/w3mg_vcgroupsw3mg/!svn/ver/415/app/controllers/photo_controller.rb
+END
+deletion_feedbacks_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/w3mg_vcgroupsw3mg/!svn/ver/322/app/controllers/deletion_feedbacks_controller.rb
+END
+welcome_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/w3mg_vcgroupsw3mg/!svn/ver/470/app/controllers/welcome_controller.rb
+END
+registrations_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/w3mg_vcgroupsw3mg/!svn/ver/428/app/controllers/registrations_controller.rb
+END
+profile_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/w3mg_vcgroupsw3mg/!svn/ver/428/app/controllers/profile_controller.rb
+END
+following_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/w3mg_vcgroupsw3mg/!svn/ver/216/app/controllers/following_controller.rb
+END
+users_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/w3mg_vcgroupsw3mg/!svn/ver/493/app/controllers/users_controller.rb
+END
+authentications_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/w3mg_vcgroupsw3mg/!svn/ver/428/app/controllers/authentications_controller.rb
+END
+application_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/w3mg_vcgroupsw3mg/!svn/ver/480/app/controllers/application_controller.rb
+END
+sessions_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/w3mg_vcgroupsw3mg/!svn/ver/258/app/controllers/sessions_controller.rb
+END
+notification_preferences_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/w3mg_vcgroupsw3mg/!svn/ver/195/app/controllers/notification_preferences_controller.rb
+END
+notifications_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/w3mg_vcgroupsw3mg/!svn/ver/163/app/controllers/notifications_controller.rb
+END

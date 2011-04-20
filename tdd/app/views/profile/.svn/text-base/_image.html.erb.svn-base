@@ -1,0 +1,165 @@
+ <div class="span-11 clear" style="margin-left:13px;;padding-top:15px; ">
+  	<h3  class="profile_heading">Profile Image:</h3>
+  	<hr class="blue_line" style="width:426px;" />	
+ </div>
+
+
+
+<%
+###BEGIN PASTE FROM PHOTO FROM
+
+	#SETTING FORM VALUES HERE SO THE SAME PAGE CAN BE USED FOR CREATE AND EDIT/UPDATE
+
+	if @photo.nil?
+		upload_label="Choose a file to upload."
+		is_editing="false"
+		disabled = true
+		form_method="post"
+	else
+		upload_label="Choose a file if you want to replace the current one."
+		is_editing="true"
+		disabled = false
+		form_method="put"
+	end
+
+%>
+
+
+<div class="span-11" style="margin-left:14px">
+  <table style="width:400px">
+    <tr>
+      <td>
+        <div>
+          <%=image_tag (@object.avatar_url || "sticky2_assets/signup/profilepic.png"),
+	    :id=>"profile_pic_image",
+	    :style=>'border: 0px;display:block;margin-left:auto;margin-right:auto;max-width:160px;max-height:160px;'%>
+	</div>
+	<div>
+	  <p style="text-align:center">
+	    <%= [current_user.first_name, current_user.last_name].compact.join(" ") %>
+	  </p>
+        </div>
+      </td>
+      <td>
+        <div style="margin-left:20px;">
+	  <%= form_tag('/photo/set_image', 
+			:method => :post, 
+			:multipart => true,
+			:id => "document_upload_form") %>
+	    <% if @object && @object.errors.any? %>
+	      <div id="error_explanation">
+	        <% if session[:omniauth].blank? %>
+                  <h2><%= pluralize(@object.errors.count, "error") %> prohibited this photo from being saved:</h2>
+                <% end %>
+                <ul>
+                  <% @object.errors.full_messages.each do |msg| %>
+                    <li><%= msg %></li>
+                  <% end %>
+                </ul>
+              </div>
+            <% end %>
+            <input type="hidden" id="object_id" name="object_id" value="<%=@this_object_id%>" />
+            <input type="hidden" id="mounted_as" name="mounted_as" value="<%= @mounted_as %>" />
+            <input type="hidden" id="model" name="model" value="<%= @this_model %>" />
+            <input type="hidden" id="came_from" name="came_from" value="<%= @came_from %>" />
+            <input type="hidden" id="redirect_path" name="redirect_path" value="<%= @redirect_path %>" />
+            <input type="hidden" id="preview" name="preview" value="1" />
+
+            <div id="upload_container">
+              <label id="upload_label">Choose  the file to upload:</label>
+              <br/>
+              <br/>
+              <input type="file" 
+	             name="file" 
+	             id="photo_uploaded_data" />
+            </div>
+            <br/>            
+
+        </form>
+                    <%= content_tag :button, "",
+                           :onClick => "do_upload();",
+                           :id=> "photo_submit_button",
+							:class=>"upload_button"
+                    %>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
+<script type="text/javascript">
+    function do_upload() {
+      jQuery("#document_upload_form").attr("action", "/profile/image_update");
+      jQuery("#document_upload_form").submit();
+    }
+
+	$j(document).ready(function() { 
+ 		$j('#document_upload_form input').change(function(){
+
+		    var options = { 
+		        //target:        '#output1',   // target element(s) to be updated with server response 
+		        //beforeSubmit:  showRequest,  // pre-submit callback 
+
+		        // other available options: 
+		        //url:       url         // override for form's 'action' attribute 
+		        //type:      type        // 'get' or 'post', override for form's 'method' attribute 
+		        //clearForm: true        // clear all form fields after successful submit 
+		        //resetForm: true        // reset the form after successful submit 
+
+		        // $.ajax options can be used here too, for example: 
+		        //timeout:   3000 
+
+		         complete:       showResponse,  // post-submit callback 
+		         dataType:  'json'       // 'xml', 'script', or 'json' (expected server response type) 
+		    }; 
+			 jQuery('#document_upload_form').ajaxSubmit(options);
+	    // bind form using 'ajaxForm' 
+	    //$j('#document_upload_form').ajaxForm(options); 
+		});
+
+	});
+
+	// pre-submit callback 
+	function showRequest(formData, jqForm, options) { 
+	    // formData is an array; here we use $.param to convert it to a string to display it 
+	    // but the form plugin does this for you automatically when it submits the data 
+	    var queryString = $j.param(formData); 
+
+		options.dataType = 'json';
+	    // jqForm is a jQuery object encapsulating the form element.  To access the 
+	    // DOM element for the form do this: 
+	    // var formElement = jqForm[0]; 
+
+	    // here we could return false to prevent the form from being submitted; 
+	    // returning anything other than false will allow the form submit to continue 
+	    return true; 
+	}
+
+	// post-submit callback 
+	function showResponse(XMLHttpRequest, textStatus)  { 
+	    // for normal html responses, the first argument to the success callback 
+	    // is the XMLHttpRequest object's responseText property 
+
+	    // if the ajaxForm method was passed an Options Object with the dataType 
+	    // property set to 'xml' then the first argument to the success callback 
+	    // is the XMLHttpRequest object's responseXML property 
+
+	    // if the ajaxForm method was passed an Options Object with the dataType 
+	    // property set to 'json' then the first argument to the success callback 
+	    // is the json data object returned by the server 
+
+	   // XMLHttpRequest.responseText will contain the URL of the uploaded image.
+	   // Put it in an image element you create, or do with it what you will.
+	   // For example, if you have an image elemtn with id "my_image", then
+	   //  $('#my_image').attr('src', XMLHttpRequest.responseText);
+	   // Will set that image tag to display the uploaded image.
+	   // alert("returned with: " + XMLHttpRequest.responseText);
+        if(XMLHttpRequest.responseText.indexOf("error_explanation") == -1) {
+          jQuery("#upload_label").text("Change profile photo?");
+          jQuery("#error_explanation").remove();
+          jQuery('#profile_pic_image').attr('src', XMLHttpRequest.responseText);
+        } else {
+          jQuery('#profile_form_container').html(XMLHttpRequest.responseText);
+        }
+	}	
+</script>
+

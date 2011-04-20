@@ -1,0 +1,60 @@
+<%
+current_page="basic_information" unless current_page
+
+%>
+<div id="profile_navigation_sidebar" class="span-3" style="height:440px">
+		<br/>
+
+		<%= link_to "Basic Information", "/profile/basic_information" %> &nbsp;&nbsp;&nbsp;
+		<% if(current_page=="basic_information") %>
+			<%= image_tag("sprint3/profiles/arrow.gif") %> 
+		<% end %> 
+
+		<hr class="space"/> 
+		<%= link_to "Relationships", profile_relationships_path %> &nbsp;&nbsp;&nbsp;
+		<% if(current_page=="relationships") %>
+			<%= image_tag("sprint3/profiles/arrow.gif") %> 
+		<% end %> 
+
+		<hr class="space"/>
+		<%= link_to "Profile Image", profile_image_path %>  &nbsp;&nbsp;&nbsp;
+		<% if(current_page=="image") %>
+			<%= image_tag("sprint3/profiles/arrow.gif") %> 
+		<% end %>
+		
+		<!--
+		<hr class="space"/>
+		<%= link_to "Work and Education",  "#"  %> 
+		<% if(current_page=="work_and_education") %>
+			<%= image_tag("sprint3/profiles/arrow.gif") %> 
+		<% end %>
+		-->
+		<hr class="space"/>
+		<%= link_to "Philosophy", profile_philosophy_path %> &nbsp;&nbsp;&nbsp;
+		<% if(current_page=="philosophy") %>
+			<%= image_tag("sprint3/profiles/arrow.gif") %> 
+		<% end %>
+
+		<hr class="space"/>
+		<%= link_to "Interests", profile_interests_path %>  &nbsp;&nbsp;&nbsp;
+		<% if(current_page=="interests") %>
+			<%= image_tag("sprint3/profiles/arrow.gif") %> 
+		<% end %>
+
+		<hr class="space"/>
+		<%= link_to "Sports and Activities", profile_activities_path %> 
+		<% if(current_page=="activities") %>
+			<%= image_tag("sprint3/profiles/arrow.gif") %> 
+		<% end %>
+
+		<hr class="space"/>
+		<%= link_to "Contact Information", profile_contact_information_path  %>
+		<% if(current_page=="contact_information") %>
+			<%= image_tag("sprint3/profiles/arrow.gif") %> 
+		<% end %>
+
+		<hr class="space"/>
+		<hr class="space"/>
+		<hr class="space"/>
+</div>
+		

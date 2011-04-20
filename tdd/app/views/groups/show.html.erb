@@ -1,0 +1,591 @@
+<% content_for :page_metadata do %>
+
+	<meta property="og:title" content="vChatter Group:<%=@group.name%>" />
+	<meta property="og:type" content="website"/>
+	<meta property="og:url" content="http://<%= WEBAPP_URL %><%= @group.get_group_profile_path %>"/>
+	<meta property="og:site_name" content="vChatter Group:<%=@group.name%>"/>
+	<meta property="og:image" content="http://<%= WEBAPP_URL %><%=Group.get_group_pic(@group)%>" />
+	<meta property="fb:admins" content="100001101766909, 100000358257903"/>
+	<meta property="og:description" content="vChatter Group : <%=@group.description%>"/>
+	<meta property="fb:app_id" content="<%= FACEBOOK_APP_ID %>"/>
+	
+	<meta name="keywords" content="vChatter Group : <%=@group.name%>, chat, video, flash, free, live, chatroom, chatline, service, software, voice, webcam, talk, friends, call, social, network, web 2.0, video chat, group video chat">
+	<meta name="description" content="vChatter Group : <%=@group.description%>, vChatter is a fun, fast, and safe group video chat service that is free for everyone. Chat with your current friends on social networks or meet new friends who share your interests. Use it for personal and business needs. No downloads or installations so getting started on vChatter is quick and easy.">
+
+<% end %>
+
+<% content_for :local_style_info do %>
+
+	<style type="text/css" media="screen"> 
+		html, body	{ 
+			height:100%; 
+		}
+		body { 
+			margin:0; 
+			padding:0; 
+			overflow:auto; 
+			text-align:center; 
+		    background-color: #ffffff; 
+		}   
+		object:focus { 
+			outline:none; 
+		}
+	
+		.top_bar {
+			float:left;
+			height:41px;
+			color: #ffffff;
+			font-size:12px;
+		}
+		.top_bar img {
+			border:none;
+			padding-top: 2px;
+		}
+	
+		.top_bar .data {
+			color:#48e71f;
+		}
+	
+		#top_bar_left {
+			background-image: url('/images/sticky2_assets/groups/hiddenbar_left.png');
+			width: 7px;
+		}
+		#top_bar_middle {
+			background-image: url('/images/sticky2_assets/groups/hiddenbar_mid.png');
+			width: 745px;
+		}
+		#following_message div {
+			background-image: url('/images/sticky2_assets/groups/hiddenbar_mid.png');
+		}
+		#top_bar_right {
+			background-image: url('/images/sticky2_assets/groups/hiddenbar_right.png');
+			width: 8px;
+		}
+		
+		#share_to_facebook_button {
+			width: 55px;
+			height: 19px;
+			border-style: none;
+			background-repeat: no-repeat;
+			background-color: transparent;
+			cursor: hand;
+			cursor: pointer;
+			background-image: url('/images/sticky2_assets/groups/fshare_btn.png');
+		}
+	
+		#share_to_facebook_button:hover {
+			width: 55px;
+			height: 19px;
+			cursor: hand;
+			cursor: pointer;
+			background-image: url('/images/sticky2_assets/groups/fsharehover_btn.png');
+		}
+		
+		#link_button {
+			width: 44px;
+			height: 19px;
+			border-style: none;
+			cursor: hand;
+			cursor: pointer;
+			background-repeat: no-repeat;
+			background-color: transparent;
+			background-image: url('/images/sticky2_assets/groups/link_btn.png');
+		}
+	
+		#link_button:hover {
+			width: 44px;
+			height: 19px;
+			cursor: hand;
+			cursor: pointer;
+			background-image: url('/images/sticky2_assets/groups/linkhover_btn.png');
+		}
+		
+		#email_button {
+			width: 50px;
+			height: 19px;
+			border-style: none;
+			background-repeat: no-repeat;
+			background-color: transparent;
+			background-image: url('/images/sticky2_assets/groups/email_btn.png');
+		}
+	
+		#email_button:hover {
+			width: 50px;
+			height: 19px;
+			background-image: url('/images/sticky2_assets/groups/emailhover_btn.png');
+		}
+		
+		.not_following_button {
+			padding:0px;
+			margin-left: -1px;
+			border: 0px;
+			width:85px;
+			cursor: hand;
+			cursor: pointer;
+			background-color: transparent;
+			height:23px;
+			background-image: url('/images/sticky2_assets/groups/follow_btn.png');
+		}
+	
+		.not_following_button:hover {
+			cursor: hand;
+			cursor: pointer;
+			background-image: url('/images/sticky2_assets/groups/followhover_btn.png');
+		}
+	
+		.follow_btn {
+			cursor: hand;
+			cursor: pointer;
+			height: 30px;
+			width: 30px;
+		}
+		
+		.following_button {
+			cursor: hand;
+			cursor: pointer;
+			padding:0px;
+			margin-left:-1px;
+			border: 0px;
+			width:85px;
+			height:23px;
+			background-color: transparent;
+			background-image: url('/images/sticky2_assets/groups/following_btn.png');
+		}
+	
+		.following_button:hover {
+			cursor: hand;
+			cursor: pointer;
+			background-image: url('/images/sticky2_assets/groups/unfollow_btn.png');
+		}
+	
+		#following_message {
+			padding-left:20px;
+			padding-top:3px;
+		}
+	
+		#group_detail_block {
+			visibility: visible;
+			display:inline;
+		}
+	
+		#group_detail_block, #group_detail_block a, #group_detail_block a:visited {
+			margin-top:-2px;
+			margin-left: 0px;
+			position: relative;
+			left: 2px;
+			background-repeat: repeat;
+			height:183px;
+			width: 757px;
+			background-color: transparent;
+			background-image: url('/images/sticky2_assets/groups/revealbk_mid.png');
+			color: white;
+			font-size: 12px;
+		}
+	
+		.large_group_photo {
+			padding-left:10px;
+			padding-top:0px;
+			padding-bottom:15px;
+		}
+		.group_description_titles, .group_description_titles_right {
+			font-size: 10px;
+			color: #d8d8d8;
+		}
+	
+		#group_details_horizontal_line {
+			width:1px;
+			background-color:#3d5b9a;
+			height:120px;
+			padding-bottom:20px;
+			margin-bottom: 22px;
+			padding-top:20px;
+		}
+		.group_description_titles_right {
+			float: right;
+			margin-right: 5px;
+		}
+	
+		#reveal_button {
+			cursor: hand;
+			cursor: pointer;
+			background-color: transparent;
+			height:21px;
+			width:21px;
+			background-color: transparent;
+		}
+		#reveal_button.revealed {
+			cursor: hand;
+			cursor: pointer;
+			margin-left: -1px;
+			margin-top: -1px;
+			background-image: url('/images/sticky2_assets/groups/show_btn.png');
+		}
+		#reveal_button.unrevealed {
+			cursor: hand;
+			cursor: pointer;
+			height:21px;
+			width:21px;
+			background-image: url('/images/sticky2_assets/groups/hidden_btn.png');
+		}
+		
+		.follow_thumb, .follow_thumb img{
+			height: 30px;
+			width: 30px;
+		}
+		.follow_thumb {
+			float: left;
+			padding-left: 2px;
+		}
+		
+		<% unless @group.background_image.nil? %>
+			body {
+				background-image: url(<%=@group.background_image_url %>);
+			}
+		<% end %>
+		
+	</style>
+<% end %>
+
+<div id="linkDialog">
+	<table>
+		<tr>
+			<td>
+				<div id="linkDialogLeft">
+			
+				</div>
+			</td>
+			<td>
+				<div id="linkDialogMid">
+						<div style="padding-top=10px">
+							<input type="text" 
+									style="width:250px;height:20px" 
+									value="http://<%= WEBAPP_URL %><%= @group.get_group_profile_path %>">
+						</div>
+				</div>
+			</td>
+			<td>
+				<div id="linkDialogRight">
+
+				</div>
+			</td>
+		</tr>
+	</table>
+</div>
+
+<div class="span-20 clearfix" >
+		<div class="span-20" style="width:760px;">
+			<div class="top_bar" id="top_bar_left"></div>
+			<div class="top_bar" id="top_bar_middle">
+				<table>
+					<tr>
+						<td style="width:200px;">
+							<div style="padding-top:5px;padding-left:10px;font-size:12px;font-weight:bold;">
+								<%=@group.name%>
+							</div>
+						</td>
+						
+
+						<td style="width:60px;height:20px;">
+							<div style="padding-left:5px;">
+										Live <br/>
+										<span class="data"><%=@group.current_user_count%></span> 
+							</div>
+						</td>
+								
+						<td style="width:73px;height:20px">
+							<div style="padding-left:5px;">
+										Followers <br/>
+										<span class="data">
+											<%=@group.follower_relationships.count%>
+										</span>
+							</div>
+						</td>
+						
+						<td>
+							<div style="margin-top: 2px;margin-left:10px;">
+										<%= button_to_function( 
+											" ", 
+											"shareOnFacebook();",
+											:id => :share_to_facebook_button
+										)%>
+							</div>
+						</td>
+						
+						<td>
+							<div style="margin-top: 2px;margin-left:10px;">
+										<%= button_to_function( 
+											" ", 
+											"linkDialogOpen();",
+											:id => :link_button
+										)%>
+							</div>
+						</td>
+						
+						<td style="width:100px;height:21px;">
+							<div style="padding-left:10px;padding-top:10px">
+								<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2F<%= WEBAPP_URL %><%=@group.get_group_profile_path%>&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;font&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:25px;" allowTransparency="true"></iframe>
+							</div>
+						</td>
+						
+						<td>
+									<div style="padding-left:10px;padding-top:10px">
+										<iframe id="tweetFrame"  allowtransparency="true" frameborder="0" scrolling="no" src="http://platform.twitter.com/widgets/tweet_button.html?url=http%3A%2F%2F<%= WEBAPP_URL %><%= @group.get_group_profile_path %>%2F&amp;text=I%20am%20video%20chatting%20on%20vChatter%20Video%20Chat%20Groups!%20Come%20join%20us.&amp;via=vChatter" style="width:100px; height:21px;"></iframe>
+									</div>
+						</td>
+
+						
+						<td>
+							<%= render :partial=> 'follows/group_button'%>
+						</td>
+						
+						
+						<td>
+							<div id="reveal_button" class="revealed">
+							</div>
+						</td>
+						
+						
+					</tr>
+				</table>
+				
+			</div>
+			<div class="top_bar" id="top_bar_right"></div>
+			
+		</div>
+
+		<div class="span-20 clearfix" id="group_detail_block">
+			<div class="span-19" 
+				style="width:732px;margin-left:13px;position:relative;top:5px;height:2px;background-color:#759ae6;">
+			</div>
+			<table>
+				<tr>
+					<td style="width:125px;">
+						<div class="large_group_photo" >
+							<%= image_tag Group.get_group_pic(@group), :style=>"height:150px;width:150px;"%>
+						</div>
+					</td>
+					<td style="width:220px;">
+						<div style="padding-left:16px;">
+							<table style="height:168px;">
+								<tr style="height:15px;">
+									<td>
+										<div class="group_description_titles" style="padding-top:20px;word-wrap:break-word;">
+											Description
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td >
+										<div style="height:80px;padding-top:5px;" >
+											<%=@group.description%>
+										</div>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</td>
+					<td style="width:1px;">
+						<div id="group_details_horizontal_line">
+						</div>
+					</td>
+					<td>
+						<div style="padding-left:16px;">
+							<table style="height:168px;">
+								<tr style="height:45px;">
+									<td style="width:117px;">
+										<div class="group_description_titles_right">
+											Administrator:
+										</div>
+									</td>
+									<td>
+										<div style="float: left;">
+											<%= render :partial => 'follows/follow_small_pic',
+														:object=> @group.user,
+														:as => :user
+											%>
+										</div>
+										<div style="float: left;margin-left:7px;margin-top:8px;">
+											<a href="<%=@group.user.get_user_profile_path%>">
+												<%= @group.user.full_name%>
+											</a>
+										</div>
+									</td>
+								</tr>
+								<tr style="height:45px;">
+									<td style="width:117px;">
+										<div class="group_description_titles_right">
+											Followers:
+										</div>
+									</td>
+									<td>
+										<%= render :partial => 'follows/follow_small_pic',
+													:collection=> @group.recent_followers,
+													:as => :user
+										%>
+										
+									</td>
+								</tr>
+								<tr style="height:15px;">
+									<td style="width:117px;">
+										<div class="group_description_titles_right">
+											Group formed:
+										</div>
+									</td>
+									<td>
+										<div style="margin-left:7px;">
+											<%= @group.created_at.strftime("%B %d, %Y")
+											%>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+							</table>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		
+		<!--  this for firefox resizing so camera will work -->
+		<div class="span-20" id="mainContainer">
+			<!--  this is where your flash content will be placed when created -->
+			<div id="flashContent">
+				<p>Loading flash ... This site requires 
+					<a href="http://www.adobe.com/products/flashplayer/">Flash to be installed</a> 
+					for video.
+				</p>
+			</div>
+		</div>
+		
+		<div id="fb-root"></div>
+
+
+		<!-- Enable Browser History by replacing useBrowserHistory tokens with two hyphens -->
+        <!-- BEGIN Browser History required section 
+        <link rel="stylesheet" type="text/css" href="/swf/history/history.css" />
+        <script type="text/javascript" src="/swf/history/history.js"></script>
+       END Browser History required section -->  
+
+        <script type="text/javascript" src="/swf/swfobject.js"></script>
+        <script type="text/javascript">
+            <!-- For version detection, set to min. required Flash Player version, or 0 (or 0.0.0), for no version detection. --> 
+
+			var flashContent =  document.getElementById('flashContent');
+
+			if (flashContent && swfobject) {
+
+	           	var swfVersionStr = "10.0.0";
+	           	<!-- To use express install, set to playerProductInstall.swf, otherwise the empty string. -->
+	           	var xiSwfUrlStr = "/swf/playerProductInstall.swf";
+	           	var flashvars = {};
+				
+				flashvars.groupName ="<%=@group.name%>";
+				flashvars.groupID ="<%=@group.id%>";
+				flashvars.groupPhotoURL = "<%= Group.get_group_pic(@group,'60_60') %>";
+				flashvars.userName = "<%= @user_name %>"; 
+				flashvars.userID = "<%= @user_id%>";
+				flashvars.photoURL = "<%= @user_pic_url%>";
+				flashvars.userIsAdmin = "<%= @is_admin %>";
+				flashvars.loggedIn = <%= @is_super_admin %>;
+				flashvars.superAdmin = <%= @is_logged_in %>;
+
+	           var params = {};
+	           params.quality = "high";
+	           params.bgcolor = "#ffffff";
+	           params.allowscriptaccess = "sameDomain";
+	           params.allowfullscreen = "true";
+			   params.wmode = "transparent";
+	           var attributes = {};
+	           attributes.id = "GroupChat";
+	           attributes.name = "GroupChat";
+	           attributes.align = "middle";
+	           swfobject.embedSWF(
+	               "/swf/GroupChat.swf?version=6", "flashContent", 
+	               "760", "650", 
+	               swfVersionStr, xiSwfUrlStr, 
+	               flashvars, params, attributes);
+
+				<!-- JavaScript enabled so display the flashContent div in case it is not replaced with a swf object. -->
+				swfobject.createCSS("#GroupChat", "display:block;text-align:left;visibility: visible;");
+			}
+			
+			window.onbeforeunload = function () {
+				flashContent = document.getElementById("GroupChat")
+				if (flashContent) {
+					flashContent.windowClosing();
+				}
+			}			
+			
+			window.fbAsyncInit = function() {
+    				FB.init({appId: '<%= FACEBOOK_APP_ID %>', status: true, cookie: true, xfbml: true});
+
+  			};
+
+			function shareOnFacebook() {
+					FB.ui
+					({
+						method: "feed", 
+				 		message: "I\'m video chatting on vChatter. Join me now!",
+						name: "<%= @group.name %>",
+						link: "http://<%= WEBAPP_URL %><%= @group.get_group_profile_path %>",
+						picture: "http://<%= WEBAPP_URL %><%=Group.get_group_pic(@group)%>",
+				 		caption: "vChatter: Fun & Free Video Chat Groups"
+					});
+			}
+			
+			$j(document).ready(function() {
+				
+				$j('#reveal_button').click(function() {
+					if ($j('#reveal_button.unrevealed').length>0) {
+						reveal_div();
+					} else {
+						hide_div();
+					}
+			    	return false;
+			  	});
+			
+				var signinLink = $j('#link_button')
+				var linkPos = signinLink.offset();
+				var linkMid = linkPos.left + (signinLink.width() / 2)
+				var dialogWidth = 260;
+		
+				$j('#linkDialog').dialog({ 
+					autoOpen: false,
+					width: dialogWidth + 'px',
+					show: 'fade',
+					hide: 'puff',
+					position: [linkMid - (dialogWidth / 2 ), (linkPos.top + signinLink.height() + 2)],
+					dialogClass: "linkDialog",
+					resizable: false
+				});
+				
+			})
+			
+			function reveal_div() {
+		    	$j('#group_detail_block').show('blind','slow');
+				$j('#reveal_button').removeClass("unrevealed");
+				$j('#reveal_button').addClass("revealed");
+			}
+			
+			function hide_div() {
+		    	$j('#group_detail_block').hide('blind','slow');
+				$j('#reveal_button').removeClass("revealed");
+				$j('#reveal_button').addClass("unrevealed");
+			}
+			
+			function linkDialogOpen() {
+				$j('#linkDialog').dialog('open');
+			}
+			
+        </script>
+		
+		
+		
+</div>

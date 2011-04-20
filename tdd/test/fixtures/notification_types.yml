@@ -1,0 +1,15 @@
+one:
+  id: 1
+  name: New follower joins group
+
+two:
+  id: 2
+  name: Follower sends message to a group
+
+three:
+  id: 3
+  name: Follower is flagged
+
+four:
+  id: 4
+  name: Received private message

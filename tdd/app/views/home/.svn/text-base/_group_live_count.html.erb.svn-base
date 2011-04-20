@@ -1,0 +1,25 @@
+<div class="group_live_count">
+	<div class="group_live_info">
+		<table>
+			<tr>
+				<td style="width:45px;">
+					<div style="margin-left: -2px;float:right">
+						<span class="group_live_number">
+							<%=group.current_user_count %>
+						</span>
+						Live
+					</div>
+				</td>
+				<td>
+					<div>
+						<% if group.current_user_count > 0 %>
+						 <%= image_tag( 
+							'/images/sticky2_assets/home/onlinelight.png') %>
+						<% end %>
+					
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>

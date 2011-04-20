@@ -1,0 +1,105 @@
+<tr class="<%= cycle("even", "odd") %>" >
+	<% tag_type =  feed_item["tags"] 
+	
+		#look up information
+		begin
+			case tag_type
+			when "GROUP_CREATE","GROUP_EDIT","GROUP_VISIT",GROUP_FOLLOW
+				group = Group.find(feed_item["value"])
+			when "USER_FOLLOW"
+				user = User.find(feed_item["value"])
+			end
+		rescue %>
+			<td></td></tr>
+		<%
+			return
+		end
+	
+	   case  tag_type
+	   when "GROUP_CREATE" %>
+		<td>
+			<a href="<%=group.get_group_profile_path%>">
+				<%= image_tag Group.get_group_pic(group,"30_30")%>
+			</a>
+		</td>
+		<td>
+			<div class="feed_description">
+				Created a new group called 
+				<a href="<%=group.get_group_profile_path%>"><%=group.name%></a>
+				<%if group.description.nil?%>.<%else%> that is described as "<%=group.description%>".<%end%>
+			</div>
+			<%= render :partial => 'shared/bunchball_feed_time', 
+						:object=>Time.at(feed_item["ts"].to_i),
+						:as=> :feed_time %>
+		</td>
+		
+	   <% when "GROUP_EDIT" %>
+			<td>
+				<a href="<%=group.get_group_profile_path%>">
+					<%= image_tag Group.get_group_pic(group,"30_30")%>
+				</a>
+			</td>
+			<td>
+				<div class="feed_description">
+					Edited the group called 
+					<a href="<%=group.get_group_profile_path%>"><%=group.name%></a>
+					<%if group.description.nil?%>.<%else%> that is described as "<%=group.description%>".<%end%>
+				
+				</div>
+				<%= render :partial => 'shared/bunchball_feed_time', 
+							:object=>Time.at(feed_item["ts"].to_i),
+							:as=> :feed_time %>
+			</td>
+		
+	   <% when "GROUP_VISIT" %>
+			<td>
+				<a href="<%=group.get_group_profile_path%>">
+					<%= image_tag Group.get_group_pic(group,"30_30")%>
+				</a>
+			</td>
+			<td>
+				<div class="feed_description">
+					Entered the group <a href="<%=group.get_group_profile_path%>"><%=group.name%></a>.
+				</div>
+				<%= render :partial => 'shared/bunchball_feed_time', 
+							:object=>Time.at(feed_item["ts"].to_i),
+							:as=> :feed_time %>
+			</td>
+		
+	   <% when "USER_FOLLOW" %>
+			<td>
+				<a href="<%=user.get_user_profile_path%>">
+					<%= image_tag User.get_user_pic(user,"30_30")%>
+				</a>
+			</td>
+			<td>
+				<div class="feed_description">
+					Started following <a href="<%=user.get_user_profile_path%>"><%=user.full_name%></a>.
+				</div>
+				<%= render :partial => 'shared/bunchball_feed_time', 
+							:object=>Time.at(feed_item["ts"].to_i),
+							:as=> :feed_time %>
+			</td>
+		
+	   <% when "GROUP_FOLLOW" %>
+			<td>
+				<a href="<%=group.get_group_profile_path%>">
+					<%= image_tag Group.get_group_pic(group,"30_30")%>
+				</a>
+			</td>
+			<td>
+				<div class="feed_description">
+					Started following <a href="<%=group.get_group_profile_path%>"><%=group.name%></a>.
+				</div>
+				<%= render :partial => 'shared/bunchball_feed_time', 
+							:object=>Time.at(feed_item["ts"].to_i),
+							:as=> :feed_time %>
+			</td>
+		
+	<% else %>
+		<%#= feed_item.inspect %>
+	<% end %>
+	
+</tr>
+
+	

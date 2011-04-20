@@ -1,0 +1,9 @@
+K 10
+svn:ignore
+V 31
+.gitignore
+tmp
+log
+myports.txt
+
+END

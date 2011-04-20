@@ -1,0 +1,8 @@
+connectBtn=Connect
+disconnectBtn=Disconnect
+connectedStatusMsg=Connected
+joinStatusMsg=Join
+disconnectedStatusMsg=Disconnected
+connectingStatusMsg=Connecting to server...
+gotMicrophoneStatusMsg=got microphone
+gotCameraStatusMsg=got camera

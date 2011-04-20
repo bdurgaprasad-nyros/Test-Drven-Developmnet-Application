@@ -1,0 +1,10 @@
+<VirtualHost *:80>
+
+        ServerName vchatter.com
+        ServerAlias beta.vchatter.com
+	ServerAlias vchatter_groups.w3mg.net
+    	DocumentRoot /home/rails/vchatter_rails/current/public
+
+
+</VirtualHost>
+

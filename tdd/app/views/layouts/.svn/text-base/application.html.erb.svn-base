@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<%=render(:partial=>"shared/header")%>	
+  </head>
+  <body class="signed_in">    
+	
+	<div id="top_navigation_header">
+		<div id="container1" class="container">
+	
+			  <!-- begin navigation-->
+		        <div class="span-20 clear">
+					<div class="span-4" style="margin-top:10px">
+							<%= link_to image_tag("#{current_asset_folder}/shared/group_video_chat_logo.png"), 
+													((current_user) ? (home_index_path) : (root_path)) %>
+			
+					</div>
+			        <div class="span-13 last align_right" style="margin-top:-5px;width:518px;">
+						<div class="span-6 float_right">
+				          <% if current_user %>
+						  	<%=render(:partial=>"shared/signed_in_navigation")%>
+						 <% else %>
+						  	<%=render(:partial=>"shared/signed_out_navigation")%>
+						 <% end %>
+		       			</div>
+		    		</div>
+		  		</div>
+			<!--end navigation-->
+	   </div>
+	</div>		
+	<hr class="space" />
+  
+<div id="content_container" class="container">
+	<div class="span-20">
+
+		        <%= yield %>
+	</div>
+
+
+</div>
+
+
+<%=render(:partial=>"shared/footer")%>	
+
+
+
+  </body>
+</html>

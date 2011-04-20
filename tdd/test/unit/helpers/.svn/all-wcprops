@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/w3mg_vcgroupsw3mg/!svn/ver/322/test/unit/helpers
+END
+following_helper_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/w3mg_vcgroupsw3mg/!svn/ver/216/test/unit/helpers/following_helper_test.rb
+END
+profile_helper_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/w3mg_vcgroupsw3mg/!svn/ver/214/test/unit/helpers/profile_helper_test.rb
+END
+mockups_helper_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/w3mg_vcgroupsw3mg/!svn/ver/169/test/unit/helpers/mockups_helper_test.rb
+END
+users_helper_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/w3mg_vcgroupsw3mg/!svn/ver/196/test/unit/helpers/users_helper_test.rb
+END
+vanities_helper_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/w3mg_vcgroupsw3mg/!svn/ver/173/test/unit/helpers/vanities_helper_test.rb
+END
+application_helper_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/w3mg_vcgroupsw3mg/!svn/ver/169/test/unit/helpers/application_helper_test.rb
+END
+follows_helper_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/w3mg_vcgroupsw3mg/!svn/ver/216/test/unit/helpers/follows_helper_test.rb
+END
+sessions_helper_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/w3mg_vcgroupsw3mg/!svn/ver/102/test/unit/helpers/sessions_helper_test.rb
+END
+notification_preferences_helper_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/w3mg_vcgroupsw3mg/!svn/ver/195/test/unit/helpers/notification_preferences_helper_test.rb
+END
+home_helper_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/w3mg_vcgroupsw3mg/!svn/ver/291/test/unit/helpers/home_helper_test.rb
+END
+photo_helper_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/w3mg_vcgroupsw3mg/!svn/ver/185/test/unit/helpers/photo_helper_test.rb
+END
+deletion_feedbacks_helper_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/w3mg_vcgroupsw3mg/!svn/ver/322/test/unit/helpers/deletion_feedbacks_helper_test.rb
+END
+welcome_helper_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/w3mg_vcgroupsw3mg/!svn/ver/6/test/unit/helpers/welcome_helper_test.rb
+END
+registrations_helper_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/w3mg_vcgroupsw3mg/!svn/ver/1/test/unit/helpers/registrations_helper_test.rb
+END

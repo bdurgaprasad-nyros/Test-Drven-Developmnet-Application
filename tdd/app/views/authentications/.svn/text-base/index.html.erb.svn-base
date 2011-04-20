@@ -1,0 +1,28 @@
+
+
+
+<% flash[:notice] %>
+
+<h3><%#= link_to "Create Groups", groups_path %></h3><br/>
+
+<% if @authentications %>
+  <% unless @authentications.empty? %>
+    <p><strong>You have signed in with these services:</strong></p>
+    <div class="authentications">
+      <% for authentication in @authentications %>
+        <div class="authentication">
+          <%= image_tag "#{authentication.provider}_32.png", :size => "32x32" %>
+          <div class="provider"><%= authentication.provider_name %></div>
+          <div class="uid"><%= authentication.uid %></div>
+          <%= link_to "X", authentication, :confirm => 'Are you sure you want to remove this authentication option?', :method => :delete, :class => "remove" %>
+        </div>
+      <% end %>
+      <div class="clear"></div>
+    </div>
+  <% end %>
+  <p><strong>Add another service to sign in with:</strong></p>
+<% else %>
+  <p><strong>Sign in through one of these services:</strong></p>
+<% end %>
+  
+<%= render :partial => "all_signin_options" %>

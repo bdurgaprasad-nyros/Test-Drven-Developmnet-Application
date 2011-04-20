@@ -1,0 +1,19 @@
+<%
+	styleBoth = "height:26px;float:left;background-color:transparent;"
+	styleLeft = styleBoth + "width:5px;background-image: url( '/images/sticky2_assets/profile/headerbk_left.png');"
+	styleRight = styleBoth + "width:6px;background-image: url( '/images/sticky2_assets/profile/headerbk_right.png');"
+	styleMiddle = "width:" + (width - 10).to_s + "px;" +
+			"height:26px;float: left;" + 
+			"background-image: url( '/images/sticky2_assets/profile/headerbk_mid.png');"
+%>
+
+<div class="span-<%= span %>" 
+	style="width: <%= width %>px;<%= "margin-top:" + margin_top + ";" if local_assigns.has_key?(:margin_top) %>" >
+	<div style="<%= styleLeft %>"></div>
+	<div style="<%= styleMiddle %>">
+		<div style="padding: 5px;font-size:13px;color:white;">
+			<%= @user.first_name%>'s groups: (<%=@user.groups_followed.count%>)
+		</div>
+	</div>
+	<div style="<%= styleRight %>"></div>
+</div>

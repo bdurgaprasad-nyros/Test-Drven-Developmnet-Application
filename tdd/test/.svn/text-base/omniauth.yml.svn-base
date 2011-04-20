@@ -1,0 +1,174 @@
+user_info: 
+  name: vchatter groups
+  location: ""
+  urls: 
+    Website: 
+    Twitter: http://twitter.com/vchattergroups
+  nickname: vchattergroups
+  description: ""
+  image: http://a1.twimg.com/sticky/default_profile_images/default_profile_0_normal.png
+uid: "265602260"
+credentials: 
+  token: 265602260-0vmZWJjeXYNojvYIHdvk3rNxHxPd5fJIXeC8XWUg
+  secret: bo3DJ41vChZT87nUMBmYvjjQbhQ7Toj32cygtIitu2I
+extra: 
+  user_hash: 
+    profile_background_tile: false
+    profile_sidebar_fill_color: DDEEF6
+    name: vchatter groups
+    profile_sidebar_border_color: C0DEED
+    created_at: Sun Mar 13 21:08:23 +0000 2011
+    location: ""
+    profile_image_url: http://a1.twimg.com/sticky/default_profile_images/default_profile_0_normal.png
+    id_str: "265602260"
+    profile_link_color: 0084B4
+    follow_request_sent: false
+    is_translator: false
+    favourites_count: 0
+    url: 
+    contributors_enabled: false
+    utc_offset: -21600
+    id: 265602260
+    listed_count: 0
+    profile_use_background_image: true
+    profile_text_color: "333333"
+    protected: false
+    lang: en
+    followers_count: 0
+    time_zone: Central Time (US & Canada)
+    notifications: false
+    verified: false
+    profile_background_color: C0DEED
+    description: ""
+    geo_enabled: false
+    profile_background_image_url: http://a3.twimg.com/a/1299876209/images/themes/theme1/bg.png
+    statuses_count: 0
+    friends_count: 0
+    screen_name: vchattergroups
+    show_all_inline_media: false
+    following: false
+  access_token: !ruby/object:OAuth::AccessToken 
+    consumer: !ruby/object:OAuth::Consumer 
+      http: !ruby/object:Net::HTTP 
+        address: api.twitter.com
+        close_on_empty_response: false
+        curr_http_version: "1.1"
+        debug_output: 
+        newimpl: true
+        open_timeout: 30
+        port: 443
+        read_timeout: 30
+        seems_1_0_server: false
+        socket: 
+        ssl_context: !ruby/object:OpenSSL::SSL::SSLContext 
+          ca_file: /etc/ssl/certs/ca-certificates.crt
+          ca_path: 
+          cert: 
+          cert_store: 
+          client_ca: 
+          client_cert_cb: 
+          extra_chain_cert: 
+          key: 
+          options: 
+          session_get_cb: 
+          session_id_context: 
+          session_new_cb: 
+          session_remove_cb: 
+          timeout: 
+          tmp_dh_callback: 
+          verify_callback: 
+          verify_depth: 5
+          verify_mode: 1
+        started: false
+        use_ssl: true
+      http_method: :post
+      key: zIPHDdrJSEiArefidpTQ
+      options: 
+        :site: https://api.twitter.com
+        :authorize_path: /oauth/authenticate
+        :request_token_path: /oauth/request_token
+        :proxy: 
+        :oauth_version: "1.0"
+        :access_token_path: /oauth/access_token
+        :signature_method: HMAC-SHA1
+        :http_method: :post
+        :scheme: :header
+      secret: rVnyJaz5uoNo1nt9ToIKIF9mOsdIbBqfyAirBclUJuI
+      uri: !ruby/object:URI::HTTPS 
+        fragment: 
+        host: api.twitter.com
+        opaque: 
+        password: 
+        path: ""
+        port: 443
+        query: 
+        registry: 
+        scheme: https
+        user: 
+    params: 
+      :oauth_token_secret: bo3DJ41vChZT87nUMBmYvjjQbhQ7Toj32cygtIitu2I
+      oauth_token_secret: bo3DJ41vChZT87nUMBmYvjjQbhQ7Toj32cygtIitu2I
+      user_id: "265602260"
+      :screen_name: vchattergroups
+      oauth_token: 265602260-0vmZWJjeXYNojvYIHdvk3rNxHxPd5fJIXeC8XWUg
+      :user_id: "265602260"
+      :oauth_token: 265602260-0vmZWJjeXYNojvYIHdvk3rNxHxPd5fJIXeC8XWUg
+      screen_name: vchattergroups
+    response: !ruby/object:Net::HTTPOK 
+      body: "{\"is_translator\":false,\"contributors_enabled\":false,\"following\":false,\"show_all_inline_media\":false,\"follow_request_sent\":false,\"geo_enabled\":false,\"profile_link_color\":\"0084B4\",\"profile_image_url\":\"http:\\/\\/a1.twimg.com\\/sticky\\/default_profile_images\\/default_profile_0_normal.png\",\"description\":\"\",\"friends_count\":0,\"profile_sidebar_border_color\":\"C0DEED\",\"url\":null,\"followers_count\":0,\"screen_name\":\"vchattergroups\",\"statuses_count\":0,\"profile_use_background_image\":true,\"location\":\"\",\"listed_count\":0,\"profile_background_color\":\"C0DEED\",\"lang\":\"en\",\"verified\":false,\"notifications\":false,\"profile_background_image_url\":\"http:\\/\\/a3.twimg.com\\/a\\/1299876209\\/images\\/themes\\/theme1\\/bg.png\",\"favourites_count\":0,\"created_at\":\"Sun Mar 13 21:08:23 +0000 2011\",\"protected\":false,\"time_zone\":\"Central Time (US & Canada)\",\"profile_text_color\":\"333333\",\"name\":\"vchatter groups\",\"profile_sidebar_fill_color\":\"DDEEF6\",\"id\":265602260,\"id_str\":\"265602260\",\"profile_background_tile\":false,\"utc_offset\":-21600}"
+      body_exist: true
+      code: "200"
+      header: 
+        x-ratelimit-reset: 
+        - "1300189059"
+        etag: 
+        - "\"c87d26d3dc757ba910e62cb51e93cad3\""
+        expires: 
+        - Tue, 31 Mar 1981 05:00:00 GMT
+        last-modified: 
+        - Tue, 15 Mar 2011 10:37:39 GMT
+        x-ratelimit-limit: 
+        - "350"
+        x-transaction: 
+        - 1300185459-97848-48287
+        connection: 
+        - close
+        content-type: 
+        - application/json; charset=utf-8
+        x-transaction-mask: 
+        - a6183ffa5f8ca943ff1b53b5644ef114
+        x-runtime: 
+        - "0.04048"
+        server: 
+        - hi
+        date: 
+        - Tue, 15 Mar 2011 10:37:39 GMT
+        x-ratelimit-class: 
+        - api_identified
+        content-length: 
+        - "1003"
+        x-ratelimit-remaining: 
+        - "349"
+        x-revision: 
+        - DEV
+        set-cookie: 
+        - k=119.152.57.79.1300185459710883; path=/; expires=Tue, 22-Mar-11 10:37:39 GMT; domain=.twitter.com
+        - guest_id=13001854597147248; path=/; expires=Thu, 14 Apr 2011 10:37:39 GMT
+        - lang=en; path=/
+        - _twitter_sess=BAh7CToMY3NyZl9pZCIlODQ5NGE3Mjk3OGU4ZmRiZTMxN2U4OTdlZDdkYzMy%250ANGI6D2NyZWF0ZWRfYXRsKwgLrBe5LgE6B2lkIiVlY2EzNWQxOTQwMjExNzRi%250AOWQ2MDM0ZjNlMTZkNTViNiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6%250ARmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%253D%253D--d809583ce8a076ec51ea3e20c525d2d8f3d35161; domain=.twitter.com; path=/; HttpOnly
+        vary: 
+        - Accept-Encoding
+        cache-control: 
+        - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+        status: 
+        - 200 OK
+        pragma: 
+        - no-cache
+      http_version: "1.1"
+      message: OK
+      read: true
+      socket: 
+    secret: bo3DJ41vChZT87nUMBmYvjjQbhQ7Toj32cygtIitu2I
+    token: 265602260-0vmZWJjeXYNojvYIHdvk3rNxHxPd5fJIXeC8XWUg
+provider: twitter
+

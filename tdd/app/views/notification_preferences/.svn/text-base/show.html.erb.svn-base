@@ -1,0 +1,5 @@
+<p id="notice"><%= notice %></p>
+
+
+<%= link_to 'Edit', edit_notification_preference_path(@notification_preference) %> |
+<%= link_to 'Back', notification_preferences_path %>

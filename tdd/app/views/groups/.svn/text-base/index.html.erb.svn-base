@@ -1,0 +1,31 @@
+<%=render :partial=>"shared/popup_closer_script"%>
+
+<div class="clear">
+	<div style="float:left;width:8px;height:41px;background-image:url(/images/level3_assets/hiddenbar_left.png)">&nbsp;
+	</div>	
+	<div id="group_browse_bar" class="span-18"  style="width:660px;background-image:url(/images/level3_assets/hiddenbar_mid.png);background-repeat:repeat-x">
+		<div class="span-10 clear" style="margin-top:3px">
+		      <%=link_to "Most Popular", "javascript:getMostPopularGroups();", :id => "popular_groups" %> 
+		      <%=link_to "Most Recent", "javascript:getMostRecentGroups();", :id => "recent_groups"%> 
+		      <%=link_to "Recommended", "javascript:getRecommendedGroups();", :id => "recommended_groups"%>
+		</div>
+	</div>
+	<div style="float:left;width:8px;height:41px;background-image:url(/images/level3_assets/hiddenbar_right.png)">&nbsp;</div>	
+	
+</div>
+<div id="groups_container">
+	<%=render(:partial=>"groups/thumbnail_displayer")%>
+</div>
+<%=render_javascript_block do %>
+
+	function getMostPopularGroups(){
+    	$j.get('/groups/most_popular.js');		
+	}
+
+	function getMostRecentGroups(){
+    	$j.get('/groups/most_recent.js');
+  	}
+	function getRecommendedGroups(){
+    	$j.get('/groups/recommended.js');
+  	}
+<%end%>

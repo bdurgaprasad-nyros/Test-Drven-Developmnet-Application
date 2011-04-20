@@ -1,0 +1,102 @@
+
+ <div class="span-11 clear" style="margin-left:13px;;padding-top:15px; ">
+  	<h3  class="profile_heading">Basic Information:</h3>
+  	<hr class="blue_line" style="width:426px;" />	
+ </div>
+
+<%= form_for(@user, :url => {:controller => "profile", :action => "basic_information"}) do |f| %>
+		<!-- row first name-->
+		 <div class="span-11 clear">
+		      <div class="span-3 form_label" >
+			  First Name:</div>
+		      <div class="span-7" style="padding-top:8px;">
+		      <%= @user.first_name %>
+			  </div>	
+		 </div>
+
+		<!-- row last name-->
+		 <div class="span-11 clear">
+		      <div class="span-3 form_label" >
+			  Last Name:</div>
+		      <div class="span-7" style="padding-top:8px;">
+		      <%= @user.last_name %>
+		      </div>	
+		 </div>
+
+		<!-- row gender -->
+		 <div class="span-11 clear">
+	      <div class="span-3 form_label" >
+		  	Gender:
+		  </div>
+		   <div class="span-7" >
+				<%=f.select(:gender, [['Male', "male"], ['Female', 'female']]) %>
+		   </div>	
+		 </div>
+
+
+		<!-- row birthday -->
+		 <div class="span-11 clear">
+	      <div class="span-3 form_label" >
+		  	Birthday:
+		  </div>
+		   <div class="span-7" >
+			      <%= f.date_select :date_of_birth, {:start_year=>1911, :end_year=>1993} %>
+
+		   </div>	
+		 </div>
+
+		<!-- row home town-->
+		 <div class="span-11 clear">
+	      <div class="span-3 form_label" >
+		  	Hometown:
+		  </div>
+		   <div class="span-7" >
+		      <%= f.text_field :home_town %>
+		   </div>	
+		 </div>
+
+    	<!-- row current town-->
+		 <div class="span-11 clear">
+	      <div class="span-3 form_label" >
+		  	Current Town:
+		  </div>
+		   <div class="span-7" >
+		      <%= f.text_field :current_town %>
+		   </div>	
+		 </div>  
+
+		<!-- row interested in-->
+		 <div class="span-11 clear">
+	      <div class="span-3 form_label" >
+		  	Interested in:
+		  </div>
+		   <div class="span-7" >
+		      	<%=f.select(:interested_in_code, [['Women', 2], ['Men', 1]]) %>
+		   </div>	
+		 </div>  
+
+		<!-- row bio-->
+		 <div class="span-11 clear " >
+		     <div class="span-3 form_label" >
+			  	Bio:
+			  </div>
+		      <div class="span-7 last" >
+		      	<%= f.text_area :bio, :style=>"width:285px;height:50px",:class=>"zero_margin" %>
+		      </div>	
+		 </div>
+
+		<hr class="space"/>
+
+		<!--saving row -->	
+		 <div class="span-11 clear ">
+		      <div class="span-4"  style="width:150px;">
+			  &nbsp;&nbsp;
+			   </div>
+		      <div class="span-7 last align_right" style="width:436px;" >
+		      		<%= f.submit "" %>
+		      </div>	
+		  </div>
+
+	<% end %>
+
+	<hr class="space" />

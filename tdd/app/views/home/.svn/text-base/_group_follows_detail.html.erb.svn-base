@@ -1,0 +1,65 @@
+<div class="group_follows_detail">
+	<table>
+		<tr>
+			<td>
+				<div class="group_followed_pic">
+					<a href="<%= group.get_group_profile_path %>">
+						<%= image_tag Group.get_group_pic(group)%>
+					</a>
+				</div>
+			</td>
+			<td>
+				<table class="group_follow_detail" >
+					<tr>
+						<td colspan="2">
+							<div class="group_name">
+								<%= group.name %>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<div class="follower_count">
+								Followers <%= group.followed_by.count %>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<div class="follower_images">
+								
+									<%= render :partial => 'follows/follow_small_pic', 
+												:collection => group.followed_by.shuffle.first(5), 
+												:as => :user %>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td style="width:95px;">
+							<a href="<%= group.get_group_profile_path %>">
+								<%= render 	:partial => 'group_live_count',
+										   	:object => group,
+											:as => :group
+								 %>
+							</a>
+						</td>
+						<td>
+							<% if group.user == current_user %>
+								<div style="margin-left: 10px;">
+									<%= link_to "Edit", edit_group_path(group) %>
+								</div>
+							<% else %>
+								<div class="join_group">
+									<%= button_to "", 
+										group.get_group_profile_path,
+										:method=> :get,
+										:class=>"chat_button"%>
+								</div>
+							<% end %>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+</div>

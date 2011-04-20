@@ -1,0 +1,11 @@
+<%=render_javascript_block do%>
+ // if an oath provider, like facebook opens this page, close it and set the parent
+   if (window.opener){	
+  
+		if (window == parent) {
+		   window.close();
+
+		   window.opener.location = window.location.pathname
+		}
+  }
+<%end%>

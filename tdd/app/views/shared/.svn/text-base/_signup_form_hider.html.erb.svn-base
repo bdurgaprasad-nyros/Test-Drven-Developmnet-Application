@@ -1,0 +1,3 @@
+<div id="signup_form_displayer" class="invisible">
+      <%=render(:partial=>"shared/user_new_html")%>
+</div>	

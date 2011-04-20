@@ -1,0 +1,17 @@
+production:
+    adapter: mysql
+    encoding: utf8
+    database: vchatter_rails_beta
+    pool: 5 
+    username: vchatter_db
+    password: willhitesh
+    host: vchatterrailstest.crvv24h78gkh.us-west-1.rds.amazonaws.com
+     
+test:
+    adapter: mysql
+    encoding: utf8
+    database: vchatter_rails_test
+    pool: 5 
+    username: vchatter_db
+    password: willhitesh
+    host: vchatterrailstest.crvv24h78gkh.us-west-1.rds.amazonaws.com

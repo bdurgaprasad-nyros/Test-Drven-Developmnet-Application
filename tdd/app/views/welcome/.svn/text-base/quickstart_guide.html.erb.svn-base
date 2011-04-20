@@ -1,0 +1,54 @@
+<div class="span-20">
+<%= render :partial => "verticalmenu"%>
+
+<div class="span-13 last" id="info-right">
+<h2>Quickstart Guide</h2>
+<h3>Step 1: Create account</h3>
+<p>There are 3 ways to create your vChatter account: Facebook Connect, Twitter Connect, or Email registration.</p>
+<h4><strong>1. Facebook</strong></h4>
+<p>Facebook is the easiest and fastest way to do this is to connect your Facebook account with vChatter.  Connecting your Facebook account makes it easier to gain followers.</p>
+<p>First, click &quot;Connect Your Facebook Account&quot; button</p>
+
+<img src="/images/sticky2_assets/quick-start-guide/vchatter-account.gif" width="281" height="319" alt="vChatter account Creation using facebook">
+<hr class="space">
+
+<p>Then, enter your Facebook username and password into the Facebook Connect popup window. This is the easiest and fastiest way to create a vChatter account.</p>
+
+<img src="/images/sticky2_assets/quick-start-guide/facebook-account.gif" width="499" height="271" alt="Login to vChatter using Facebook Account">
+
+<hr class="space" />
+<h4><strong>2. Twitter</strong></h4>
+<p>You can also create an account with your Twitter account. Connecting your Twitter account makes it easier to gain followers.</p>
+<p>First, click the "Sign up using Twitter" link</p>
+
+<img src="/images/sticky2_assets/quick-start-guide/vchatter-account.gif" width="281" height="319" alt="vChatter account Creation using twitter">
+<hr class="space">
+
+<p>Then,enter your Twitter username and password into the Twitter Connect popup window.</p>
+
+<img src="/images/sticky2_assets/quick-start-guide/twitter-account.gif" width="493" height="217" alt="Login to vChatter using twitter Account">
+
+<hr class="space" />
+<h4><strong>3. Email</strong></h4>
+<p>You can also create an account by signing up with your email. This is the traditional way to register on most sites but it isn't as fast or convenient as signing up with Facebook.</p>
+<p>First, input profile information</p>
+
+<img src="/images/sticky2_assets/quick-start-guide/create-vchatter-account.gif" width="399" height="378" alt="First, input profile information">
+<hr class="space">
+
+<p>Then,connect your Facebook account to gain followers quickly</p>
+
+<img src="/images/sticky2_assets/quick-start-guide/add-facebook-account.gif" width="449" height="264" alt="Second, connect your Facebook account to gain followers quickly">
+<hr class="space">
+
+<p>Finally, upload your profile picture (but only if we didn't connect your Facebook account)</p>
+
+<img src="/images/sticky2_assets/quick-start-guide/add-profile-pic.gif" width="473" height="315" alt="Third, upload your profile picture (but only if we didn't connect your Facebook account)">
+<hr class="space">
+<h3>Step 2: Fill-out your profile information</h3>
+<hr class="space">
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> 
+<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+
+</div>

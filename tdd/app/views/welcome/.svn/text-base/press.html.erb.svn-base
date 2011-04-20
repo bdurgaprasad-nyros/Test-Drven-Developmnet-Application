@@ -1,0 +1,30 @@
+<div class="span-20">
+<%= render :partial => "verticalmenu"%>
+
+<div class="span-13 last" id="info-right">
+<!--BRANDS START HERE-->
+<h2>As Seen On:</h2> <a href="http://www.fastcompany.com/1674711/chatroulette-comes-under-fire-vchatter-responds-with-family-safe-service" target="_blank"><img src="/images/sticky2_assets/aboutus/fast-company.jpg" width="109" height="36" alt="FastCompany" /></a> &nbsp;&nbsp;
+      
+      <a href="http://techcrunch.com/2010/09/21/vchatter-launches-a-pg-rated-version-of-chatroulette/" target="_blank"><img src="/images/sticky2_assets/aboutus/tech-crunch.jpg" width="109" height="36" alt="TechCrunch" /></a>&nbsp;&nbsp;
+      
+      <a href="http://venturebeat.com/2010/09/21/vchatter-video-chat/" target="_blank"><img src="/images/sticky2_assets/aboutus/venture-beat.jpg" width="109" height="36" alt="Venturebeat" /></a>&nbsp;&nbsp;
+
+      <a href="http://edition.cnn.com/2010/TECH/innovation/10/01/vchatter.facebook/" target="_blank"><img src="/images/sticky2_assets/aboutus/cnn.jpg" width="63" height="36" alt="CNN" /></a>
+      <h2 class="bottom-line"></h2>
+      
+      <!--BRANDS END HERE-->
+<hr class="space"/>      
+<h2>Media Contact</h2>
+      
+<p>Media inquiries can be made via email at <a href="mailto:media@vchatter.com">media@vchatter.com</a> or phone at 650-347-3507.</p>
+
+ <h2>Media Assets</h2>
+ 
+ <img src="/images/sticky2_assets/shared/group_video_chat_logo.png" width="145" height="25" alt="group video chatter logo">
+ 
+ <hr class="space"/> 
+ <h2>Quick Facts</h2>
+<p> Started may 2010 <br/>Became the #1 video chatting service on Facebook in its first month.<br/> Users have placed over X- number of calls.<br/> Based in San Mateo California.</p>
+</div>
+
+</div>

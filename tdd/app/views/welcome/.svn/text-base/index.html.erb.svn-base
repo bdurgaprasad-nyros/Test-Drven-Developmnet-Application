@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<%=render(:partial=>"shared/header")%>	
+
+  </head>
+  <body class="not_signed_in" style="background:url(images/<%=current_asset_folder%>/shared/header_bk.png) repeat-x scroll 0 0 transparent">    
+	
+<div id="container1" class="container ">
+	<div class="span-20 clearfix" style="height:118px; background-image:url(/images/sticky2_assets/shared/content_top_center2.png); background-repeat:no-repeat;">
+		
+			  <!-- begin navigation-->
+		        <div class="span-20 clear" style="margin-top:15px">
+					<div class="span-12" style="margin-top:15px">
+						<div class="span-5">
+							<%= link_to image_tag("#{current_asset_folder}/shared/group_video_chat_logo_big.png"), ((current_user) ? (groups_path) : (root_path)) %>
+						</div>
+				        <div class="span-6 white_font" style="margin-top:15px;font-size:13px">
+				          Fun and Free Video Groups
+				        </div>
+					</div>
+			        <div class="span-8 last  smaller_font white_font">
+			          <% if current_user %>
+			            Welcome <%= current_user.email %>, <%= link_to "Sign out", destroy_user_session_path %>
+			            &nbsp;&nbsp;<%= link_to "Update Profile", edit_user_registration_path %>
+			            &nbsp;&nbsp;<%= link_to "Browse Groups", groups_path %><br/>
+			          <% else %>
+				      	<%=render(:partial=>"sessions/html_signin_top")%>
+					  <% end %>
+		       
+			 		</div>
+		    	</div>
+		  	<!--end navigation-->
+	</div>
+		<!-- middle -->
+		
+<div 
+class="span-20 clearfix"
+style="margin-top:-2px;background-image:url(/images/sticky2_assets/shared/content_middle_div.gif);background-repeat:repeat-y">
+		<div class="span-20 clearfix">
+			        <%= flash[:error] unless flash[:error].blank? %>
+			        <%= flash[:notice] unless flash[:notice].blank? %>
+			        <%= flash[:warn] unless flash[:warn].blank? %>
+			        <%= flash[:alert] unless flash[:alert].blank? %>
+ <!-- column 1 -->
+ <div class="span-12" style="width:435px;margin-left:30px;margin-top:-20px">
+  		<%=image_tag "sticky2_assets/welcome/valueprop.jpg"%>
+
+ </div>
+<!-- end column1 -->
+<!-- column 2-->
+<div id="facebook_signup_container_1" class="span-8 last right_column " style="">
+    <h2 style="font-size:16px; font-color: #474646;">Create An Account - It's FREE</h2>
+
+
+    <div class="clearfix">
+      <a href="javascript:handleClickRegisterFacebook()" class="auth_provider_popup">
+        <%=image_tag "/images/#{current_asset_folder}/welcome/fb_btn.png", :style=>'border: 0px;'%>
+      </a>
+    </div>
+
+		<div class="directions">
+			Facebook is the easiest way to complete your profile and build trust to gain followers
+			<%=render(:partial=>"shared/more_dialog", :locals=>{:more_id=>"more_1"})%>	
+		</div> 
+
+    <hr class="space"/>
+	<div class="span-5" style="margin-top:4px">		
+				Or, you can <a href="javascript:handleClickRegisterTwitter()">Sign up using Twitter</a>
+			</div>
+			<div class="span-1 last">
+				<a href="javascript:handleClickRegisterTwitter()">
+					<%=image_tag "/images/#{current_asset_folder}/welcome/twittericon.png"%>
+				</a>
+			</div>	
+
+	<hr class="space"/>		
+    <hr class="space"/>
+    <div style="border-top:1px solid #ccc">
+      <hr class="space"/>
+      <h3 style="z-index:999"><%=link_to "Sign up with email", "javascript:handleClickSignUpEmail()" %></h3>
+    </div>
+
+  </div>
+
+<%=render(:partial=>"shared/handle_signup")%>	
+
+<%=render_javascript_block do%>
+	function handleClickRegisterFacebook(){
+		window.open('<%= user_omniauth_authorize_path(:facebook) %>','','width=900,height=500');	
+	}
+	function handleClickRegisterTwitter(){
+		window.open('<%=  user_omniauth_authorize_path(:twitter) %>','','width=900,height=500');	
+	}	
+<%end%>
+
+
+		</div>
+</div>
+		<!-- end middle -->	
+		<!-- end bottom -->
+		<div class="span-20 clearfix"
+			 style="background-image:url(/images/sticky2_assets/shared/contentbk_low.png);background-repeat:repeat-y">
+					&nbsp;
+	    </div>
+		<!-- end bottom -->		
+    </div>
+	<%=render(:partial=>"shared/footer")%>	
+
+  </body>
+</html>

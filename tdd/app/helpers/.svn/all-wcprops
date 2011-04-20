@@ -1,0 +1,113 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/w3mg_vcgroupsw3mg/!svn/ver/427/app/helpers
+END
+groups_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/w3mg_vcgroupsw3mg/!svn/ver/1/app/helpers/groups_helper.rb
+END
+vanities_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/w3mg_vcgroupsw3mg/!svn/ver/173/app/helpers/vanities_helper.rb
+END
+follows_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/w3mg_vcgroupsw3mg/!svn/ver/216/app/helpers/follows_helper.rb
+END
+home_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/w3mg_vcgroupsw3mg/!svn/ver/291/app/helpers/home_helper.rb
+END
+photo_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/w3mg_vcgroupsw3mg/!svn/ver/185/app/helpers/photo_helper.rb
+END
+deletion_feedbacks_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/w3mg_vcgroupsw3mg/!svn/ver/322/app/helpers/deletion_feedbacks_helper.rb
+END
+welcome_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/w3mg_vcgroupsw3mg/!svn/ver/6/app/helpers/welcome_helper.rb
+END
+registrations_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/w3mg_vcgroupsw3mg/!svn/ver/1/app/helpers/registrations_helper.rb
+END
+profile_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/w3mg_vcgroupsw3mg/!svn/ver/214/app/helpers/profile_helper.rb
+END
+following_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/w3mg_vcgroupsw3mg/!svn/ver/216/app/helpers/following_helper.rb
+END
+users_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/w3mg_vcgroupsw3mg/!svn/ver/196/app/helpers/users_helper.rb
+END
+authentications_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/w3mg_vcgroupsw3mg/!svn/ver/1/app/helpers/authentications_helper.rb
+END
+application_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/w3mg_vcgroupsw3mg/!svn/ver/427/app/helpers/application_helper.rb
+END
+sessions_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/w3mg_vcgroupsw3mg/!svn/ver/102/app/helpers/sessions_helper.rb
+END
+notification_preferences_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/w3mg_vcgroupsw3mg/!svn/ver/195/app/helpers/notification_preferences_helper.rb
+END
+notifications_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/w3mg_vcgroupsw3mg/!svn/ver/163/app/helpers/notifications_helper.rb
+END
+notification_types_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/w3mg_vcgroupsw3mg/!svn/ver/163/app/helpers/notification_types_helper.rb
+END
+notification_subscriptions_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/w3mg_vcgroupsw3mg/!svn/ver/163/app/helpers/notification_subscriptions_helper.rb
+END

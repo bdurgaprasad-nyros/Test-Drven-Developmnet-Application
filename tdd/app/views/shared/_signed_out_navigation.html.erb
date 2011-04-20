@@ -1,0 +1,185 @@
+<table style="width:311px">
+	<tr><!--need new image for left side-->
+		<td id="signedOutNavLeft">
+			&nbsp;
+        </td>
+		<td id="navigation_links" class="align_center">
+			&nbsp;<%=link_to "Home", root_path %>			
+  			&nbsp;&nbsp;<%= link_to "Browse", groups_path %>	
+  			&nbsp;&nbsp;<%= link_to_function "Sign In", "signIn();", :id=> "signInLink" %>	
+			&nbsp;&nbsp;<%= link_to_function "Sign Up", "signUp();", :id=> "signUpLink" %>         
+		</td>
+		<td id="signedOutNavRight">
+			&nbsp;										
+		</td>	
+	</tr>
+</table>
+
+
+<div id="signInDialog">
+	<table>
+		<tr>
+			<td>
+				<div id="signInDialogLeft"></div>
+			</td>
+			<td>
+				<div id="signInDialogMid">
+					<div>
+						<%= form_for(User.new, :as => 'user', :url => session_path('user')) do |f| %>
+							<table>
+								<tr>
+									<td>Email:</td>
+									<td colspan="2">
+										<%= f.text_field :email, 
+													:style=>"background-color: white",
+													:id=>"dialogEmail" %>
+									</td>
+								</tr>
+								<tr>
+									<td>Password:</td>
+									<td colspan="2">
+										<%= f.password_field :password, :id=>"dialogPassword" %>
+									</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td >
+										<div id="rememberMeDiv">
+											<table>
+												<tr>
+													<td>
+														<%= f.check_box :remember_me %> 
+														Keep me logged in
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<a href="<%= new_user_password_path %>">Forgot password?</a>
+													</td>
+												</tr>
+											</table>
+											
+										</div>
+									</td>
+									<td>
+										<%= f.submit "", :id=>"signInButton" %>
+									</td>
+								</tr>
+							</table>
+						
+						<% end %>
+					</div>
+				</div>
+			</td>
+			<td>
+				<div id="signInDialogRight"></div>
+			</td>
+		</tr>
+	</table>
+</div>
+
+<div id="signUpDialog">
+	<table>
+		<tr>
+			<td>
+				<div id="signUpDialogLeft"></div>
+			</td>
+			<td>
+				<div id="signUpDialogMid">
+					<div>
+						<table>
+							<tr>
+								<td>
+									<div style="font-size: 11px;">
+										Create Account Using:
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div style="padding-top:4px;">
+										<%= button_to_function "&nbsp;", 
+										"handleClickRegisterFacebook();", 
+										:id=>"facebookSignupButton" %>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div style="padding-top: 5px;font-family: Arial;font-weight: bold;">
+										The fastest way to sign in
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div style="padding-top: 10px;">
+										Or with 
+										<a href="javascript:handleClickRegisterTwitter()">
+											Twitter
+										</a> or 
+										<a href="javascript:handleClickSignUpEmail()">
+											Email
+										</a>
+									</div>
+								</td>
+							</tr>
+						</table>
+						
+					</div>
+				</div>
+			</td>
+			<td>
+				<div id="signUpDialogRight"></div>
+			</td>
+		</tr>
+	</table>
+</div>
+
+<script>
+	$j(document).ready( function() {
+		
+		var signinLink = $j('#signInLink')
+		var signInPos = signinLink.offset();
+		var signInMid = signInPos.left + (signinLink.width() / 2)
+		var dialogWidth = 260;
+		 
+		
+		$j('#signInDialog').dialog({ 
+			autoOpen: false,
+			width: dialogWidth + 'px',
+			show: 'fade',
+			hide: 'puff',
+			position: [signInMid - (dialogWidth / 2 ), (signInPos.top + signinLink.height() + 2) ],
+			dialogClass: "signInDialog",
+			resizable: false
+		});
+		
+		var signUpLink = $j('#signUpLink')
+		var signUpPos = signUpLink.offset();
+		console.dir(signUpPos);
+		var signUpMid = signUpPos.left + (signUpLink.width() / 2)
+		console.dir(signUpMid);
+		dialogWidth = 150;
+		 
+		
+		$j('#signUpDialog').dialog({ 
+			autoOpen: false,
+			width: dialogWidth + 'px',
+			show: 'fade',
+			hide: 'puff',
+			position: [signUpMid - (dialogWidth / 2 ), (signUpPos.top + signUpLink.height() + 2) ],
+			dialogClass: "signUpDialog",
+			resizable: false
+		});
+	});
+	
+	function signIn() {
+		$j('#signInDialog').dialog('open');
+	}
+	
+	function signUp() {
+		$j('#signUpDialog').dialog('open');
+	}
+</script>
+<%=render(:partial=>"shared/handle_signup")%>	

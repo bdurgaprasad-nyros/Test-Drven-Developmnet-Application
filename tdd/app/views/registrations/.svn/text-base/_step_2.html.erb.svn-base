@@ -1,0 +1,32 @@
+<%=render_indicator_title_and_sequence(@title_text, 2)%>
+<hr class="spacer" />
+<div class="span-14">
+	<div class="prepend-2">
+				<div style="margin-top:10px;font-size:9px" >
+					Easiest way to complete your profile and build trust to gain followers
+				</div>
+		
+				<div class="clear" style="margin-left:14px;margin-top:20px;">
+					<a href="javascript:handleClickRegisterFacebook()" class="auth_provider_popup">
+				  		<%=image_tag "/images/#{current_asset_folder}/welcome/fb_btn.png", :style=>'border: 0px;'%>
+					</a>
+				</div>
+
+				<div style="margin-top:28px;margin-left: 15px;font-size:9px" class="clear" >
+					We will have you follow all your Facebook friends on vChatter 		
+						<%=render(:partial=>"shared/more_dialog", :locals=>{:more_id=>"more_3"})%>
+				</div>
+
+	</div>
+	
+	<div class="clear" style="margin-top:55px;">
+		<hr class="spacer"  />
+		<div class="clear" style="float:right">
+			<span style="margin-right:10px;">
+	  			Don't have Facebook? 
+				<%= link_to "Skip", "/registrations/step_2.js",:remote=>true, :method=>:post %>
+			</span>
+		</div>
+	
+	</div>
+</div>

@@ -1,0 +1,18 @@
+<%= render_profile_rounded_rectangle do %>
+    <%= render :partial => 'navigation_top_tabs' %>
+	<!-- begin outer box-->
+	<%=render_profile_box do %>
+		<!-- left column begins-->
+		<%=render(:partial=>"profile/navigation_sidebar", :locals=>{:current_page=>"activities"})%>
+		<!-- left column ends-->
+
+		<!-- right column begin-->
+		<div id="profile_form_container" class="span-11 last">
+			
+				<%=render(:partial=>"profile/activities")%>
+
+		</div>
+		<!-- end left column-->
+	<%end%>
+<%end%>
+

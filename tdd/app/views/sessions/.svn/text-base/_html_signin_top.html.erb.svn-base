@@ -1,0 +1,50 @@
+<!-- begin signin form -->
+<form method="post" id="user_signin"  action="/users/sign_in" accept-charset="UTF-8">
+		<input type="hidden" value="✓" name="utf8">
+		<input type="hidden" value="<%=form_authenticity_token%>" name="authenticity_token">
+		<input type="hidden" value="0" name="user[remember_me]" />
+	<div class="span-7" style="margin-left:15px;width:247px;">
+		<table>
+			<tr>
+				<td style="width:152px;">
+					Email Address
+				</td>
+				<td style="width:95px">
+					Password
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="text" value="" style="width:139px;height:13px;" name="user[email]" id="user_email">
+				</td>
+				<td>
+					<input type="password" style="width:85px;height:13px;" name="user[password]" id="user_password">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="span-1" style="width:12px">
+						<input id="user_remember_me" 
+								name="user[remember_me]" 
+								type="checkbox" 
+								value="1" 
+								style="padding:0px"/>
+					</div>
+					<div class="span-3 last " style=" width:83px;font-size:9px;margin-left:7px;padding-top:2px;" >
+				    	&nbsp;Keep me logged in	
+					</div>
+				</td>
+				<td>
+					<%=link_to "forgot password", new_user_password_path, :class=>"white_font"%>
+				</td>
+			</tr>
+		</table>
+	</div>	
+
+	<div class="span-1 last" style="margin-top: 20px;width:19px">
+		<a class="small_login" href="javascript:handleSubmitTopLogin()"></a>
+		
+	</div>
+</form>
+
+<!-- begin end form -->

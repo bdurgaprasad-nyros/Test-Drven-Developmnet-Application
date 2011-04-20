@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/w3mg_vcgroupsw3mg/!svn/ver/406/config/environments/live_production_files
+END
+database_live.yml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/w3mg_vcgroupsw3mg/!svn/ver/44/config/environments/live_production_files/database_live.yml
+END
+production_live.rb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/w3mg_vcgroupsw3mg/!svn/ver/406/config/environments/live_production_files/production_live.rb
+END
+vchatter_vhost.conf
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/w3mg_vcgroupsw3mg/!svn/ver/32/config/environments/live_production_files/vchatter_vhost.conf
+END

@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/w3mg_vcgroupsw3mg/!svn/ver/101/config/initializers
+END
+inflections.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/w3mg_vcgroupsw3mg/!svn/ver/1/config/initializers/inflections.rb
+END
+amazon_ses.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/w3mg_vcgroupsw3mg/!svn/ver/31/config/initializers/amazon_ses.rb
+END
+devise.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/w3mg_vcgroupsw3mg/!svn/ver/94/config/initializers/devise.rb
+END
+session_store.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/w3mg_vcgroupsw3mg/!svn/ver/1/config/initializers/session_store.rb
+END
+mail.rb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/w3mg_vcgroupsw3mg/!svn/ver/35/config/initializers/mail.rb
+END
+omniauth.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/w3mg_vcgroupsw3mg/!svn/ver/94/config/initializers/omniauth.rb
+END
+secret_token.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/w3mg_vcgroupsw3mg/!svn/ver/96/config/initializers/secret_token.rb
+END
+backtrace_silencers.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/w3mg_vcgroupsw3mg/!svn/ver/1/config/initializers/backtrace_silencers.rb
+END
+carrierwave.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/w3mg_vcgroupsw3mg/!svn/ver/101/config/initializers/carrierwave.rb
+END
+mime_types.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/w3mg_vcgroupsw3mg/!svn/ver/1/config/initializers/mime_types.rb
+END

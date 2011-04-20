@@ -1,0 +1,117 @@
+<div class="span-7" id="profile_block">
+	<table>
+		<tr>
+			<td style="width:10px;">
+				<div id="profile_left"></div>
+			</td>
+			<td>
+				<div id="profile_middle">
+					<table>
+						<tr>
+							<td>
+								<table>
+									<tr>
+										<td colspan="2">
+											<div style="padding-top:15px;padding-left:5px;">
+												<%= current_user.full_name%>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div style="padding-top:7px;">
+												<a href="<%= current_user.groups.first.get_group_profile_path %>">
+													<%= image_tag(
+														User.get_user_pic(current_user, "60_60"), 
+														:id=>"home_page_profile_pic")%>
+												</a>
+											</div>
+
+										</td>
+										<td>
+											<div id="follower_info">
+												<div class="follow_count">
+													<%=current_user.followed_by.count%>
+												</div>
+												<div>
+													<%= (current_user.followed_by.count == 1) ? 
+															'Follower' : 'Followers' %>
+												</div>
+												<div class="follow_count">
+													<%=current_user.is_following.count%>
+												</div>
+												<div>
+													Following
+												</div>
+											</div>
+
+										</td>
+									</tr>
+								</table>
+
+							</td>
+							
+							<!--
+							<td style="width:13px">
+								<div style="margin-top:-40px;padding-right:5px;">
+									<% if current_user.groups.first.current_user_count > 0 %>
+										<%= image_tag '/images/sticky2_assets/home/onlinelight.png' %>
+									<% end %>
+								</div>
+							</td>
+							-->
+							
+							<td>
+								<div>
+									<div style="margin-top: 0px;">
+
+											<%= button_to( "", 
+												current_user.default_group_path,
+												:method => :get,
+												:class => :user_group_button,
+												:id => :default_user_button
+											)%>
+
+									</div>
+									<!--
+									<div style="margin-top: 7px;">
+										<%= button_to( 
+											"", 
+											new_group_path,
+											:method => :get,
+											:id => :new_group_button
+										)%>
+									</div>
+									-->
+									<div style="margin-top: 7px;">
+										<%= button_to_function( 
+											" ", 
+											"onShareToWall();",
+											:id => :invite_friends_button
+										)%>
+									</div>
+									<!--
+									<div style="margin-top: 7px;">
+										<%= button_to_function( 
+											" ", 
+											"onInviteOneFriend('1225905');",
+											:id => :invite_friends_button
+										)%>
+									</div>
+									-->	
+								</div>
+							</td>
+						</tr>
+					</table>
+					
+				</div>
+			</td>
+			<td style="width:10px;">
+				<div id="profile_right"></div>
+			</td>
+		</tr>
+	</table>
+	
+	
+	
+</div>

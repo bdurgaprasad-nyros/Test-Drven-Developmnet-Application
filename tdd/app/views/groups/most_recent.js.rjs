@@ -1,0 +1,1 @@
+page.replace_html 'groups_container', :partial=>"groups/thumbnail_displayer"

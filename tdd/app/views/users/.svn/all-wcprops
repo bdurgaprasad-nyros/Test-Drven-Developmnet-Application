@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/w3mg_vcgroupsw3mg/!svn/ver/505/app/views/users
+END
+locate.js.rjs
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/w3mg_vcgroupsw3mg/!svn/ver/436/app/views/users/locate.js.rjs
+END
+_user_info.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/w3mg_vcgroupsw3mg/!svn/ver/505/app/views/users/_user_info.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/w3mg_vcgroupsw3mg/!svn/ver/505/app/views/users/show.html.erb
+END

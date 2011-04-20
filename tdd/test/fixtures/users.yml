@@ -1,0 +1,57 @@
+# == Schema Information
+# Schema version: 20110319052451
+#
+# Table name: users
+#
+#  id                   :integer(4)      not null, primary key
+#  email                :string(255)     default(""), not null
+#  encrypted_password   :string(128)     default(""), not null
+#  password_salt        :string(255)     default(""), not null
+#  reset_password_token :string(255)
+#  remember_token       :string(255)
+#  remember_created_at  :datetime
+#  sign_in_count        :integer(4)      default(0)
+#  current_sign_in_at   :datetime
+#  last_sign_in_at      :datetime
+#  current_sign_in_ip   :string(255)
+#  last_sign_in_ip      :string(255)
+#  confirmation_token   :string(255)
+#  confirmed_at         :datetime
+#  confirmation_sent_at :datetime
+#  created_at           :datetime
+#  updated_at           :datetime
+#  gender               :string(255)     default("")
+#  date_of_birth        :datetime
+#  first_name           :string(255)
+#  last_name            :string(255)
+#
+
+one:
+  id: 1
+  email: test@test.com
+  first_name: Bobo
+  last_name: Jenkins
+  encrypted_password: $2a$10$TFj0Alg7GPmdAeUSRCuqc.ADy/tBfwLjFJ.fYRLGCkeTGmSTsde3S
+  confirmation_token: 4dfgdguifdijgijfd444545
+
+two:
+  id: 2
+  email: test2@test.com
+  encrypted_password: t9D5fu71SXVhCHfWf6YWz.y8Nq6W3LFm/RPlt7t9miY6oNSdteS9S
+
+uma_one:
+  id:  3
+  email:  umamahesh_nyros1@yahoo.com
+  encrypted_password:  $2a$10$S6dP0O/oj0uX6R2k4GrOT.n52wuD5.ku.iObGpa/EEGrSvk.p1Qea
+  first_name:  kalyan
+  last_name:  rails  
+
+unconfirmed_user:
+  id: 4
+  email:  idonotconfirm@myemail.com
+  encrypted_password:  $2a$10$S6dP0O/oj0uX6R2k4GrOT.n52wuD5.ku.iObGpa/EEGrSvk.p1Qea
+  first_name:  Nonconfirming  
+  last_name:  Person
+  confirmation_token:  11122233344455ggg
+
+

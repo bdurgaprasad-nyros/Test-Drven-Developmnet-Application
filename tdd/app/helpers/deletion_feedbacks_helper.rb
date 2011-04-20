@@ -1,0 +1,2 @@
+module DeletionFeedbacksHelper
+end

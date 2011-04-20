@@ -1,0 +1,9 @@
+one:
+  group_id: 1
+  notification_type_id: 1
+  body: MyText
+
+two:
+  group_id: 1
+  notification_type_id: 1
+  body: MyText

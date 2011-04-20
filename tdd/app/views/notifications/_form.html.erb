@@ -1,0 +1,16 @@
+<%= form_for @notification do |f| %>
+  <%#= f.error_messages %>
+  <p>
+    <%= f.label :group_id %><br />
+    <%= f.text_field :group_id %>
+  </p>
+  <p>
+    <%= f.label :notification_type_id %><br />
+    <%= f.text_field :notification_type_id %>
+  </p>
+  <p>
+    <%= f.label :body %><br />
+    <%= f.text_area :body %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

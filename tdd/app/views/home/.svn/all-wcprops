@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/w3mg_vcgroupsw3mg/!svn/ver/505/app/views/home
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/w3mg_vcgroupsw3mg/!svn/ver/505/app/views/home/index.html.erb
+END
+_group_carousel.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/w3mg_vcgroupsw3mg/!svn/ver/505/app/views/home/_group_carousel.html.erb
+END
+_profile_block.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/w3mg_vcgroupsw3mg/!svn/ver/497/app/views/home/_profile_block.html.erb
+END
+_friends_view_block.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/w3mg_vcgroupsw3mg/!svn/ver/480/app/views/home/_friends_view_block.html.erb
+END
+_newsfeed_item.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/w3mg_vcgroupsw3mg/!svn/ver/493/app/views/home/_newsfeed_item.html.erb
+END
+_individual_group_carousel.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/w3mg_vcgroupsw3mg/!svn/ver/501/app/views/home/_individual_group_carousel.html.erb
+END
+_group_follows_detail.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/w3mg_vcgroupsw3mg/!svn/ver/501/app/views/home/_group_follows_detail.html.erb
+END
+_group_live_count.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/w3mg_vcgroupsw3mg/!svn/ver/334/app/views/home/_group_live_count.html.erb
+END

@@ -1,0 +1,44 @@
+<title>Fun and Free Video Groups</title>
+
+<meta name="keywords" content="chat, video, flash, free, live, chatroom, chatline, service, software, voice, webcam, talk, friends, call, social, network, web 2.0, video chat, group video chat">
+<meta name="description" content="vChatter is a fun, fast, and safe group video chat service that is free for everyone. Chat with your current friends on social networks or meet new friends who share your interests. Use it for personal and business needs. No downloads or installations so getting started on vChatter is quick and easy.">
+
+
+<!-- todo - package js and css assets with asset_packeger-->
+<script src="//cdn.optimizely.com/js/5679234.js"></script>
+<%= stylesheet_link_tag 'screen', 
+						'theme-start/jquery-ui-1.8.11.custom',
+						'w3mg_standard',
+						'w3mg_site_specific_public'
+						%>
+<%= javascript_include_tag 	'jquery-1.5.2.min'%>
+
+<script type="text/javascript">
+  var $j = jQuery.noConflict();
+</script>
+<%= javascript_include_tag 	:defaults,
+							'jquery-ui-1.8.11.custom.min', 
+							'jquery.form', 
+							'W3MG_standard_utilities'
+%>
+
+<%= csrf_meta_tag %>
+
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-16381078-5']);
+    _gaq.push(['_setDomainName', '.vchatter.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+
+<%= yield :page_metadata %>
+
+<%= yield :local_style_info %>

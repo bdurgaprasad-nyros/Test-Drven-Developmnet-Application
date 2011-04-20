@@ -1,0 +1,7 @@
+<%=render_javascript_block do%>
+ var group_id="<%=@group.id%>";
+<%end%>
+<%=render_in_rounded_rectangle_level3 do %>
+			<%= render :partial => 'form', :locals => { :group => @group } %>
+
+<%end%>

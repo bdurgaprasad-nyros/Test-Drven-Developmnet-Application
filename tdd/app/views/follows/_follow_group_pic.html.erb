@@ -1,0 +1,30 @@
+<div style="padding:3px;">
+	<table style="width:100px;">
+		<tr>
+			<td>
+				<a href="<%= group.get_group_profile_path  %>">
+					<%= image_tag(Group.get_group_pic(group,"100_100"), :class=>"follow_group") unless group.nil?%>
+				</a>
+			</td>
+		</tr>
+		<tr>
+			<td style="color:black;text-align:center">
+				<%= truncate(group.name, :length => 18, :omission => '...')%>
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:center">
+				<%= pluralize(group.follower_relationships.count, 'follower')%>
+			</td>
+		</tr>
+		<% if @user == current_user %>
+			<tr>
+				<td style="text-align:center">
+					<div style="margin-top:2px;">
+						<%= link_to "Edit Group", edit_group_path(group) %>
+					</div>
+				</td>
+			</tr>
+		<% end %>
+	</table>
+</div>

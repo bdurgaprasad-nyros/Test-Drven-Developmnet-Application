@@ -1,0 +1,17 @@
+<%= form_for(@deletion_feedback) do |f| %>
+  <% if @deletion_feedback.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@deletion_feedback.errors.count, "error") %> prohibited this deletion_feedback from being saved:</h2>
+
+      <ul>
+      <% @deletion_feedback.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

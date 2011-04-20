@@ -1,0 +1,1 @@
+page.replace_html 'signup_container', :partial=>"registrations/step_2"

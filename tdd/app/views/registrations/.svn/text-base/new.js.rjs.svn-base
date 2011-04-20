@@ -1,0 +1,2 @@
+page.replace_html 'signup_container', :partial=>"registrations/new"
+page <<	"$j('#signup_container').dialog({width:580, height:550,modal: true,position: 'top', dialogClass: 'noTitleStuff',show: 'fade', hide: 'explode'});"

@@ -1,0 +1,20 @@
+<% "Notification Subscription" %>
+
+<p>
+  <strong>Group:</strong>
+  <%= @notification_subscription.group_id %>
+</p>
+<p>
+  <strong>User:</strong>
+  <%= @notification_subscription.user_id %>
+</p>
+<p>
+  <strong>Notification Type:</strong>
+  <%= @notification_subscription.notification_type_id %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_notification_subscription_path(@notification_subscription) %> |
+  <%= link_to "Destroy", @notification_subscription, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", notification_subscriptions_path %>
+</p>

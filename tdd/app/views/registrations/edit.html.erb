@@ -1,0 +1,86 @@
+<h2>Edit <%= resource_name.to_s.humanize %></h2>
+
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, :multipart => true }) do |f| %>
+  <% if @user && @user.errors.any? %>
+    <div id="error_explanation">
+      <% if session[:omniauth].blank? %>
+        <h2><%= pluralize(@user.errors.count, "error") %> prohibited this challenge from being saved:</h2>
+      <% end %>
+      <ul>
+        <% @user.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="clearfix">
+    <div class="span-2" style="padding-top:8px">First Name</div>
+    <div class="span-6">
+      <%= f.text_field :first_name %>
+    </div>
+  </div>
+  <div class="clearfix">
+    <div class="span-2" style="padding-top:8px">Last Name</div>
+    <div class="span-6">
+      <%= f.text_field :last_name %>
+    </div>
+  </div>
+  <div class="clearfix">
+    <div class="span-2" style="padding-top:8px">Your Email</div>
+    <div class="span-6" >
+      <%= f.text_field :email %>
+    </div>
+  </div>
+  <div class="clearfix">
+    <div class="span-2" style="padding-top:8px">Birthday</div>
+    <div class="span-6">
+      <%= f.date_select :date_of_birth %>
+    </div>
+  </div>
+  <div class="clearfix">
+    <div class="span-2" style="padding-top:8px">Gender</div>
+    <div class="span-6">
+      <%= f.radio_button :gender, "male" %>&nbsp;Male &nbsp;&nbsp;
+      <%= f.radio_button :gender, "female" %>&nbsp;Female &nbsp;&nbsp;
+    </div>
+  </div>
+  <div class="clearfix">
+    <div class="span-2" style="padding-top:8px">Profile Photo</div>
+    <div class="span-6">
+      <% if @user.avatar.pic100_100.url %>
+        <%= image_tag(@user.avatar.pic100_100.url) %><br/>
+        <%= f.check_box :remove_avatar %> Remove Profile Photo<br/>
+      <% end %>
+      <%= f.file_field :avatar %>
+    </div>
+  </div>
+  <div class="clearfix">
+    <div class="span-2" style="padding-top:8px">Password</div><i>(leave blank if you don't want to change it)</i>
+    <div class="span-6">
+      <%= f.password_field :password %>
+    </div>
+  </div>
+
+  <div class="clearfix">
+    <div class="span-2" style="padding-top:8px">Password Confirmation</div>
+    <div class="span-6">
+      <%= f.password_field :password_confirmation %>
+    </div>
+  </div>
+
+  <div class="clearfix">
+    <div class="span-2" style="padding-top:8px">Current Password</div><i>(we need your current password to confirm your changes)</i>
+    <div class="span-6">
+      <%= f.password_field :current_password %>
+    </div>
+  </div>
+
+  <div class="span-2">
+    <%= image_tag session[:omniauth]['user_info']['image'] unless session[:omniauth].blank?%>
+  </div>
+
+  <%= f.submit "Update" %>
+<% end %>
+<br/>
+<%= link_to "Back", :back %>

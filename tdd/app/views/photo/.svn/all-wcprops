@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/w3mg_vcgroupsw3mg/!svn/ver/403/app/views/photo
+END
+_registration_photo_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/w3mg_vcgroupsw3mg/!svn/ver/388/app/views/photo/_registration_photo_form.html.erb
+END
+new_photo_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/w3mg_vcgroupsw3mg/!svn/ver/185/app/views/photo/new_photo_form.html.erb
+END
+new_photo_iframe.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/w3mg_vcgroupsw3mg/!svn/ver/185/app/views/photo/new_photo_iframe.html.erb
+END
+_photo_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/w3mg_vcgroupsw3mg/!svn/ver/403/app/views/photo/_photo_form.html.erb
+END
+photo_upload_registration_close.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/w3mg_vcgroupsw3mg/!svn/ver/185/app/views/photo/photo_upload_registration_close.html.erb
+END
+_photo_form_iframe_wrapper.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/w3mg_vcgroupsw3mg/!svn/ver/188/app/views/photo/_photo_form_iframe_wrapper.html.erb
+END

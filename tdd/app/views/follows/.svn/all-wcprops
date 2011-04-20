@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/w3mg_vcgroupsw3mg/!svn/ver/494/app/views/follows
+END
+_group_button.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/w3mg_vcgroupsw3mg/!svn/ver/488/app/views/follows/_group_button.html.erb
+END
+destroy.js.rjs
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/w3mg_vcgroupsw3mg/!svn/ver/222/app/views/follows/destroy.js.rjs
+END
+_abandon_group_button.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/w3mg_vcgroupsw3mg/!svn/ver/279/app/views/follows/_abandon_group_button.html.erb
+END
+_follow_group_button.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/w3mg_vcgroupsw3mg/!svn/ver/488/app/views/follows/_follow_group_button.html.erb
+END
+_follow_group_pic.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/w3mg_vcgroupsw3mg/!svn/ver/494/app/views/follows/_follow_group_pic.html.erb
+END
+_user_button.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/w3mg_vcgroupsw3mg/!svn/ver/488/app/views/follows/_user_button.html.erb
+END
+destroy.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/w3mg_vcgroupsw3mg/!svn/ver/216/app/views/follows/destroy.html.erb
+END
+_abandon_user_button.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/w3mg_vcgroupsw3mg/!svn/ver/236/app/views/follows/_abandon_user_button.html.erb
+END
+_follow_user_button.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/w3mg_vcgroupsw3mg/!svn/ver/488/app/views/follows/_follow_user_button.html.erb
+END
+_follow_user_pic.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/w3mg_vcgroupsw3mg/!svn/ver/493/app/views/follows/_follow_user_pic.html.erb
+END
+create.js.rjs
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/w3mg_vcgroupsw3mg/!svn/ver/222/app/views/follows/create.js.rjs
+END
+create.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/w3mg_vcgroupsw3mg/!svn/ver/216/app/views/follows/create.html.erb
+END
+_follow_small_pic.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/w3mg_vcgroupsw3mg/!svn/ver/493/app/views/follows/_follow_small_pic.html.erb
+END

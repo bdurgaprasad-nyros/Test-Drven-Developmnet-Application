@@ -1,0 +1,80 @@
+<div class="container clear" style="width:810px">
+	<div class="span-20 clear small_font" style="margin-top:10px;border-top:1px solid #cccccc;width:810px">
+			<hr class="space">
+			<div class="span-7">
+				Copyright 2010 vChatter, Inc.
+			</div>
+			<div class="span-14 last align_right">
+				
+				<%=link_to "About Us",  welcome_about_us_path %>
+				&nbsp;|&nbsp; 
+				<%=link_to "Jobs", welcome_jobs_path%>
+				&nbsp;|&nbsp;
+				<%=link_to "Press", welcome_press_path%>
+				&nbsp;|&nbsp; 
+				<%=link_to "Terms", welcome_terms_path%>
+				&nbsp;|&nbsp; 
+				<%=link_to "Privacy", welcome_privacy_path%>
+				&nbsp;|&nbsp; 
+				<%=link_to "Help", welcome_help_path%>
+
+			</div>
+	</div>
+
+</div>
+	
+	
+<!--flash-->
+<div id="flash_notice_container" class="last bold_font align_center invisible" style="position:fixed;top:0;padding:10px;z-index:9999;width:100%"></div>
+<% 	
+	# two variables for readability during debugging
+	  is_flash_content_present=false
+	  flash_content=nil	
+		flash_content= flash[:error] unless flash[:error].blank?
+	    flash_content=flash[:notice] unless flash[:notice].blank? 
+		flash_content=flash[:warn] unless flash[:warn].blank? 
+		flash_content=flash[:alert] unless flash[:alert].blank? 
+
+		is_flash_content_present=true unless flash_content.nil?
+	  
+if is_flash_content_present %>
+	<script type="text/javascript">
+		reportActionResult("<%= flash_content %>");
+	</script>
+<% end%>
+<!-- end flash-->
+
+<script type="text/javascript">
+
+  //Facebook javascript
+  (function() {
+    var e = document.createElement('script'); e.async = true;
+    e.src = document.location.protocol +
+      '//connect.facebook.net/en_US/all.js';
+    document.getElementById('fb-root').appendChild(e);
+  }());
+
+
+
+  var uservoiceOptions = {
+    key: 'vchatter',
+    host: 'vchatter.uservoice.com', 
+    forum: '99691',
+    alignment: 'right',
+    background_color:'#324387', 
+    text_color: 'white',
+    hover_color: '#E01B5D',
+    lang: 'en',
+    showTab: true
+  };
+  function _loadUserVoice() {
+    var s = document.createElement('script');
+    s.src = ("https:" == document.location.protocol ? "https://" : "http://") + "cdn.uservoice.com/javascripts/widgets/tab.js";
+    document.getElementsByTagName('head')[0].appendChild(s);
+  }
+  _loadSuper = window.onload;
+  window.onload = (typeof window.onload != 'function') ? _loadUserVoice : function() { _loadSuper(); _loadUserVoice(); };
+</script>
+
+
+

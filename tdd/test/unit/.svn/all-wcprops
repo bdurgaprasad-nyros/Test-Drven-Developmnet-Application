@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/w3mg_vcgroupsw3mg/!svn/ver/505/test/unit
+END
+user_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/w3mg_vcgroupsw3mg/!svn/ver/412/test/unit/user_test.rb
+END
+authentication_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/w3mg_vcgroupsw3mg/!svn/ver/77/test/unit/authentication_test.rb
+END
+user_additional_info_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/w3mg_vcgroupsw3mg/!svn/ver/256/test/unit/user_additional_info_test.rb
+END
+notification_preference_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/w3mg_vcgroupsw3mg/!svn/ver/195/test/unit/notification_preference_test.rb
+END
+contact_phone_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/w3mg_vcgroupsw3mg/!svn/ver/221/test/unit/contact_phone_test.rb
+END
+notification_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/w3mg_vcgroupsw3mg/!svn/ver/247/test/unit/notification_test.rb
+END
+notification_type_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/w3mg_vcgroupsw3mg/!svn/ver/163/test/unit/notification_type_test.rb
+END
+notification_subscription_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/w3mg_vcgroupsw3mg/!svn/ver/247/test/unit/notification_subscription_test.rb
+END
+group_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/w3mg_vcgroupsw3mg/!svn/ver/458/test/unit/group_test.rb
+END
+user_ban_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/w3mg_vcgroupsw3mg/!svn/ver/505/test/unit/user_ban_test.rb
+END
+follow_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/w3mg_vcgroupsw3mg/!svn/ver/215/test/unit/follow_test.rb
+END
+instant_messenger_account_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/w3mg_vcgroupsw3mg/!svn/ver/221/test/unit/instant_messenger_account_test.rb
+END
+deletion_feedback_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/w3mg_vcgroupsw3mg/!svn/ver/322/test/unit/deletion_feedback_test.rb
+END
+user_report_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/w3mg_vcgroupsw3mg/!svn/ver/505/test/unit/user_report_test.rb
+END
+vanity_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/w3mg_vcgroupsw3mg/!svn/ver/178/test/unit/vanity_test.rb
+END

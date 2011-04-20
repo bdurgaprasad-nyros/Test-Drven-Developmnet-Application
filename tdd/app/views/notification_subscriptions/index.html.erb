@@ -1,0 +1,21 @@
+<% "Notification Subscriptions" %>
+
+<table>
+  <tr>
+    <th>Group</th>
+    <th>User</th>
+    <th>Notification Type</th>
+  </tr>
+  <% for notification_subscription in @notification_subscriptions %>
+    <tr>
+      <td><%= notification_subscription.group_id %></td>
+      <td><%= notification_subscription.user_id %></td>
+      <td><%= notification_subscription.notification_type_id %></td>
+      <td><%= link_to "Show", notification_subscription %></td>
+      <td><%= link_to "Edit", edit_notification_subscription_path(notification_subscription) %></td>
+      <td><%= link_to "Destroy", notification_subscription, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Notification Subscription", new_notification_subscription_path %></p>

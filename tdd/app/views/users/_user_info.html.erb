@@ -1,0 +1,195 @@
+<div class="span-8" style="margin-top:12px;" >
+	<%= content_tag :button,"", :id=>"basic_info_button", :class=>"selected profile_info_button" %>
+	<%= content_tag :button,"",:id=>"interests_button", :class=>"profile_info_button" %>
+	<%= content_tag :button,"",:id=>"activity_button", :class=>"profile_info_button" %>
+	<%= content_tag :button,"",:id=>"empty_tab" %>
+</div>
+<script>
+
+	$j(document).ready(function() {
+		
+		$j('#basic_info_button').click(function () {
+			switchButton(this);
+			$j('#basic_info_panel').addClass("selected_panel");
+			$j('#basic_info_panel').removeClass("unselected_panel");
+		});
+
+		$j('#interests_button').click(function () {
+			switchButton(this);
+			$j('#interests_info_panel').addClass("selected_panel");
+			$j('#interests_info_panel').removeClass("unselected_panel");
+		});
+
+		$j('#activity_button').click(function () {
+			switchButton(this);
+			$j('#activities_info_panel').addClass("selected_panel");
+			$j('#activities_info_panel').removeClass("unselected_panel");
+		});
+
+		function switchButton(button_clicked) {
+			$j('.profile_info_button.selected').removeClass("selected");
+			$j(button_clicked).addClass("selected");
+			$j('.selected_panel').removeClass("selected_panel").addClass("unselected_panel");
+
+		}
+	})
+	
+</script>
+
+<div id="profileDetails" 
+	class="span-8 profile-left-column" >
+	<div id="basic_info_panel" class="selected_panel">
+		<table style="width:280px;" >
+			<tr >
+				<td style="width:100px;">
+					<div class="info_type">My bio:</div>
+				</td>
+				<td style="width:180px;">
+					<div class="info_text"><%=@user.bio%></div>
+				</td>
+			</tr>
+			<tr >
+				<td>
+					<div class="info_type">Hometown:</div>
+				</td>
+				<td>
+					<div class="info_text"><%=@user.home_town%></div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="info_type">Current Town:</div>
+				</td>
+				<td>
+					<div class="info_text"><%=@user.current_town%></div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="info_type">Interested in:</div>
+				</td>
+				<td>
+					<div class="info_text"><%=@user.interested_in_code%></div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="info_type">Sex:</div>
+				</td>
+				<td>
+					<div class="info_text"><%=@user.gender%></div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="info_type">Relationship:</div>
+				</td>
+				<td>
+					<div class="info_text"><%=@user.relationship_status_code%></div>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+
+	<div id="interests_info_panel" class="unselected_panel">
+		<table >
+			<tr >
+				<td style="width:100px;">
+					<div class="info_type">Music:</div>
+				</td>
+				<td>
+					<div class="info_text"><%=@user.user_additional_info.music%></div>
+				</td>
+			</tr>
+			<tr >
+				<td>
+					<div class="info_type">Books:</div>
+				</td>
+				<td>
+					<div class="info_text"><%=@user.user_additional_info.books%></div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="info_type">Movies:</div>
+				</td>
+				<td>
+					<div class="info_text"><%=@user.user_additional_info.movies%></div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="info_type">Television:</div>
+				</td>
+				<td>
+					<div class="info_text"><%=@user.user_additional_info.television%></div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="info_type">Games:</div>
+				</td>
+				<td>
+					<div class="info_text"><%=@user.user_additional_info.games%></div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="info_type">Other:</div>
+				</td>
+				<td>
+					<div class="info_text"><%=@user.user_additional_info.other%></div>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+
+	<div id="activities_info_panel" class="unselected_panel">
+		<table >
+			<tr >
+				<td style="width:100px;">
+					<div class="info_type">Sports:</div>
+				</td>
+				<td>
+					<div class="info_text"><%=@user.user_additional_info.sports%></div>
+				</td>
+			</tr>
+			<tr >
+				<td>
+					<div class="info_type">Favorite Teams:</div>
+				</td>
+				<td>
+					<div class="info_text"><%=@user.user_additional_info.teams%></div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="info_type">Favorite Athletes:</div>
+				</td>
+				<td>
+					<div class="info_text"><%=@user.user_additional_info.athletes%></div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="info_type">Television:</div>
+				</td>
+				<td>
+					<div class="info_text"><%=@user.user_additional_info.television%></div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="info_type">Other Activities:</div>
+				</td>
+				<td>
+					<div class="info_text"><%=@user.user_additional_info.other_activities%></div>
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>
+<div id="profileBottom" class="span-8 profile-left-column" ></div>
+

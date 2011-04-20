@@ -1,0 +1,262 @@
+<%
+is_edit=(controller.action_name=="edit")
+is_new=(controller.action_name=="new")
+naughty_message="(Profanity or nudity in this group form will result in the group's deletion)"
+label_prefix= (is_new==true) ? "<span class=\"margin-left:-10px\">*</span>" : ""
+label_margin= (is_new==true) ? 10 : 12
+%>
+
+
+
+<!-- begin top /header-->
+<div class="clear" style="width:510px;margin-left:12px;">
+	<div class="content_title  clearfix">
+		<%if is_edit%>
+
+				<div class="span-10" style="width:200px">
+					<h1 style="margin-top:12px">Edit Group</h1>		
+				</div>
+				<div class="span-10 last align_right" style="width:310px;margin-left:0px;margin-right:0px;color:#999999">
+					<a href="javascript:showDeleteGroupDialog()" style="font-size:11px;color:#999999;" class="no_underline">Delete Group</a>
+					<hr class="space"/>
+					<span class="smaller_font" style="font-size:9px"><%=naughty_message%></span>
+				</div>	
+	
+	
+
+		<%else%>
+
+				<div class="span-10" style="width:200px">
+					<h1 style="margin-top:12px">Create Group</h1>		
+				</div>
+				<div class="span-10 last align_right" style="width:310px;margin-left:0px;margin-right:0px;color:#999999">
+					<hr class="space"/>
+					<span class="smaller_font" style="font-size:9px"><%=naughty_message%></span>
+				</div>	
+	
+
+		<%end%>
+	</div>
+</div>
+<!-- end top /header-->
+<hr/>
+<%if is_new%>
+<div class="align_right smaller_font quiet" style="color:#999999;margin-top:-10px;margin-bottom:8px">
+	*Required Information
+</div>	
+<%end%>
+<!-- begin middle section-->
+
+<%= form_for group,:html => {:id=>"group_form",:multipart => true} do |f| %>
+  <% if @group.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@group.errors.count, "error") %> prohibited this challenge from being saved:</h2>
+
+      <ul>
+        <% @group.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+	<div class="clearfix">
+		<div class="span-10 " style="width:400px;margin-right:0">
+		
+			<div class="clearfix">
+				<div class="span-3 form_label"  style="width:108px;margin-left:<%=label_margin%>px">
+		   				<%=label_prefix.html_safe%>Group Name:
+					
+					</div>
+					<div class="span-6  ">
+						<%= f.text_field :name , :style=>"width:280px",:class=>"zero_margin" ,:onchange=>"validateGroupName()", :onkeyup=>"validateGroupName()"%>
+					</div>	
+		    </div>
+
+			<div class="clearfix" style="margin-top:12px">
+					<div class="span-3 form_label"  style="width:108px;margin-left:12px">
+		   			Group URL:
+
+					</div>
+					<div class="span-7 " style="font-size:9px;color:#999999;width:280px">
+							
+							www.vchatter.com/<input class="zero_margin" 
+							id="group_vanity_attributes_tag" 
+							name="group[vanity_attributes][tag]" 
+							value="<%=@group.vanity.tag%>"
+							size="30" 
+							style="width:176px" 
+							onkeyup="validateVanity()" 
+							onchange="validateVanity()"
+							type="text" />
+							<br/>
+							<span id="validation_vanity"></span>
+
+					</div>	
+		    </div>
+
+			<div class="clearfix" style="margin-top:12px">
+
+				<div class="span-3 form_label "  style="width:108px;margin-left:<%=label_margin%>px;">
+		   				<%=label_prefix.html_safe%>Group Description:
+						<div class="directions">140 char maximum
+						</div>	
+					</div>
+					<div class="span-7 last " style="width:280px">
+		    			<%= f.text_area :description, :style=>"width:277px;height:42px",:class=>"zero_margin"%>
+					</div>		
+		  </div>
+		</div>
+		<div class="span-2 " style="width:124px;text-align:right">
+			   <% if group.group_image_url(:pic100_100) %>
+			      <%= image_tag(group.group_image_url(:pic100_100) , :style=>"border:3px solid #cccccc") %>
+			      <%#= f.check_box :remove_group_image %> <!--Remove Group Image-->
+				<%else%>
+					 <%= image_tag("sticky2_assets/groups/defaultpic.png", :style=>"border:3px solid #cccccc") %>
+			    <% end %>
+		</div>
+	</div>	
+	<div class="clearfix" style="margin-top:12px">
+
+		<div class="span-2  form_label"  style="width:200px;margin-left:12px">	
+		   Group Profile Image:<span class="directions">&nbsp;&nbsp;(100px * 100px)</span>
+		</div>
+		 <div class="span-8" style="font-size:9px">
+		    <%= f.file_field :group_image %>
+		</div>	
+
+  </div>
+
+	<div class="clearfix" style="margin-top:12px">
+   
+		<div class="span-3 form_label"  style="width:200px;margin-left:12px">	
+		   Background Image:<span class="directions">&nbsp;&nbsp;&nbsp;&nbsp;(1200px * 800px)</span>
+		</div>
+		<div class="span-6" style="font-size:9px">
+  
+    		<%= f.file_field :background_image %>
+		</div>
+		<div class="span-2">	
+		  	<% if group.background_image_url(:thumb) %>
+		      <%= image_tag(group.background_image_url(:thumb), :style=>"width:50px;border:3px solid #cccccc;") %>
+		     
+		    <% end %>
+		</div>	
+  </div>
+<hr style="margin-top:8px" />
+
+	<div class="clear" style="width:510px;margin-left:12px;margin-top:12px">
+		<div class="content_title  clearfix">
+			<div class="span-2" style="width:98px">
+					<h1 >Notifications </h1>
+			</div>
+			<div class="span-2" style="margin-top:2px" >
+				<a href="javascript:handleClickNotificationsHelpShow();"><%=image_tag( "sticky2_assets/shared/qmark_btn.png")%></a>
+			</div>
+		</div>
+
+	</div>	
+	<hr class="space"/>
+	<div class="clearfix" style="font-size:11px;margin-left:12px">
+		<div class="span-4 form_label"  >	
+			Send me notifications when
+		</div>	
+		<div class="span-9" style="color:black;font-size:10px">
+			<% NotificationType.order(:name).each do |nt| %>
+				  <%= check_box_tag "group[notification_type_ids][]", nt.id, is_new || @group.notification_types.include?(nt), :id => "notify_when_#{nt.id}" %>
+				  <%= nt.name %><br/>
+			<% end %>
+		</div>	
+	</div>	
+	<hr class="space">
+	<div class="clearfix" style="font-size:11px;margin-top:12px;margin-left:12px">
+			<div class="span-5 form_label"  style="">	
+				Send me chat section summaries
+			</div>
+				<div class="span-6" style="color:black;font-size:10px">
+					<!-- create notification preference for the user with thsi group id, having code corresponding to value if one has been set-->
+					<% 
+					daily_code = NotificationPreference::DAILY_FREQUENCY_CODE
+					weekly_code = NotificationPreference::WEEKLY_FREQUENCY_CODE
+					monthly_code = NotificationPreference::MONTHLY_FREQUENCY_CODE
+					%>
+					<%= f.fields_for :notification_preference do |np| %>
+						<%= np.radio_button :frequency_code, daily_code, :checked => @group.notification_preference.frequency_code == daily_code %>Daily&nbsp;
+						<%= np.radio_button :frequency_code, weekly_code, :checked => @group.notification_preference.frequency_code == weekly_code %>Weekly&nbsp;
+						<%= np.radio_button :frequency_code, monthly_code, :checked => @group.notification_preference.frequency_code == monthly_code %>Monthly
+						<%= np.hidden_field :user_id, :value => current_user.id %>
+					<% end %>
+				</div>
+	</div>	
+	<%if is_new%>
+	<div class="clearfix" style="font-size:11px;margin-top:12px;margin-left:12px">
+
+			<div class="span-5 form_label"  style="">	
+			Share my new group when finished 
+			</div>
+				<div class="span-8" style="color:black">
+					<input type="checkbox" name="tbd" value="tbd"  checked="checked" />On Facebook&nbsp;
+					<input type="text" id="share_message" style="width:200px" value="share feature coming soon..."/>
+					<br/>
+					<input type="checkbox" name="tbd" value="tbd"  checked="checked"/>On Twitter&nbsp;
+				</div>
+	</div>	
+	<%end%>
+
+
+	<hr class="space"/>
+	<hr class="space"/>
+	<div class="clearfix">
+  		<div class="span-5" style="margin-top:10px">
+			<%if is_new%>
+				<a href="javascript:location.href='<%= url_for :back %>';" class="no_underline">Cancel</a>
+			<%else%>
+				<a href="javascript:showCancelGroupEditDialog()" class="no_underline">Cancel</a>
+
+			<%end%>
+		</div>
+		<div class="span-8 last align_right" style="width:335px">
+			<%if is_new%>
+				<%= f.submit "", :id=>"group_create_submit" ,  :onclick=>"validateGroupCreate();return false;" %>
+			<%else%>
+			<%= f.submit "", :id=>"group_edit_submit" %>
+
+			<%end%>
+		</div>		
+	</div>
+<% end %>
+
+<!-- PLACE DIALOGS HERE-->
+<div class="invisible">
+	<div id="notifications_container">
+	<div style="text-align:right;">
+		
+		<a href="javascript:handleClickNotificationsHelpHide()" class="no_underline">X</a>
+	</div>	
+		The following controls keep you informed about your group and helps promote your group to attract more followers. 
+	</div>	
+	
+	
+	<div id="group_edit_cancel_dialog" class="align_center">
+	            You will lose any non-updated changes.<br/>
+				Are you sure you want to cancel editing this group? 				
+				<hr class="space" />
+				<a href="javascript:handleClickGroupEditCancelYes()"><%=image_tag "sticky2_assets/groups/yes_btn.png"%></a>
+				<a href="javascript:handleClickGroupEditCancelNo()"><%=image_tag "sticky2_assets/groups/no_btn.png"%></a>
+
+	</div>
+	    <div id="group_edit_delete_dialog" class="align_center">
+		Are you sure you want to delete this group?
+		<hr class="space" />
+
+		<a href="javascript:handleClickGroupDeleteCancelYes()"><%=image_tag "sticky2_assets/groups/yes_btn.png"%></a>
+		<a href="javascript:handleClickGroupDeleteCancelNo()"><%=image_tag "sticky2_assets/groups/no_btn.png"%></a>
+		
+	</div>
+	
+</div>	
+<script type="text/javascript">
+	 $j(document).ready(function() {
+			$j('input#group_name').focus();	
+ 	});
+</script>

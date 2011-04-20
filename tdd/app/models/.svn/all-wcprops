@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/w3mg_vcgroupsw3mg/!svn/ver/505/app/models
+END
+user.rb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/w3mg_vcgroupsw3mg/!svn/ver/498/app/models/user.rb
+END
+authentication.rb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/w3mg_vcgroupsw3mg/!svn/ver/1/app/models/authentication.rb
+END
+user_additional_info.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/w3mg_vcgroupsw3mg/!svn/ver/256/app/models/user_additional_info.rb
+END
+notification_preference.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/w3mg_vcgroupsw3mg/!svn/ver/195/app/models/notification_preference.rb
+END
+contact_phone.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/w3mg_vcgroupsw3mg/!svn/ver/221/app/models/contact_phone.rb
+END
+notification.rb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/w3mg_vcgroupsw3mg/!svn/ver/195/app/models/notification.rb
+END
+notification_type.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/w3mg_vcgroupsw3mg/!svn/ver/195/app/models/notification_type.rb
+END
+notification_subscription.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/w3mg_vcgroupsw3mg/!svn/ver/195/app/models/notification_subscription.rb
+END
+group.rb
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/w3mg_vcgroupsw3mg/!svn/ver/487/app/models/group.rb
+END
+ability.rb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/w3mg_vcgroupsw3mg/!svn/ver/446/app/models/ability.rb
+END
+user_ban.rb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/w3mg_vcgroupsw3mg/!svn/ver/505/app/models/user_ban.rb
+END
+follow.rb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/w3mg_vcgroupsw3mg/!svn/ver/215/app/models/follow.rb
+END
+instant_messenger_account.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/w3mg_vcgroupsw3mg/!svn/ver/221/app/models/instant_messenger_account.rb
+END
+deletion_feedback.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/w3mg_vcgroupsw3mg/!svn/ver/322/app/models/deletion_feedback.rb
+END
+user_report.rb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/w3mg_vcgroupsw3mg/!svn/ver/505/app/models/user_report.rb
+END
+vanity.rb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/w3mg_vcgroupsw3mg/!svn/ver/173/app/models/vanity.rb
+END

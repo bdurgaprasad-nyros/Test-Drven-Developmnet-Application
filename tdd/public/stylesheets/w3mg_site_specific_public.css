@@ -1,0 +1,917 @@
+th, td {padding:0px;}/*override screen*/
+/*CLASSES THAT ARE APPLICATION SPECIFIC*/
+/*=================================
+		site layout 
+=================================*/
+
+ a.no_underline{
+	text-decoration:none;
+	
+}
+
+.not_signed_in #top_navigation_header{
+	/*holde the top most 'bar' and its contents*/
+	width:100%;
+	height:40px;
+	margin:0;
+	top:0;
+	height:118px;
+	color:#fff;
+}
+
+.signed_in #top_navigation_header{
+	/*holde the top most 'bar' and its contents*/
+	width:100%;
+	height:40px;
+	margin:0;
+	top:0;
+	height:50px;
+	color:#fff;
+	background-color:#3b5998;
+	border-top:1px solid #47639e;
+	border-bottom:1px solid #dce2ed;	
+}
+
+
+
+a.small_login{
+	
+	background: url("/images/sticky2_assets/shared/login_btn.png") repeat scroll 0 0 transparent;
+	height: 19px;
+	width: 41px;
+	display:block;
+	border:0px;
+	cursor:hand;cursor:pointer;
+}
+
+
+a:hover.small_login,
+a:active.small_login {
+	cursor:hand;cursor:pointer;
+	
+	background:url('/images/sticky2_assets/shared/login_btn_hover.png');
+}
+
+.signed_in #navigation_links{
+	font-size:13px;
+	background-image:url(/images/sticky2_assets/groups/navbk_mid.png);
+	background-repeat:repeat-x;
+	height:39px;
+	margin-right: 2px;	
+}
+
+.signed_in #navigation_links a{
+	text-decoration:none;
+	 color:#2a3a95;
+}
+
+.right_column{
+	width:260px;
+	margin-left:25px;
+}
+
+
+#groups_content_area{
+
+	background-image:url(/images/sticky2_assets/shared/groups_content_middle.gif);
+	background-repeat:repeat-y;
+	padding:8px;
+}
+
+
+#signedOutNavLeft {
+    background-image: url('/images/sticky2_assets/groups/navbk_left.png');
+    background-repeat:no-repeat;
+    width:11px;
+    height:39px;
+    font-size:1px
+}
+
+#signedOutNavRight {
+    background-image:url('/images/sticky2_assets/groups/navbk_right.png');
+    background-repeat:no-repeat;
+    width:11px;
+    height:39px;
+    font-size:1px
+}
+
+/*================================*/
+/*signup popups
+==================================*/
+.noTitleStuff .ui-dialog-titlebar
+{
+	display:none;visibility:invisible;
+}
+
+.noTitleStuff .ui-dialog-content{
+	padding-top:8px;
+}
+
+
+/*override query modalbox*/
+.noTitleStuff .ui-widget-overlay {
+	background-image:none;
+}
+
+
+.noTitleStuff .ui-dialog.ui-widget{
+		border:5px solid #dae0ec;
+	/*	padding-left:15px;
+		padding-right:15px;*/
+	
+}
+.noTitleStuff .ui-dialog.ui-widget.ui-widget-content h3 {
+	font-size:13px;
+}
+
+#finish_signup{
+	background:url(/images/sticky2_assets/shared/create_account.png);width:208px;height:38px;border:0px;cursor:hand;cursor:pointer
+}
+
+input.error{
+	border:1px solid red;
+}
+input.success{
+	border:1px solid green;
+}
+/*
+
+
+/*=================================
+		SignIn Dialog
+=================================*/
+#signInDialog {
+	display:none;
+}
+
+.signInDialog {
+    background-color: transparent;
+    background-image: none;
+    border: 0px;
+    overflow: visible;
+}
+
+.signInDialog .ui-dialog-content {
+  background-color: transparent;
+  border: 0px;
+  padding: 0px;
+  margin-top: -5px;
+}
+
+.signInDialog .ui-dialog-titlebar {
+    padding: 0px 0px;
+    border: 0px;
+    background-image: url('/images/sticky2_assets/dialogs/indicatearrow.png');
+    background-repeat: no-repeat;
+    background-color: transparent;
+    z-index: 40;
+}
+
+.signInDialog .ui-dialog-titlebar .ui-dialog-titlebar-close {
+    padding: 0px;
+    right: -4px;
+    top: 13px;
+    z-index: 2000;
+}
+
+.signInDialog .ui-dialog-titlebar .ui-dialog-titlebar-close .ui-icon-closethick {
+    background-position: 0px 0px;
+    height: 20px;
+    width: 20px;
+    background-image: url('/images/sticky2_assets/dialogs/cancel_btn.png');
+}
+
+#signInDialogLeft {
+    height: 106px;
+    width: 10px;
+    background-image: url('/images/sticky2_assets/dialogs/signinbk_left.png');
+}
+#signInDialogMid, #signInDialogMid label {
+    height: 106px;
+    width: 240px;
+    background-image: url('/images/sticky2_assets/dialogs/signinbk_mid.png');
+    color: white;
+    font-size: 10px;
+}
+
+
+#signInDialogRight {
+    height: 106px;
+    width: 10px;
+    background-image: url('/images/sticky2_assets/dialogs/signinbk_right.png');
+}
+
+.signInDialog input {
+    width: 185px;
+    background-color: white;
+}
+
+#rememberMeDiv {
+    padding-top: 3px;
+}
+
+#signInDialogMid label, #signInDialogMid a, #rememberMeDiv {
+    color: white;
+    font-size: 9px;
+}
+
+
+#rememberMeDiv input {
+    width: auto;
+}
+
+#signInDialogMid > div {
+    padding-top: 13px;
+}
+
+
+#signInButton {
+    padding:0px;
+    margin-left:-1px;
+    border: 0px;
+    width:61px;
+    height:27px;
+    background-color: transparent;
+    background-image: url('/images/sticky2_assets/dialogs/login_btn.png');
+}
+
+#signInButton:hover {
+    background-image: url('/images/sticky2_assets/dialogs/loginhover_btn.png');
+}
+
+
+/*=================================
+		Link Dialog
+=================================*/
+
+#linkDialog {
+	display:none;
+}
+
+.linkDialog {
+    background-color: transparent;
+    background-image: none;
+    border: 0px;
+    overflow: visible;
+}
+
+.linkDialog .ui-dialog-content {
+  background-color: transparent;
+  border: 0px;
+  padding: 0px;
+  margin-top: -5px;
+}
+
+.linkDialog .ui-dialog-titlebar {
+    padding: 0px 0px;
+    border: 0px;
+    background-image: url('/images/sticky2_assets/dialogs/indicatearrow.png');
+    background-repeat: no-repeat;
+    background-color: transparent;
+    z-index: 40;
+}
+
+.linkDialog .ui-dialog-titlebar .ui-dialog-titlebar-close {
+    padding: 0px;
+    right: -4px;
+    top: 13px;
+    z-index: 2000;
+}
+
+.linkDialog .ui-dialog-titlebar .ui-dialog-titlebar-close .ui-icon-closethick {
+    background-position: 0px 0px;
+    height: 20px;
+    width: 20px;
+    background-image: url('/images/sticky2_assets/dialogs/cancel_btn.png');
+}
+
+#linkDialogLeft {
+    height: 46px;
+    width: 10px;
+    background-image: url('/images/sticky2_assets/dialogs/signinbk_left.png');
+}
+
+#linkDialogMid, #linkDialogMid label {
+    height: 46px;
+    width: 240px;
+    background-image: url('/images/sticky2_assets/dialogs/signinbk_mid.png');
+    color: white;
+    font-size: 10px;
+}
+
+#linkDialogRight {
+    height: 46px;
+    width: 10px;
+    background-image: url('/images/sticky2_assets/dialogs/signinbk_right.png');
+}
+
+.linkDialog input {
+    width: 235px;
+    background-color: white;
+}
+
+#linkDialogMid label, #linkDialogMid a {
+    color: white;
+    font-size: 9px;
+}
+
+#linkDialogMid > div {
+    padding-top: 13px;
+}
+
+
+
+/*=================================
+		SignUp Dialog
+=================================*/
+
+#signUpDialog {
+	display:none;
+}
+
+.signUpDialog {
+    background-color: transparent;
+    background-image: none;
+    border: 0px;
+    overflow: visible;
+}
+
+.signUpDialog .ui-dialog-content {
+  background-color: transparent;
+  border: 0px;
+  padding: 0px;
+  margin-top: -5px;
+}
+
+.signUpDialog .ui-dialog-titlebar {
+    padding: 0px 0px;
+    border: 0px;
+    background-image: url('/images/sticky2_assets/dialogs/indicatearrow.png');
+    background-repeat: no-repeat;
+    background-color: transparent;
+    z-index: 40;
+}
+
+.signUpDialog .ui-dialog-titlebar .ui-dialog-titlebar-close {
+    padding: 0px;
+    right: -4px;
+    top: 13px;
+    z-index: 2000;
+}
+
+.signUpDialog .ui-dialog-titlebar .ui-dialog-titlebar-close .ui-icon-closethick {
+    background-position: 0px 0px;
+    height: 20px;
+    width: 20px;
+    background-image: url('/images/sticky2_assets/dialogs/cancel_btn.png');
+}
+
+#signUpDialogLeft {
+    height: 106px;
+    width: 10px;
+    background-image: url('/images/sticky2_assets/dialogs/signinbk_left.png');
+}
+#signUpDialogMid, #signUpDialogMid label {
+    height: 106px;
+    width: 130px;
+    background-image: url('/images/sticky2_assets/dialogs/signinbk_mid.png');
+    color: white;
+    font-size: 10px;
+}
+
+#signUpDialogMid td {
+    text-align: center;
+}
+
+#signUpDialogRight {
+    height: 106px;
+    width: 10px;
+    background-image: url('/images/sticky2_assets/dialogs/signinbk_right.png');
+}
+
+.signUpDialog input {
+    width: 185px;
+    background-color: white;
+}
+
+#signUpDialogMid label, #signUpDialogMid a {
+    color: white;
+    font-size: 9px;
+}
+
+#signUpDialogMid > div {
+    padding-top: 4px;
+}
+
+#facebookSignupButton {
+    padding:0px;
+    margin-left:-1px;
+    border: 0px;
+    width:123px;
+    height:32px;
+    background-color: transparent;
+    background-image: url('/images/sticky2_assets/dialogs/signupfacebook_btn.png');
+}
+
+#facebookSignupButton:hover {
+    background-image: url('/images/sticky2_assets/dialogs/signupfacebookhover_btn.png');
+}
+
+
+/*=================================
+		General
+=================================*/
+
+a, a:visited{color:#36C;}
+
+body 
+{
+	/*text-align: center;*/
+	font: 12px Arial, sans-serif;
+	line-height: 15px;
+	color: #666;
+	
+	margin-bottom:10px;
+}
+h3 {
+	font-size: 1em;
+	margin-bottom: 3px;
+	color:black;
+	font-weight:bold;
+}
+
+/*press coverage branding*/
+#brands {
+    font-size: 14px;
+    height: 61px;
+    vertical-align: middle;
+}
+#brands img {
+    border: medium none;
+    margin-right: 23px;
+    margin-top: 10px;
+    vertical-align: middle;
+}
+
+.notice a, .success a {color:blue;}
+/*end press coverage branding*/
+
+.head_thumb{
+	text-align:center;
+	padding:5px;
+	float:left;
+	width:58px;
+	height:70px;
+	margin:5px;
+	border:1px solid #fff;
+}
+
+.clickable{
+	cursor:hand;
+	cursor:pointer;
+}
+.clickable:hover{
+	border-color:#06C;
+	background-color:#e7e7e7;
+	color:#06C;
+}
+
+#bottom_bar{width:100%;background-color:#E3E9FF;padding-top:5px;padding-bottom:8px;border-top:1px solid #ccc;position:fixed;bottom:0;z-index:999999}
+
+/****home page sprint 1 styles****/
+
+.authentications {
+  margin-bottom: 30px;
+}
+
+.authentication {
+  width: 130px;
+  float: left;
+  background-color: #EEE;
+  border: solid 1px #999;
+  padding: 5px 10px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  position: relative;
+  margin-right: 10px;
+}
+
+.authentication .remove {
+  text-decoration: none;
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  color: #333;
+  padding: 2px 4px;
+  font-size: 10px;
+}
+
+.authentication .remove:hover {
+  color: #CCC;
+  background-color: #777;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+}
+
+.authentication img {
+  float: left;
+  margin-right: 10px;
+}
+
+.authentication .provider {
+  font-weight: bold;
+}
+
+.authentication .uid {
+  color: #666;
+  font-size: 11px;
+}
+
+.auth_provider img {
+  display: block;
+}
+
+.auth_provider {
+  float: left;
+  text-decoration: none;
+  margin-right: 20px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+/**** end sprint 1 assets***/
+.indicator_current{
+	width:22px;
+	height:19px;
+	text-align:center;
+	float:right;	
+	margin-left:4px;
+	background-color:#3c63b5;
+	padding-top:3px;
+	font-size:14px;
+
+	color:white;
+}
+
+.indicator{
+	text-align:center;
+	float:right;	
+	margin-left:4px;
+	margin-top:3px;
+	width:16px;
+	height:15px;
+	padding-top:1px;
+	background-color:#d2d2d2;
+	color:white;
+}	
+
+/* form validaton*/
+input.validation_error{
+	border-color:red;
+	color:red;
+}
+input.validation_success{
+	border-color:green;
+	color:green;
+}
+span.validation_error{
+	font-size:9px;
+	color:red;
+}
+span.validation_success{
+	color:green;
+	font-size:9px;
+}
+/*end validation*/
+
+/* using groups to define standard layout colors*/
+.content_title h1{
+	font-size:16px;
+	color:#3b5998;
+	margin:0;
+}
+.content_title{
+	
+}
+.form_label{
+	color:black;
+	font-size:12px;
+}
+
+/*======================
+	GROUP SPECIFIC
+======================*/
+
+.group_edit_cancel_dialog,
+.group_edit_delete_dialog{
+	font-size:13px;
+	color:black;
+}
+
+#group_edit_submit{
+	background: url("/images/sticky2_assets/shared/update_btn.png") repeat scroll 0 0 transparent;
+	height:34px;
+	width:89px;
+	border:0px;
+	cursor:hand;cursor:pointer;
+}
+#group_create_submit{
+	background: url("/images/sticky2_assets/shared/create_btn.png") repeat scroll 0 0 transparent;
+	height:34px;
+	width:151px;
+	border:0px;
+	cursor:hand;cursor:pointer;
+}
+input.zero_margin{
+	margin:0;
+}
+
+
+.group_live_info {
+    cursor:hand;
+    cursor:pointer;
+}
+
+/*=================================================
+	PROFILE RELATED
+==================================================*/
+
+
+#profile input[type=submit]{
+	background: url("/images/sticky2_assets/shared/update_btn.png") repeat scroll 0 0 transparent;
+	height:34px;
+	width:89px;
+	border:0px;
+	cursor:hand;cursor:pointer;
+}
+
+
+#profile .form_label{
+	padding-top:8px;
+	margin-left:30px;
+	color:#999999;
+	font-size:12px;
+	font-weight:bold;
+}
+
+.blue_line{
+
+	height:1px;
+	color:#3b5998;
+	background-color:#3b5998;
+}
+.profile_heading{
+	color:#000000;
+	font-size:14px;
+	margin-left:5px;
+	margin-bottom:4px;
+}	
+#profile_navigation_sidebar {
+	background-color:#f2f2f2;
+	margin-bottom:0px;
+	width:148px;
+	font-size:12px;
+}
+
+#profile_navigation_sidebar a,
+#profile_navigation_sidebar a:visited{
+	color:#3b5998;
+	text-decoration:none;
+	font-size:12px;
+	padding-left:10px
+	
+}
+
+#profile input[type="text"], 
+#profile input[type="password"], 
+#profile input.text, 
+#profile input.title, 
+#profile textarea {
+	border:1px solid #999999;
+	font-size:12px;
+	font-family:arial;
+	line-height:14px;
+}
+
+.blue_dialog_font{
+	color:#254484;
+}
+
+
+a.change_password{
+	
+	background: url("/images/sprint3/profiles/change_btn.png") repeat scroll 0 0 transparent;
+	height: 24px;
+	width: 67px;
+	display:block;
+	border:0px;
+	cursor:hand;cursor:pointer;
+	margin-top:3px;
+}
+
+
+a:hover.change_password,
+a:active.change_password {
+	cursor:hand;cursor:pointer;
+	
+	background:url('/images/sprint3/profiles/changehover_btn.png');
+}
+
+.upload_button{
+	background: url(/images/sticky2_assets/signup/upload_btn.png);width:66px;height:26px;
+			border-style: none;
+           background-repeat: no-repeat;
+           background-color: transparent;
+}
+
+.directions{
+	font-size:10px;
+	color:#969696;
+}
+
+/**GROUP THUMBNAILS/CAROUSEL**/
+
+.group_carousel_heading{
+	height: 30px;
+	background-image: url('/images/sticky2_assets/home/mygroupbk_top.png');
+	font-size: 13px;
+	color: white;
+}
+
+.content_block_top {
+	height: 38px;
+	background-image: url('/images/sticky2_assets/home/mygroupbk_top.png');
+	font-size: 14px;
+	color: white;
+	border:1px solid #cccccc;
+}
+
+
+
+.group_name {
+	color: black;
+	font-size: 12px;
+}
+.follower_count {
+	color: #385592;
+	font-size: 12px;
+}
+.group_live_count {
+	background-image: url('/images/sticky2_assets/home/livecount_bk.png');
+	height: 22px;
+	width: 93px;
+	font-size: 12px;
+	color: white;
+}
+.group_live_info {
+	padding-top: 3px;
+	margin-left: 18px;
+}
+.group_live_info img {
+	margin-left: 4px;
+	margin-top: 1px;
+}
+.group_live_number {
+	color: #3fea5b;
+}
+.carousel_block {
+	padding-top: 10px;
+}
+.carousel_block_image, .carousel_block_image img{
+	width: 100px;
+	height: 100px;
+}
+
+.carousel_group_name {
+	font-size: 12px;
+	color: black;
+}
+
+
+#group_browse_bar a, 
+#group_browse_bar a:hover,
+#group_browse_bar a:active,  
+#group_browse_bar a:visited{
+	color:white;
+	text-decoration:none;
+	font-size:16px;
+	margin-left:20px;
+}
+#group_browse_bar{
+	padding-top:10px;
+	height:31px;
+	
+}
+#groups_container .carousel_group_name{
+	font-weight:bold;
+}
+
+/**STATIS PAGES CSS STARTS FROM HERE**/
+
+/*General for all static pages*/
+
+#menu-left {
+	border-right:1px solid #ccc;
+	padding-right:10px;
+	padding-top:20px;
+	height:100%;
+}
+
+#menu-left p {
+	line-height:1.7em;
+	
+}
+#menu-left ul {
+	padding:0px;
+	margin:0px;
+	list-style:none;
+	
+}
+
+.bottom-line {
+	border-bottom:1px solid #ccc;
+	padding-bottom:10px;
+
+}
+
+#menu-left ul li {
+	padding:0px;
+	margin:0px;
+	border-bottom:1px solid #fff;
+	line-height:2.5em;
+}
+
+#menu-left ul li a {
+	padding:0px;
+	margin:0px;
+	font-weight:normal;
+	font-size:15px;
+	text-decoration:none;
+	background: url(../images/sticky2_assets/aboutus/menu-pointer.jpg) no-repeat left center;
+	padding-left: 10px;
+	
+	
+}
+
+#menu-left ul li a:hover {
+	padding:0px;
+	margin:0px;
+	color:#4899ff;
+	text-decoration:none;
+	/*border-bottom:1px solid #4899ff;*/
+	background: url(../images/sticky2_assets/aboutus/menu-pointer.jpg) no-repeat left center;
+	padding-left: 10px;
+	
+}
+
+/*Sub Menu*/
+
+#menu-left ul ul {
+	padding:0px;
+	margin:0px;
+	list-style: circle;
+	padding-left: 30px;
+	margin-top:-5px;
+}
+
+#menu-left ul ul li {
+	padding:0px;
+	margin:0px;
+	border-bottom:1px solid #fff;
+	line-height:1.5em;
+}
+
+#menu-left ul ul li a {
+	padding:0px;
+	margin:0px;
+	font-weight:normal;
+	font-size:12px;
+	text-decoration:none;
+	background: none;
+}
+
+#menu-left ul ul li a:hover {
+	padding:0px;
+	margin:0px;
+	color:#4899ff;
+	text-decoration:none;
+	background: none;
+	
+	
+}
+
+#info-right {
+	padding-left:10px;
+	
+}
+
+#info-right p {
+	line-height:1.7em;
+	
+}
+#info-right ul li {
+	padding:0px;
+	margin:0px;
+	border-bottom:1px solid #fff;
+	line-height:1.5em;
+}
+

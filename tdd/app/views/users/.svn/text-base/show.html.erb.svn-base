@@ -1,0 +1,453 @@
+<% content_for :page_metadata do %>
+
+	<meta property="og:title" content="vChatter Profile: <%= @user.full_name %>" />
+	<meta property="og:type" content="website"/>
+	<meta property="og:url" content="http://<%= WEBAPP_URL %><%= @user.get_user_profile_path %>"/>
+	<meta property="og:site_name" content="vChatter Profile:  <%= @user.full_name%>"/>
+	<meta property="og:image" content="http://<%= WEBAPP_URL %><%= User.get_user_pic(@user,"60_60") %>" />
+	<meta property="fb:admins" content="100001101766909, 100000358257903"/>
+	<meta property="og:description" content="Visit vChatter user profile for <%=@user.full_name%>"/>
+	<meta property="fb:app_id" content="<%= FACEBOOK_APP_ID %>"/>
+	
+	<meta name="keywords" content="vChatter Profile: <%= @user.full_name %>, chat, video, flash, free, live, chatroom, chatline, service, software, voice, webcam, talk, friends, call, social, network, web 2.0, video chat, group video chat">
+	<meta name="description" content="vChatter Profile: <%= @user.full_name %>, vChatter is a fun, fast, and safe group video chat service that is free for everyone. Chat with your current friends on social networks or meet new friends who share your interests. Use it for personal and business needs. No downloads or installations so getting started on vChatter is quick and easy.">
+
+<% end %>
+
+<% content_for :local_style_info do %>
+	<style>
+	
+		.profile-column, .profile-left-column, .profile-right-column {
+			padding-left: 5px;
+			padding-right: 5px;
+			font-family: Arial;
+			color:#3b5998;
+		}
+	
+		.profile-left-column {
+			margin-left:0px;
+			margin-right:7px;
+		}
+	
+		.profile-right-column {
+			margin-left:0px;
+			margin-right:0px;
+		}
+	
+	
+		#profileGroupsFollowed {
+			padding: 5px;
+			width: 419px;
+			border-top-width:0px;
+			background-image: url('/images/sticky2_assets/profile/groupbk_mid.png');
+			background-repeat: repeat-y;
+		}
+		
+		.not_following_button {
+			padding:0px;
+			margin:0px;
+			border: 0px;
+			width:85px;
+			height:23px;
+			background-image: url('/images/sticky2_assets/profile/follow_btn.png');
+		}
+	
+		.not_following_button:hover {
+			background-image: url('/images/sticky2_assets/profile/followhover_btn.png');
+		}
+	
+		.following_button {
+			padding:0px;
+			margin:0px;
+			border: 0px;
+			width:85px;
+			height:23px;
+			background-image: url('/images/sticky2_assets/profile/following_btn.png');
+		}
+		
+		.follow_count {
+			font-size: 11px;
+			color: #48bf3c;
+		}
+		
+		.follow_group  {
+			height: 100px;
+			width: 100px;
+		}
+	
+		.following_button:hover {
+			background-image: url('/images/sticky2_assets/profile/unfollow_btn.png');
+		}
+	
+		.chat_button {
+			padding:0px;
+			margin-right:0px;
+			margin-bottom:0px;
+			margin-right:8px;
+			border: 0px;
+			width:85px;
+			height:23px;
+			background-image: url('/images/sticky2_assets/profile/joinchat_btn.png');
+		}
+	
+		.chat_button:hover {
+			background-image: url('/images/sticky2_assets/profile/joinchathover_btn.png');
+		}
+	
+		.my_room_button {
+			padding:0px;
+			margin-right:0px;
+			margin-bottom:0px;
+			margin-right:8px;
+			border: 0px;
+			width:104px;
+			height:23px;
+			background-color: transparent;
+			background-image: url('/images/sticky2_assets/profile/mychannel_btn.png');
+		}
+	
+		.my_room_button:hover {
+			background-image: url('/images/sticky2_assets/profile/mychannelhover_btn.png');
+		}
+	
+		#user_profile_pic {
+			width: 100px;
+			height: 100px;
+			border-width: 0px;
+		}
+	
+		.follow_thumb {
+			height: 30px;
+			width: 30px;
+		}
+	
+		.group-list-top {
+			background-image: url('/images/sticky2_assets/profile/grouplist_top.png');
+			color: white;
+		}
+	
+		.feed-list-top {
+			background-image: url('/images/sticky2_assets/profile/newsfeedbk_top.png');
+			color: white;
+			font-size:13px;
+			margin-top: 15px;
+			width: 432px;
+		}
+	
+	
+		#basic_info_button {
+			background-image: url('/images/sticky2_assets/profile/basicinfo_btn.png');
+			width: 70px;
+			height: 30px;
+			margin: 0px;
+			border: 0px;
+		}
+		#basic_info_button:hover {
+			background-image: url('/images/sticky2_assets/profile/basicinfohover_btn.png');
+		}
+		#basic_info_button.selected {
+			background-image: url('/images/sticky2_assets/profile/basicinfohover_btn.png');
+		}
+
+		#interests_button {
+			background-image: url('/images/sticky2_assets/profile/interest_btn.png');
+			width: 70px;
+			height: 30px;
+			margin-left: -4px;
+			border: 0px;
+		}
+		#interests_button:hover {
+			background-image: url('/images/sticky2_assets/profile/interesthover_btn.png');
+		}
+		#interests_button.selected  {
+			background-image: url('/images/sticky2_assets/profile/interesthover_btn.png');
+		}
+		#activity_button {
+			background-image: url( '/images/sticky2_assets/profile/activity_btn.png');
+			width: 70px;
+			height: 30px;
+			margin-left: -4px;
+			border: 0px;
+		}
+	
+		#activity_button:hover {
+			background-image: url( '/images/sticky2_assets/profile/activityhover_btn.png');
+		}
+		#activity_button.selected {
+			background-image: url( '/images/sticky2_assets/profile/activityhover_btn.png');
+		}
+		
+		.profile_info_button{
+			background-color: transparent;
+		}
+	
+		#empty_tab {
+			background-image: url('/images/sticky2_assets/profile/emptytab.png');
+			width: 88px;
+			height: 30px;
+			margin-left: -5px;
+			border: 0px;
+			background-color: transparent;
+		}
+	
+		.info_type {
+			font-size: 11px;
+			color: #999999;
+			margin-top: 10px;
+			text-align: left;
+		}
+	
+		.info_text {
+			margin-top: 10px;
+			font-size: 12px;
+			color: black;
+			text-align: left;
+			width: 180px;
+			word-wrap: break-word;
+		}
+	
+		.selected_panel {
+			visibility: visible;
+			display: block;
+		}
+	
+		.unselected_panel {
+			visibility: hidden;
+			display:none;
+		}
+	
+		#profile_feed img {
+			width: 40px;
+			height: 40px;
+			padding-top: 5px;
+			padding-bottom: 5px;
+		}
+	
+		.feed_time {
+			font-size: 10px;
+			color: #999999;
+			float:right;
+			padding-right: 5px;
+		}
+	
+		.feed_description {
+			margin-left:6px;
+			font-size: 12px;
+		}
+	
+		#profile_feed {
+			padding: 5px;
+			width: 419px;
+			border-top-width:0px;
+			background-image: url('/images/sticky2_assets/profile/groupbk_mid.png');
+			background-repeat: repeat-y;
+		}
+	
+		tr.odd {
+			background-color: #f9f9f9;
+		}
+		
+		.follow_thumb {
+			float: left;
+			margin-right: 2px;
+		}
+		
+		.contentBottom {
+			width: 426px;
+			height: 5px;
+			float: left;
+			background-image: url( '/images/sticky2_assets/profile/groupbk_low.png');
+		}
+		
+		#profileDetails {
+			border-top:0px;
+			padding-top:5px;
+			margin-top:-1px;
+			width:295px;
+			background-image: url( '/images/sticky2_assets/profile/basicinfobk_mid.png');
+			background-repeat: repeat-y;
+		}
+		
+		#profileBottom {
+			width:295px;
+			height: 5px;
+			background-image: url( '/images/sticky2_assets/profile/basicinfobk_low.png');
+			background-repeat: no-repeat;
+			
+		}
+		
+		#profileBlockMid {
+			width:284px;
+			background-image: url( '/images/sticky2_assets/profile/profilebk_mid.png');
+			background-repeat: repeat-y;
+			padding-top: 0px;
+		}
+		
+		#profileBlockTop {
+			width:284px;
+			height: 5px;
+			background-image: url( '/images/sticky2_assets/profile/profilebk_top.png');
+			background-repeat: no-repeat;
+		}
+		
+		#profileBlockBottom {
+			width:284px;
+			height: 5px;
+			background-image: url( '/images/sticky2_assets/profile/profilebk_low.png');
+			background-repeat: no-repeat;
+		}
+		
+	</style>
+<% end %>
+<div id="fb-root"></div>	
+<div class="span-20">
+	<div class="span-8" style="margin-right:21px;" >
+		<div id="profileBlockTop" class="span-8 profile-left-column"></div>
+		<div id="profileBlockMid" class="span-8 profile-left-column" >
+			<table style="margin-left:5px;margin-right:5px;">
+				<tr>
+					<td style="font-size:15px;width:167px;">
+						<%= @user.full_name%>
+					</td>
+					<td style="width:145px;">
+						<% if user_signed_in? && @user==current_user %>
+							<div style="text-align:right;margin-right:24px;">
+								<%= link_to "Edit Profile", profile_basic_information_path %>
+							</div>
+						<% else %>
+							<%= render :partial => 'follows/user_button'%>
+						<% end %>
+					</td>
+				</tr>
+				<tr >
+					<td style="padding-top:3px;">
+						<%=image_tag User.get_user_pic(@user,"100_100"), :id=>"user_profile_pic"%>
+					</td>
+					<td style="font-size:12px;">
+						
+						<div style="padding-top:8px;">
+							<iframe id="tweetFrame"  allowtransparency="true" frameborder="0" scrolling="no" src="http://platform.twitter.com/widgets/tweet_button.html?url=http%3A%2F%2F<%= WEBAPP_URL %>%2F<%= @user.get_user_profile_path %>%2F&amp;text=I%20am%20hanging%20out%20on%20vChatter%20Video%20Chat%20Groups!%20Come%20join%20us.&amp;via=vChatter&amp;count=true" style="width:100px; height:21px;"></iframe>
+						</div>
+						<div style="padding-top:2px;">
+
+							<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2F<%= WEBAPP_URL %>%2F<%= @user.get_user_profile_path %>&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;font&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:25px;" allowTransparency="true"></iframe>
+						</div>
+						<div style="height:45px;">
+							<div>
+								Followers <span class="follow_count"><%= @user.follower_relationships.count%></span>
+							</div>
+							<div>
+								<%= render :partial=> 'follows/follow_small_pic', 
+											:collection => @user.followed_by.first(3), 
+											:as=> :user %>
+							</div>
+						</div>
+						<div style="height:45px;">
+							<div>
+								Following <span class="follow_count"><%= @user.following_relationships.count%></span>
+							</div>
+							<div >
+								<%= render :partial=> 'follows/follow_small_pic', 
+											:collection => @user.is_following.first(3), 
+											:as=> :user %>
+							</div>
+						</div>
+					
+					</td>
+				</tr>
+			</table>
+			
+			
+			
+			<div class="span-7" style="margin-left:7px;font-size:15px;width:260px;margin-top:7px;">
+				<table style="width:266px;">
+					<tr>
+								<% if @user.current_broadcast_group.nil? %>
+									<td >
+										<div>
+											<img src="/images/sticky2_assets/profile/offline_btn.png" />
+										</div>
+									</td>
+									<td>
+										<div style="float:right;">
+											<%= button_to "", 
+												@user.default_group_path,
+												:method=> :get,
+												:class=>"my_room_button"%>
+										</div>
+									</td>
+								<% else %>
+									<td >
+										<a href="<%= @user_group.get_group_profile_path%>">
+											<img src="/images/sticky2_assets/profile/live_btn.png" />
+										</a>
+									</td>
+									<td style="font-size:11px;">
+										<a href="<%= @user_group.get_group_profile_path%>">
+											@ <%= @user.current_broadcast_group.name %>
+										</a>
+									</td>
+									<td>
+										<div style="float:right;">
+											<%= button_to "", 
+												@user_group.get_group_profile_path,
+												:method=> :get,
+												:class=>"chat_button"%>
+										</div>
+									</td>
+								<% end %>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div id="profileBlockBottom" class="span-8 profile-left-column"></div>
+		
+		<%= render :partial => 'users/user_info' %>		
+		
+	</div>
+	<%= render 	:partial=>'groups/section_header', 
+				:locals=>{:width=>425, 
+					:content => "${@user.first_name}'s groups: (${@user.groups_followed.count})",
+					:span => "10" }
+					 %>
+	<div id="profileGroupsFollowed" class="span-10  profile-right-column clearfix" >
+		<div style="height:154px;margin-bottom:0px;">
+			<% if @user.groups_followed.count > 0 %>
+					<% @user.groups_followed.first(4).each_with_index do |my_group, group_cnt| %>
+						<div style="width:100px;float:left;margin-right:4px;">
+							<%= render :partial=> 'follows/follow_group_pic', 
+										:object => my_group, 
+										:as=> :group %>
+						</div>
+					<% end %>
+			<% end %>
+		</div>
+	</div>
+	<div class="span-10 contentBottom"></div>
+	
+	
+	<% unless @user_actionfeed.class == TrueClass %>
+	
+		<div class="span-10" >
+			<%= render 	:partial=>'groups/section_header', 
+					:locals=>{:width=>425, 
+						:content => "News feed",
+						:span => "10",
+						:margin_top => "7px" }
+						 %>
+			<div 	class="span-10  profile-right-column" 
+					id="profile_feed">
+					<table>
+						<%= render :partial => 'shared/bunchball_feed', 
+									:collection=>@user_actionfeed['ActionHistoryItem'],
+									:as=> :feed_item %>
+					</table>
+			</div>
+			<div class="span-10 contentBottom"></div>
+		</div>
+	<% end %>
+	
+	
+</div>
+<div class="clear"></div>
+

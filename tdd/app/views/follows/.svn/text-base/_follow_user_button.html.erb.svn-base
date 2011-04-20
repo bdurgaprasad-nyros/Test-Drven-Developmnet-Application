@@ -1,0 +1,5 @@
+<%= button_to " ",
+ 	follows_path(:followed_id=>@user.id,:followed_type=>"User"), 
+	:remote=>true,
+	:class=>"not_following_button",
+	:id=>"start_following"%>

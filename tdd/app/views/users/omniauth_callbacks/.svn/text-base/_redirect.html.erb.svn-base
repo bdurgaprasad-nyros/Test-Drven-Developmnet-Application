@@ -1,0 +1,8 @@
+<script>
+	<%=render :partial =>"shared/window_children_plugin"%>
+	<% unless @desired_url.nil? %>
+		window.propChildUrl2Opener({'url': '<%=@desired_url%>'})
+	<% else %>
+		window.propChildUrl2Opener({'popupfunction': '<%=@desired_function%>'})
+	<% end %>
+</script>

@@ -1,0 +1,5 @@
+<div style="padding:3px;">
+	<a href="<%= user.get_user_profile_path  %>">
+		<%= image_tag(User.get_user_pic(user, "30_30"), :class=>"follow_thumb") unless user.nil?%>
+	</a>
+</div>

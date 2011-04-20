@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/w3mg_vcgroupsw3mg/!svn/ver/504/app/views/shared
+END
+_header.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/w3mg_vcgroupsw3mg/!svn/ver/459/app/views/shared/_header.html.erb
+END
+_press_footer.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/w3mg_vcgroupsw3mg/!svn/ver/11/app/views/shared/_press_footer.html.erb
+END
+_bunchball_feed_time.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/w3mg_vcgroupsw3mg/!svn/ver/448/app/views/shared/_bunchball_feed_time.html.erb
+END
+_oath_sites_javascripts.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/w3mg_vcgroupsw3mg/!svn/ver/403/app/views/shared/_oath_sites_javascripts.html.erb
+END
+_bunchball_feed.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/w3mg_vcgroupsw3mg/!svn/ver/493/app/views/shared/_bunchball_feed.html.erb
+END
+_window_children_plugin.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/w3mg_vcgroupsw3mg/!svn/ver/371/app/views/shared/_window_children_plugin.html.erb
+END
+_footer.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/w3mg_vcgroupsw3mg/!svn/ver/470/app/views/shared/_footer.html.erb
+END
+_popup_closer_script.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/w3mg_vcgroupsw3mg/!svn/ver/20/app/views/shared/_popup_closer_script.html.erb
+END
+_signed_in_navigation.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/w3mg_vcgroupsw3mg/!svn/ver/437/app/views/shared/_signed_in_navigation.html.erb
+END
+_signed_out_navigation.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/w3mg_vcgroupsw3mg/!svn/ver/482/app/views/shared/_signed_out_navigation.html.erb
+END
+_window_children_plugin2.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/w3mg_vcgroupsw3mg/!svn/ver/372/app/views/shared/_window_children_plugin2.html.erb
+END
+_handle_signup.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/w3mg_vcgroupsw3mg/!svn/ver/467/app/views/shared/_handle_signup.html.erb
+END
+_more_dialog.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/w3mg_vcgroupsw3mg/!svn/ver/504/app/views/shared/_more_dialog.html.erb
+END
+_signup_form_hider.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/w3mg_vcgroupsw3mg/!svn/ver/58/app/views/shared/_signup_form_hider.html.erb
+END

@@ -1,0 +1,26 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  id: 1
+  tag: MyVanity
+  owner_id: 1
+  owner_type: Group 
+two:
+  id: 2 
+  tag: MyString
+  owner_id: 3
+  owner_type: User
+  
+  
+# == Schema Information
+#
+# Table name: vanities
+#
+#  id         :integer(4)      not null, primary key
+#  tag        :string(255)
+#  owner_id   :integer(4)
+#  owner_type :string(255)
+#  created_at :datetime
+#  updated_at :datetime
+#
+

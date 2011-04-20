@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/w3mg_vcgroupsw3mg/!svn/ver/506/app/views/groups
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/w3mg_vcgroupsw3mg/!svn/ver/201/app/views/groups/edit.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/w3mg_vcgroupsw3mg/!svn/ver/464/app/views/groups/index.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/w3mg_vcgroupsw3mg/!svn/ver/195/app/views/groups/new.html.erb
+END
+update_count.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/w3mg_vcgroupsw3mg/!svn/ver/384/app/views/groups/update_count.html.erb
+END
+_section_header.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/w3mg_vcgroupsw3mg/!svn/ver/505/app/views/groups/_section_header.html.erb
+END
+_thumbnail_displayer.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/w3mg_vcgroupsw3mg/!svn/ver/466/app/views/groups/_thumbnail_displayer.html.erb
+END
+most_recent.js.rjs
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/w3mg_vcgroupsw3mg/!svn/ver/443/app/views/groups/most_recent.js.rjs
+END
+recommended.js.rjs
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/w3mg_vcgroupsw3mg/!svn/ver/443/app/views/groups/recommended.js.rjs
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/w3mg_vcgroupsw3mg/!svn/ver/506/app/views/groups/show.html.erb
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/w3mg_vcgroupsw3mg/!svn/ver/502/app/views/groups/_form.html.erb
+END
+most_popular.js.rjs
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/w3mg_vcgroupsw3mg/!svn/ver/443/app/views/groups/most_popular.js.rjs
+END

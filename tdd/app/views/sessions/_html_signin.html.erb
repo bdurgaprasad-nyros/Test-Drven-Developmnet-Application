@@ -1,0 +1,35 @@
+<!-- begin signin form -->
+<form method="post" id="user_new" class="user_new" action="/users/sign_in" accept-charset="UTF-8">
+	<div style="margin: 0pt; padding: 0pt; display: inline;"><input type="hidden" value="✓" name="utf8">
+		<input type="hidden" value="<%=form_authenticity_token%>" name="authenticity_token"></div>
+
+	<div class=" span-3" style="margin-top:1em">
+		Email Address
+	</div>	
+	<div class="span-6 last">
+  		<input type="text" value="" style="width:175px;" name="user[email]" id="user_email">
+	</div>	
+	<div class="span-3" style="margin-top:1em">
+		Password
+	</div>	
+	<div class="span-6 last">
+
+  		<input type="password" style="width:175px;" name="user[password]" id="user_password">
+	</div>
+	<hr class="space">
+    
+	<div class="span-6">
+		<div class="span-1" style="width:14px">
+			<input type="hidden" value="0" name="user[remember_me]" />
+			<input id="user_remember_me" name="user[remember_me]" type="checkbox" value="1" />
+		</div>
+		<div class="span-5 last small_font" style="margin-top:.5em">
+	    	Let me login without a password on this browser	
+		</div>
+	</div>	
+	<div class="span-2 last align_right">
+  		<input type="submit" value="Sign in" name="commit" id="user_submit">
+	</div>
+</form>
+
+<!-- begin end form -->

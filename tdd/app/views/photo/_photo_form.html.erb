@@ -1,0 +1,79 @@
+<%
+	# # # # # # # # # # # CODE USED BY [action_type]_document_form.rhtml# # # # # # # # # # # # #
+
+
+	#SETTING FORM VALUES HERE SO THE SAME PAGE CAN BE USED FOR CREATE AND EDIT/UPDATE
+
+	if @photo.nil?
+		upload_label="Choose a file to upload."
+		is_editing="false"
+		save_button_disabled_string="disabled= 'disabled'"
+        form_method="post"
+	else
+		upload_label="Choose a file if you want to replace the current one."
+		is_editing="true"
+		save_button_disabled_string=""
+		form_method="put"
+    end
+
+
+
+%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" <% unless (params[:debug].nil?)%>debug="true"<%end%> >
+<head>
+<title>Photo Upload</title>
+<%= javascript_include_tag 'jquery-1.5.2.min' %>
+<script type="text/javascript">
+
+    function validateUploadFile(field_element){
+          var pathSplit = field_element.value.split(".");
+          var extension = pathSplit[pathSplit.length-1];
+          if (pathSplit != "") {
+              jQuery('#photo_submit_button').removeAttr('disabled');
+          }
+    }
+
+</script>
+
+</head>
+<body>
+
+		<div id="form_container" class="align_left">
+		    <%= form_tag('/photo/set_image', :method => form_method, :multipart => true, :id => "document_upload_form") %>
+                <% if @object && @object.errors.any? %>
+                   <div id="error_explanation">
+                      <% if session[:omniauth].blank? %>
+                          <h2><%= pluralize(@object.errors.count, "error") %> prohibited this challenge from being saved:</h2>
+                      <% end %>
+                      <ul>
+                          <% @object.errors.full_messages.each do |msg| %>
+                              <li><%= msg %></li>
+                          <% end %>
+                      </ul>
+                   </div>
+                <% end %>
+                <input type="hidden" id="object_id" name="object_id" value="<%=@this_object_id%>" />
+				<input type="hidden" id="mounted_as" name="mounted_as" value="<%= @mounted_as %>" />
+                <input type="hidden" id="model" name="model" value="<%= @this_model %>" />
+                <input type="hidden" id="came_from" name="came_from" value="<%= @came_from %>" />
+                <input type="hidden" id="redirect_path" name="redirect_path" value="<%= @redirect_path %>" />
+
+				<div id="upload_container">
+					<label>Choose  the file to upload:</label>
+					<br/>
+					<br/>
+					<input type="file" name="file" id="photo_uploaded_data" onchange="validateUploadFile(this);" />
+				</div>
+				<br/>
+
+				<div class="span-12 last align_right">
+					<input type="submit" value="Save and Upload" id="photo_submit_button" <%=save_button_disabled_string%>  />
+				</div>
+			</form>
+
+		</div>
+
+
+</body></html>

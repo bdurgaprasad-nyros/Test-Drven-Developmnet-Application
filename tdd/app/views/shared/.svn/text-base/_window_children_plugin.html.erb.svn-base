@@ -1,0 +1,47 @@
+/**
+ * Opener Helper Plugin
+ *
+ * This plugin support to manage window.opener object.
+ *
+ * Copyright (c) 2011 W3MG
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ *
+ * Author: Brian
+ * Date: Mar 29 2011
+ */
+
+/**
+ * @name propChildUrl2Opener
+ * @purpose This function make the opener window will be redirected to child window's url, and close child window.
+ * @params url(String) if null, just redirect to child's url, if not, redirect to the url given.
+ * @example window.propChildUrl2Opener(), or window.propChildUrl2Opener({'url': 'http://www.google.com'})
+ * @return null 
+ */ 
+;(function(win) {
+	win.propChildUrl2Opener = function(options) {
+		// Merge passed options with defaults
+		var opts = mergeParameters(win.propChildUrl2Opener.defaults, options);
+		
+		if (win.opener != null ) {
+			if (opts.popupfunction != null) {
+				win.opener[opts.popupfunction]();
+			} else if (opts.url != null) {
+				win.opener.location.href = opts.url;
+			}
+			win.close();
+		}
+		return null;
+	};
+
+	function mergeParameters(first_obj, second_obj){
+		var result = {};
+		for (attrname in first_obj) { result[attrname] = first_obj[attrname]; }
+		for (attrname in second_obj) { result[attrname] = second_obj[attrname]; }
+		return result;
+	}
+
+	// Default options
+	win.propChildUrl2Opener.defaults = {
+		'url': win.location.href
+	};
+})(window);

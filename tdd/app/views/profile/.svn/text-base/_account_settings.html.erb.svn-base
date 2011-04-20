@@ -1,0 +1,385 @@
+<%=render_profile_box do %>
+		<!-- begin top /header-->
+		<div class="clear" style="width:575px;margin-left:13px;padding-top:15px; ">
+			  	<h3  class="profile_heading">My Account Settings:</h3>
+			  	<hr class="blue_line" />	
+		</div>
+		<!-- end top /header-->				
+		<!-- begin middle section-->
+	
+				<!-- row first name-->
+				 <div class="span-12  clear">
+				      <div class="span-3 form_label" >
+					  	Main Email:</div>
+				      <div class="span-8 last" style="padding-top:7px;color:black;font-size:12px">
+				      	<%= @user.email %>
+				      </div>	
+				 </div>
+		<form id="password_form" action="javascript:void(0)" method="post">
+				<!-- row old password-->
+				 <div class="span-12  clear">
+				      <div class="span-3 form_label" >
+					  	Old password:</div>
+				      <div class="span-8 last">
+						<input id="user_current_password" name="user[current_password]" size="30" type="password" onkeyup="checkPasswordForm()" /> 
+					 
+				      </div>	
+				 </div>
+
+			
+				<!-- row new password-->
+				 <div class="span-14  clear">
+				      <div class="span-3 form_label" >
+					  	New password:
+					   </div>
+				      	<div class="span-6 ">
+				      	     <input id="user_password" name="user[password]" size="30" type="password" value="" onkeyup="validatePassword();checkPasswordForm()" />
+						</div>	
+						<div class="span-4 directions" style="margin-top:8px">(Must be between 6-12 characters)
+						</div>	
+				 </div>
+
+
+				<!-- New  password confirm-->
+				 <div class="span-12  clear">
+				      <div class="span-3 form_label" >
+					  	Confirm:
+					  </div>
+				      <div class="span-6">
+							<input id="user_password_confirmation" name="user[password_confirmation]" size="30" type="password" value=""  onkeyup="validateConfirmPassword();checkPasswordForm()"/>
+						</div>	
+
+				 		<div id="update_password_container" class="span-2 invisible">
+							<a href="javascript:handleClickUpdatePassword();" class="change_password"></a>
+						</div>
+					</div>
+			</form>	
+			<%= form_for(@user, :url => {:controller=>'profile',:action=>'account_update'}, :html => { :method => :put }) do |f| %>
+			  <% if @user && @user.errors.any? %>
+			    <div id="error_explanation">
+			      <% if session[:omniauth].blank? %>
+			        <h2><%= pluralize(@user.errors.count, "error") %> prohibited this challenge from being saved:</h2>
+			      <% end %>
+			      <ul>
+			        <% @user.errors.full_messages.each do |msg| %>
+			          <li><%= msg %></li>
+			        <% end %>
+			      </ul>
+			    </div>
+			  <% end %>
+
+				<!-- linked accounts-->
+				 <div class="span-12  clear">
+				      <div class="span-3 form_label" >
+					  	Linked Accounts:</div>
+				      <div class="span-8 last" style="margin-top:9px">
+							<%	@user.social_authorizations.each do |account|%>
+								<%=account%>
+							<%end%>
+							<br/>
+							<%unless @user.has_authorized_facebook?%>
+								<span id="facebook_account">
+									<a href="javascript:handleClickAddFacebookToAccount()">Add Facebook</a>
+								</span>
+							<%end%>
+							<%unless @user.has_authorized_twitter?%>
+								<span id="twitter_account">
+									<a href="javascript:handleClickAddTwitterToAccount()">Add Twitter</a>
+								</span>
+							<%end%>
+
+				      </div>	
+				 </div>
+
+
+				<!-- vanity-->
+				 <div class="span-15  clear">
+				      <div class="span-3 form_label" >
+					  	My Profile URL:</div>
+				      <div class="span-8">
+					   		<%= f.fields_for :vanity do |builder|  %>
+					 		http://www.vchatter.com/<%=  builder.text_field :tag ,:size => 20, :onkeyup=>"validateVanity()", :onchange=>"validateVanity()"  
+							%>
+					   		<% end %>
+			
+				      </div>	
+						<div id= "validation_vanity" class="directions span-3"></div>
+				 </div>
+
+
+				<!-- secret question-->
+				 <div class="span-12  clear">
+				      <div class="span-3 form_label" >
+					  	Secret Question:
+					  </div>
+				      <div class="span-8 last">
+					     <%= f.select("secret_question_code",{
+						              " Who is your favorite author?" => "1",
+									 "What town were you born in?" => "2",
+									 "What is the first name of your best childhood friend?" => "3",
+									 "What was your favorite food as a child? " => "4"},
+									 options ={:prompt => "select a secret question"}) %>
+			
+				      </div>	
+				 </div>
+
+
+				<!-- secret question-->
+				 <div class="span-12  clear">
+				      <div class="span-3 form_label" >
+					  	Secret Answer:
+					  </div>
+				      <div class="span-8 last">
+					      <%= f.text_field :secret_question_answer ,:size => 50%>
+				      </div>	
+				 </div>
+
+
+
+				<!-- language-->
+				 <div class="span-12  clear">
+				      <div class="span-3 form_label" >
+					  	Language:
+					  </div>
+				      <div class="span-8 last">
+					     <%= f.select("language_code",{
+						              "English" => "1",
+									 "Hindi" => "2",
+									 "French" => "3",
+									 "Latin" => "4"}) %>  
+				      </div>	
+				 </div>
+
+
+
+				<!-- time zone-->
+				 <div class="span-12  clear">
+				      <div class="span-3 form_label" >
+					  	Time zone:
+					  </div>
+				      <div class="span-8 last">
+					      <%= f.time_zone_select('time_zone', ActiveSupport::TimeZone.us_zones , :style => "width:332px;") %>
+				      </div>	
+				 </div>
+
+
+
+			<hr class="space"/>	
+	
+			<div class="clear">
+				
+				<div class="span-4" style="margin-left:10px;margin-top:14px">
+					<a href="javascript:handleClickDeactivate();" class="no_underline">Deactivate Account</a>
+				</div>	
+				<div class="float_right" style="margin-right:8px">
+					 <%= f.submit "" %>
+	    		</div>
+	    	</div>
+	
+		
+	
+			<% end %>
+			<hr class="space" />	
+<%end %>
+
+
+
+<div class="invisible">
+
+	<div id="deactivate_dialog" class="align_center blue_dialog_font" style="padding:12px">
+		<div class="blue_dialog_font">
+			
+			You will lose all your followers and account settings if you deactivate your account.
+
+			<br/><br/>
+			Are you sure you want to delete your vChatter account.
+			<br/><br/>
+			<a href="javascript:handleClickCancelDeactivate('#deactivate_dialog')"><%=image_tag "sticky2_assets/profile/canceldelete_btn.png"%></a>
+			<a href="javascript:handleClickConfirmDeactivate()"><%=image_tag "sprint3/profiles/deactivate_btn.png"%></a>
+			
+		</div>
+	
+		
+	</div>	
+	<div id="deactivate_feedback_div" class="align_center blue_dialog_font">
+		<div class="blue_dialog_font" style="margin-top:12px width:360px">
+
+			Thank you for using vChatter. We will be grateful if you will give us some feedback on our product so that 
+			we can improve future user experience.  Please take a moment and provide your feedback below.
+		</div>
+			<form id="feedback_form" action="javscript:void(0)">
+				<textarea name="deactivation_feedback" id="deactivation_feedback" style="width:360px;height:70px">
+				</textarea>	
+			</form>	
+
+
+			<div class="align_right" style="margin-top:12px">	
+				<a href="javascript:handleClickCancelDeactivate('#deactivate_feedback_div')"><%=image_tag "sprint3/profiles/canceldelete_btn.png"%></a>
+						<a href="javascript:handleClickConfirmDeactivate()"><%=image_tag "sprint3/profiles/deactivate_btn.png"%></a>
+			
+			</div>
+	
+		
+	</div>
+	
+</div>	
+
+<%=render_javascript_block do%>
+		// pw updates
+		
+
+		function isFieldBlank(selector){
+			
+		
+			if (($j(selector).val()=="") || ($j(selector).val()==undefined) || ($j(selector).val()===undefined) || ($j(selector).val()=="undefined" )){ 
+				return true;
+			}else{
+				return false;
+			}
+			
+			
+		}
+
+	  function checkPasswordForm(){
+			shouldShowUpdate=true;
+			
+			if (isFieldBlank('#user_current_password')){
+				
+				shouldShowUpdate=false;
+			}
+			if (isFieldBlank('#user_password')){
+
+				shouldShowUpdate=false;
+			}
+			if (isFieldBlank('#user_password_confirmation')){
+
+				shouldShowUpdate=false;
+			}
+			
+	
+			if (validatePassword() && validateConfirmPassword() && (shouldShowUpdate==true )){
+				makeVisible('update_password_container');
+			}
+		}
+	
+	
+	   
+		function validatePassword(){
+			var elementToValidate=$j('input#user_password');
+			var valueToValidate=elementToValidate.val();
+
+			// rules for password here - blank, length less than 13, greater than 5
+			if ( (isBlank(valueToValidate)) ||  (valueToValidate.length < 6) ||  (valueToValidate.length > 13) ){
+				 handleInvalidValueFor(elementToValidate, "Please enter a password of 6-12 characters");
+				return false;	   
+			}else{
+				handleValidValueFor(elementToValidate);
+				return true;
+			}
+		}
+
+		function validateConfirmPassword(){
+			var elementToValidate=$j('input#user_password_confirmation');
+			if ( !isBlank(elementToValidate) && ($j('input#user_password').val() == elementToValidate.val()) ){
+				handleValidValueFor(elementToValidate);
+				return true;
+			}else{
+				 handleInvalidValueFor(elementToValidate, "Please ensure your password and confirmation match.");
+				return false;	   
+			}
+		}
+	
+	
+	
+	
+		function handleClickUpdatePassword(){
+		
+			var serialized_data=$j('#password_form').serialize();
+			serialized_data=serialized_data + "&authenticity_token=<%=form_authenticity_token%>;" 	
+		
+			$j.ajax({
+			  type: 'POST',
+			  url: '/profile/password_update',
+			  data: serialized_data,
+			  success: function(msg){
+		            handleUpdatePasswordSuccess(msg);
+			  }
+			});
+		
+		
+		}
+	
+		function handleUpdatePasswordSuccess(msg){
+			alert(msg);
+			if (msg.indexOf("success") != -1) {
+				$j('#user_password').val('');
+				$j('#user_current_password').val('');
+				$j('#user_password_confirmation').val('');
+				makeInvisible('update_password_container');
+			}
+		}
+		// end pw
+	
+	
+
+	
+		function handleClickCancelDeactivate(selector){
+			$j(selector).dialog('close');
+
+		}
+	
+		function handleClickFinishDeactivate(){
+				var serialized_data=$j('#feedback_form').serialize();
+				serialized_data=serialized_data + "&authenticity_token=<%=form_authenticity_token%>;" 	
+			
+			
+			$j.ajax({
+			  type: 'POST',
+			  url: '/profile/deactiviate_account',
+			  data: serialized_data,
+			  success: handleUpdateDeactivateSuccess
+		  
+			});
+		
+		
+		}
+
+		function handleClickConfirmDeactivate(){
+					handleClickCancelDeactivate('#deactivate_dialog');
+					$j('#deactivate_feedback_div').dialog({width:425, height:210, resizeable:false});
+		
+		
+		}
+	
+		function handleUpdateDeactivateSuccess(){
+			//alert('we will miss you :(");
+			location.href="/";
+		}
+		
+		function handleClickDeactivate(){
+		
+				$j('#deactivate_dialog').dialog({width:425, height:135,resizeable:false});
+
+		}
+
+		// add twitter or facebook
+		
+		function handleClickAddTwitterToAccounts(){
+			//$j('#twitter_account').html("Twitter");
+		}
+		function handleClickAddFacebookToAccounts(){
+			//$j('#facebook_account').html("Facebook");
+
+
+		}
+		
+		function handleClickAddFacebookToAccount(){
+			window.open('<%= user_omniauth_authorize_path(:facebook) %>','','width=900,height=500');
+		}
+		function handleClickAddTwitterToAccount(){
+			window.open('<%=  user_omniauth_authorize_path(:twitter) %>','','width=900,height=500');
+		}	
+
+
+ 
+<%end%>	

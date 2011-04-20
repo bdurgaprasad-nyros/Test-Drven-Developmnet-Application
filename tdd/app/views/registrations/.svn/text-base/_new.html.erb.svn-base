@@ -1,0 +1,133 @@
+<%=render_indicator_title_and_sequence("Create vChatter Account", 1)%>
+<div class="clear" style="margin-top:5px">
+	<div class="span-14" id="signup1_container">
+		<hr/>
+		<%= form_for(:user, :as => @user || User.new, 
+							:url => registration_path(@user || User.new) + ".js", 
+							:remote => true, :html => {:id=>"signup_step1_form"}) do |f| %>
+				    <% if @user && @user.errors.any? %>
+				    <div id="error_explanation">
+				      <% if session[:omniauth].blank? %>
+				        <h2><%= pluralize(@user.errors.count, "error") %> prohibited this challenge from being saved:</h2>
+				      <% end %>
+				      <ul>
+				        <% @user.errors.full_messages.each do |msg| %>
+				          <li><%= msg %></li>
+				        <% end %>
+				      </ul>
+				    </div>
+				  <% end %>
+
+
+
+				  <div class="clear"><!-- group of rows next to thumbnail-->
+			
+			
+				 	<div class="span-14">
+					 	<div class="clear">
+						  	<div class="prepend-1 span-2" style="padding-top:8px">First Name</div>
+						    <div class="span-11">
+						      <%= f.text_field :first_name,:style=>"width:115px;" ,:onchange=>"validateFirstName()", :onkeyup=>"validateFirstName()"%>
+						    </div>
+						</div>
+						<div class="clear">
+						    <div class="prepend-1 span-2" style="padding-top:8px">Last Name</div>
+						    <div class="span-11">
+						      <%= f.text_field :last_name,:style=>"width:115px;" ,:onchange=>"validateLastName()", :onkeyup=>"validateLastName()"%>
+						    </div>
+						</div>
+						<div class="clear">
+						    <div class="prepend-1 span-2" style="padding-top:8px">Your Email</div>
+						    <div class="span-11">
+						      <%= f.text_field :email,:style=>"width:115px;",:onchange=>"validateSignupEmail()",:onkeyup=>"validateSignupEmail()" %> <br/><span class="directions">This will be your login name</span>
+						    </div>
+						</div>
+						
+					</div>
+					
+					
+					<!-- photo thumb holder-->
+					<div class="span-5 last">
+						    <%= image_tag session[:omniauth]['user_info']['image'] unless session[:omniauth].blank?%>
+					</div>	
+					<!-- end photo thumb holder-->
+			   </div>
+				
+	
+				<!--  rows below thumbnail image-->	
+			
+	
+				  <div class="clear">
+				    <div class="prepend-1 span-2" style="padding-top:8px">Your URL:</div>
+				    <div class="span-11">
+						<span class="small_font">
+					  		http://www.vchatter.com/<input id="user_vanity_tag" 
+															onkeyup="validateVanity()" 
+															onchange="validateVanity()"  
+															name="user_vanity_tag" 
+															class="vanity_tag"
+															type="text" 
+															style="width:70px" value=""/>
+						</span>
+						<span class="directions">
+							Create a vanity URL for your profile page
+						</span>
+						<br/>
+						<span id="validation_vanity"></span>
+				    </div>
+				  </div>
+	
+				  <div class="clear">
+				    <div class="prepend-1 span-2" style="padding-top:8px">Birthday</div>
+				    <div class="span-11">
+				      <%= f.date_select :date_of_birth, {:start_year=>1911, :end_year=>1993, :default=> (Time.now - 18.years)} %>
+				    </div>
+				  </div>
+				  <div class="clear">
+				    <div class="prepend-1 span-2" style="padding-top:8px">Gender</div>
+				    <div class="span-11">
+				      <%= f.radio_button :gender, "male" %>&nbsp;Male &nbsp;&nbsp;
+				      <%= f.radio_button :gender, "female" %>&nbsp;Female
+				    </div>
+				  </div>
+				  <div class="clear">
+				    <div class="prepend-1 span-2" style="padding-top:8px">Password</div>
+				    <div class="span-11">
+				      <%= f.password_field :password, :style=>"width:105px;" ,:onchange=>"validatePassword()",:onkeyup=>"validatePassword()"%>
+						<span class="directions" style="margin-left:3px;">6-12 characters long</span>
+				    </div>
+				  </div>
+				  <div class="clear">
+				    <div class="prepend-1 span-2" style="padding-top:8px">Confirm</div>
+				    <div class="span-11">
+				      <%= f.password_field :password_confirmation, :style=>"width:105px;",:onchange=> "validateConfirmPassword()",:onkeyup=> "validateConfirmPassword()" %>
+						<span class="directions" style="margin-left:3px;">Verify your password</span>
+				    </div>
+				  </div>
+
+				<hr class="space" />
+				<div class="clear">
+				  <div class="span-14 align_right">
+		
+						  	<%= f.submit "" , :id=>"finish_signup",  :onclick=>"return validateFormSignUpStep1();"%>
+	
+				
+	
+		
+				  </div>
+				</div>
+		<% end %>
+		<hr class="space" />
+		<hr/>
+	
+		<div class="span-12" style="font-size:9px;margin-top:20px;">
+			<%= @agreement_text%> 
+	
+		</div>
+			<hr class="space" />
+		<hr class="space"/>
+			<div class="float_right">
+				<a style="text-decoration:none" href="javascript:handleClickCancelSignUp()">Cancel</a>
+			</div>
+	</div>
+</div>

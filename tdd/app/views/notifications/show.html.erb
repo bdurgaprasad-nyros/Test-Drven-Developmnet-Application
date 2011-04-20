@@ -1,0 +1,20 @@
+<% "Notification" %>
+
+<p>
+  <strong>Group:</strong>
+  <%= @notification.group_id %>
+</p>
+<p>
+  <strong>Notification Type:</strong>
+  <%= @notification.notification_type_id %>
+</p>
+<p>
+  <strong>Body:</strong>
+  <%= @notification.body %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_notification_path(@notification) %> |
+  <%= link_to "Destroy", @notification, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", notifications_path %>
+</p>

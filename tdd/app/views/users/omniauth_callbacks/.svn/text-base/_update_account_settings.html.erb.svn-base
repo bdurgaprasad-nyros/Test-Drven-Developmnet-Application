@@ -1,0 +1,4 @@
+<script>
+	<%=render :partial =>"shared/window_children_plugin2"%>
+		window.propChildUrl2Opener({'popupfunction': '<%=@desired_function%>'})
+</script>
